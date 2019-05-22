@@ -1,0 +1,153 @@
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+
+var Actor=require("actor");
+var FSM=require("FSM");
+var {Walk,Fire,TopTurn,Die}=require("bossState");
+cc.Class({
+    extends:Actor,
+
+    properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
+    },
+    init(){
+        this.node.zIndex=100;
+        this.life=10;
+        this.orignPos=this.node.position;
+        this.dir=DIR.DIR_LEFT;
+        this.enableCollsi=true;
+        //是否允许使用斧子
+        this.aex=arguments[1];
+        this.fsm=new FSM();
+        this.animation=this.node.getComponent(cc.Animation);
+        this.fsm.addState(new Walk(this,"walk"));
+        this.fsm.addState(new Fire(this,"fire"));
+        this.fsm.addState(new TopTurn(this,"updown"));
+        this.fsm.addState(new Die(this,"die"));
+        this.fsm.setDefaultState("walk");
+        //boss来回运动
+        let moveLeft=cc.moveBy(10,cc.v2(-360,0));
+        this.node.runAction(cc.repeatForever(cc.sequence(moveLeft,moveLeft.reverse())));
+
+        this.schedule(this.jump,4);
+
+        this.schedule(this.fire,3);
+    },
+    jump(){
+        this.vCurrSpeed=400;
+        this.vCurrAcceleration=-800;
+    },
+    fire(){
+        this.fsm.switchStateWithStack("fire");
+    },
+    getSize(){
+        let size=this.node.getContentSize();
+        return cc.rect(this.node.x,this.node.y,size.width,size.height);
+    },
+    getFirePos(){
+        switch(this.dir){
+            case DIR.DIR_LEFT:return cc.v2(this.node.x-20,this.node.y+40);
+            case DIR.DIR_RIGHT:return cc.v2(this.node.x+20,this.node.y+40);
+        }
+    },
+    getDesFireY(){
+        return this.orignPos.y+Math.floor(Math.random()*4)*40;
+    },
+    turnLeft(){
+        this.node.scaleX=1;
+        this.dir=DIR.DIR_LEFT;
+    },
+    turnRight(){    
+        this.node.scaleX=-1;
+        this.dir=DIR.DIR_RIGHT;
+    },
+    onCollsiWithPBullet(bullet){
+        bullet.die();
+        if(this.life--<=0){
+            this.fsm.switchState("updown");
+        }
+    },
+    interactive(actor){
+        if(actor.isDie||this.isDie)return;
+        let sizeOne=actor.getSize();
+        let sizeTwo=this.getSize();
+
+        if(sizeOne.x>sizeTwo.x&&this.dir===DIR.DIR_LEFT){
+            this.turnRight();
+        }else if(sizeOne.x<sizeTwo.x&&this.dir===DIR.DIR_RIGHT){
+            this.turnLeft();
+        }
+
+        if(this.actorCollsition(sizeOne,sizeTwo)){
+            //闪烁状态碰到怪物
+            if(!actor.isFlashing&&!actor.isInvincible){
+                if(actor.getFormState()!==FORM_STATE.SMALL){
+                    actor.fsm.switchStateWithStack("to_small");
+                }else{
+                    actor.fsm.switchState("die");
+                }
+            }
+        }
+    },
+    // LIFE-CYCLE CALLBACKS:
+    
+    // onLoad () {}
+
+    update (dt) {
+        if(this.isPause)return;
+
+        if(this.enableMove){
+            this.move(dt);
+        }
+
+        let tile=null;
+
+        if(this.enableCollsi){
+                    //脚底的碰撞检测
+        tile=this.getDownCollsiTile();
+        if(tile.type){
+            switch(tile.type){
+                case TILE_TYPE.LAND:
+                case TILE_TYPE.PIPE_H_ENTRY:
+                case TILE_TYPE.WALL:
+                case TILE_TYPE.PIPE_V_ENTRY:  
+                case TILE_TYPE.QUESTION:
+                this.node.y=this.orignPos.y;
+                this.vCurrAcceleration=0;
+                this.vCurrSpeed=0;
+                break;                    
+            }
+        }else{
+            if(this.isOnLand){
+                this.isOnLand=false;
+            }
+        }
+        }
+
+        if(this.isOutScreen()){
+            this.node.removeFromParent();            
+        }
+
+    }
+});

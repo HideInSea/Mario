@@ -1,0 +1,95 @@
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+
+var State=require("state");
+
+var Walk=cc.Class({
+    extends:State,
+    onEnter(){
+        this.target.state=ENUM.BOSS_STATE.WALK;
+
+
+        this.playWalkAni();
+    },
+    playWalkAni(){
+        this.target.animation.play("walk");
+    },
+    resume(){
+        this.onEnter();
+    }
+});
+
+
+
+var Fire=cc.Class({
+    extends:State,
+    onEnter(){
+        this.target.state=ENUM.BOSS_STATE.FIRE;
+        this.playFireAni();
+        this.id=setTimeout(this.callBack.bind(this),1000);
+    },
+    playFireAni(){
+        this.target.animation.play("fire");
+    },
+    callBack(){
+        EM.emit(EM.type.CREATE_MONSTER,this.target.getFirePos(),"fire_left_"+this.target.getDesFireY()+"_"+this.target.dir);
+        this._fsm.switchPreState();
+    },
+    onExit(){
+        clearTimeout(this.id);
+    }
+});
+
+
+//被顶翻
+var TopTurn=cc.Class({
+    extends:State,
+    onEnter(){
+        this.target.state=ENUM.BOSS_STATE.UP_DOWN;
+        this.target.node.scaleY=-1;
+        this.target.node.y+=80;
+        this.target.isDie=true;
+        this.target.vCurrSpeed=300;
+        this.target.vCurrAcceleration=-1400;
+        this.target.hCurrSpeed=0;
+        this.target.hCurrAcceleration=0;
+        this.target.node.stopAllActions();
+        this.target.unschedule(this.target.jump);
+        this.target.unschedule(this.target.fire);
+        gm.monster.isBossDie=true;
+    }
+});
+
+
+//die
+var Die=cc.Class({
+    extends:State,
+    onEnter(){
+        this.target.state=ENUM.BOSS_STATE.DIE;
+        this.playDieAni();
+        this.target.node.stopAllActions();
+        this.target.unschedule(this.target.jump);
+        this.target.unschedule(this.target.fire);
+
+        this.target.vCurrSpeed=0;
+        this.target.vCurrAcceleration=0;
+        this.target.hCurrSpeed=0;
+        this.target.hCurrAcceleration=0;
+        
+        setTimeout(function(){
+            this.target.vCurrAcceleration=-1400;
+        }.bind(this),2000);
+    },
+    playDieAni(){
+        this.target.animation.play("die");
+    }
+});
+
+module.exports={Walk,Fire,TopTurn,Die}

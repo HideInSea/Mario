@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "blue_star",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.85,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "2",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "c24ac42b-43b4-4004-a677-bb26c26a2859"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "cae58931-38b1-4225-ad69-9b8967208aa0"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "1116116b-745f-4bc5-b04b-ea879420610c"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "c24ac42b-43b4-4004-a677-bb26c26a2859"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

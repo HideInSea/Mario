@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "flower_red",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.16666666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "2",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "4749f6d2-9198-4084-aeeb-1557acf7d9cf"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "189b56f5-a183-49f0-95a2-84dd465a05cf"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "47ecf924-5ab9-40ca-a731-0726e61245c1"
+            }
+          },
+          {
+            "frame": 0.15,
+            "value": {
+              "__uuid__": "4749f6d2-9198-4084-aeeb-1557acf7d9cf"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

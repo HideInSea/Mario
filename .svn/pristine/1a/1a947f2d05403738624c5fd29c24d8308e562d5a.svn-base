@@ -1,0 +1,182 @@
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+//所有运动物体基类
+
+var Actor= cc.Class({
+    extends:cc.Component,
+    ctor(){
+        this.vCurrSpeed=0;
+        this.vCurrAcceleration=0;
+        this.hCurrSpeed=0;
+        this.hCurrAcceleration=0;
+        this.dir=DIR.DIR_RIGHT;
+        this.fsm=null;
+        this.oldPos=null;
+        this.isPause=false;
+        this.actorType=null;
+        this.enableCollsi=true;
+        this.enableMove=true;
+    },
+    getActorType(){
+        return this.actorType;
+    },
+    init(){
+
+    },
+    turnLeft(){
+        this.dir=DIR.DIR_LEFT;
+        this.node.scaleX=-1;
+    },
+    turnRight(){
+        this.dir=DIR.DIR_RIGHT;
+        this.node.scaleX=1;
+    },
+    //与其他角色交互
+    interactive(actor){
+
+    },
+    //备份坐标
+    backPos(){
+        this.oldPos=this.node.position;
+    },
+    //获取自身包围盒
+    getSize(){  
+
+    },
+    //角色与墙体的碰撞检测:
+    //上：检测头顶中心点的碰撞类型
+    //左、右: 分别检测上、中、下三点的碰撞类型
+    //下：检测左右两点的碰撞类型
+    getUpCollsiTile(){
+        let size=this.getSize();
+        let tile=null;
+        //top
+        //let topleftMid=new cc.Vec2(size.x-3,size.y+size.height);
+        let topMid=new cc.Vec2(size.x,size.y+size.height);
+        // tile=gm.mapMgr.getWallObstacleTileAt(topleftMid);
+        // if(tile.type)return tile;
+        // tile=gm.mapMgr.getLandObstacleTileAt(topleftMid);
+        // if(tile.type)return tile;
+        tile=gm.mapMgr.getObstacleTileAt(topMid);
+        return  tile;
+    },
+    getLeftCollsiTile(){
+        let size=this.getSize();
+        let tile=null;
+        //left
+        let topLeft=new cc.Vec2(size.x-size.width/2,size.y+size.height);
+        let midLeft=new cc.Vec2(size.x-size.width/2,size.y+size.height/2);
+        let bottomLeft=new cc.Vec2(size.x-size.width/2,size.y+1);
+
+        tile=gm.mapMgr.getObstacleTileAt(bottomLeft);
+        if(tile.type)return tile;
+        tile=gm.mapMgr.getObstacleTileAt(midLeft);
+        if(tile.type)return tile;
+        tile=gm.mapMgr.getObstacleTileAt(topLeft);
+        return tile;
+    },
+    getRightCollsiTile(){
+        let size=this.getSize();
+        let tile=null;
+        //right
+        let topRight=new cc.Vec2(size.x+size.width/2,size.y+size.height);
+        let midRight=new cc.Vec2(size.x+size.width/2,size.y+size.height/2);
+        let bottomRight=new cc.Vec2(size.x+size.width/2,size.y+1);
+
+        tile=gm.mapMgr.getObstacleTileAt(bottomRight);
+        if(tile.type)return tile;
+        tile=gm.mapMgr.getObstacleTileAt(midRight);
+        if(tile.type)return tile;  
+        tile=gm.mapMgr.getObstacleTileAt(topRight);
+        return tile;
+    },
+    getDownCollsiTile(){
+        let size=this.getSize();
+        let tile=null;
+        //bottom
+        let bottomRight=new cc.Vec2(size.x+size.width/2,size.y-1);
+        let bottomLeft=new cc.Vec2(size.x-size.width/2,size.y-1);
+        tile=gm.mapMgr.getObstacleTileAt(bottomLeft);
+        if(tile.type)return tile;
+        tile=gm.mapMgr.getObstacleTileAt(bottomRight);
+        return tile;
+    },
+    move(dt){
+        //垂直方向的运动更新
+        this.node.y+=this.vCurrSpeed*dt+this.vCurrAcceleration*dt*dt*.5;
+        this.vCurrSpeed+=this.vCurrAcceleration*dt;
+
+        //水平方向的运动更新
+        this.node.x+=this.hCurrSpeed*dt+this.hCurrAcceleration*dt*dt*.5;
+        this.hCurrSpeed+=this.hCurrAcceleration*dt;
+    },
+    isOutScreen(){
+        let pos=this.node.convertToWorldSpace(cc.v2(0,0));
+        if(pos.x>global.winSize.width+80||pos.x<-80||pos.y<-120||pos.y>global.winSize.height+80){
+            return true;
+        }
+        return false;
+    },
+    pause(){
+
+    },
+    resume(){
+
+    },
+    actorCollsition(sizeOne,sizeTwo){
+        let rectOne=cc.rect(sizeOne.x-sizeOne.width/2,sizeOne.y,sizeOne.width,sizeOne.height);
+        let rectTwo=cc.rect(sizeTwo.x-sizeTwo.width/2,sizeTwo.y,sizeTwo.width,sizeTwo.height);
+        if(cc.Intersection.rectRect(rectOne,rectTwo)){
+            return true;
+        }
+        return false;
+    },
+    //改变方向
+    changeDir(){
+
+    },
+    //与怪物的碰撞检测
+    collsiWithMon(actor){
+
+    },
+    //死亡
+    die(){
+
+    },
+    //被踩
+    flat(){
+
+    },
+    //与被顶墙体的碰撞检测
+    collsiWithPushWall(wallBox){
+        if(this.isDie)return;
+        let size=this.getSize();
+        if(this.actorCollsition(size,wallBox)){
+            this.onCollsiPushWall(wallBox);
+        }
+    },
+    onCollsiPushWall(wallBox){
+
+    },
+    //与玩家子弹碰撞
+    collsiWithPlayerBullet(bullet){
+        if(this.isDie||bullet.isDie)return;
+        let sizeOne=bullet.getSize();
+        let sizeTwo=this.getSize();
+        if(this.actorCollsition(sizeOne,sizeTwo)){
+            this.onCollsiWithPBullet(bullet);
+        }
+    },
+    onCollsiWithPBullet(bullet){
+    
+    }
+});
+
+module.exports=Actor;

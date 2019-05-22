@@ -1,0 +1,103 @@
+"use strict";
+cc._RF.push(module, 'ff1dcYsbK1I+IMhauEdOuu5', 'bossState');
+// script/state/monsterState/bossState.js
+
+"use strict";
+
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+
+var State = require("state");
+
+var Walk = cc.Class({
+    extends: State,
+    onEnter: function onEnter() {
+        this.target.state = ENUM.BOSS_STATE.WALK;
+
+        this.playWalkAni();
+    },
+    playWalkAni: function playWalkAni() {
+        this.target.animation.play("walk");
+    },
+    resume: function resume() {
+        this.onEnter();
+    }
+});
+
+var Fire = cc.Class({
+    extends: State,
+    onEnter: function onEnter() {
+        this.target.state = ENUM.BOSS_STATE.FIRE;
+        this.playFireAni();
+        this.id = setTimeout(this.callBack.bind(this), 1000);
+    },
+    playFireAni: function playFireAni() {
+        this.target.animation.play("fire");
+    },
+    callBack: function callBack() {
+        EM.emit(EM.type.CREATE_MONSTER, this.target.getFirePos(), "fire_left_" + this.target.getDesFireY() + "_" + this.target.dir);
+        this._fsm.switchPreState();
+    },
+    onExit: function onExit() {
+        clearTimeout(this.id);
+    }
+});
+
+//被顶翻
+var TopTurn = cc.Class({
+    extends: State,
+    onEnter: function onEnter() {
+        this.target.state = ENUM.BOSS_STATE.UP_DOWN;
+        this.target.node.scaleY = -1;
+        this.target.node.y += 80;
+        this.target.isDie = true;
+        this.target.vCurrSpeed = 300;
+        this.target.vCurrAcceleration = -1400;
+        this.target.hCurrSpeed = 0;
+        this.target.hCurrAcceleration = 0;
+        this.target.node.stopAllActions();
+        this.target.unschedule(this.target.jump);
+        this.target.unschedule(this.target.fire);
+    }
+});
+
+//die
+var Die = cc.Class({
+    extends: State,
+    onEnter: function onEnter() {
+        this.target.state = ENUM.MUSHROOM_STATE.TOP_TURN;
+        this.playTopTurnAni();
+        this.target.node.scaleY = -1;
+        this.target.node.y += 40;
+        this.target.enableCollsi = false;
+        this.target.isDie = true;
+        this.target.vCurrSpeed = 300;
+        this.target.vCurrAcceleration = -1400;
+        this.target.hCurrSpeed = 0;
+        this.target.hCurrAcceleration = 0;
+    },
+    playTopTurnAni: function playTopTurnAni() {
+        switch (this.target.type) {
+            case ENUM.MON_COLOR.RED:
+                this.target.animation.play("topturn_red");
+                break;
+            case ENUM.MON_COLOR.BLUE:
+                this.target.animation.play("topturn_blue");
+                break;
+            case ENUM.MON_COLOR.GRAY:
+                this.target.animation.play("topturn_gray");
+                break;
+        }
+    }
+});
+
+module.exports = { Walk: Walk, Fire: Fire, TopTurn: TopTurn };
+
+cc._RF.pop();

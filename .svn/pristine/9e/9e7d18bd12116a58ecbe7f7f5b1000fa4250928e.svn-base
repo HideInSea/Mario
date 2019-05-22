@@ -1,0 +1,41 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "weapon.plist",
+  "_objFlags": 0,
+  "_native": "",
+  "_spriteFrames": {
+    "weapon_1": {
+      "__uuid__": "5cabcfe5-5871-4ab5-bd01-4581329a4e77"
+    },
+    "weapon_10": {
+      "__uuid__": "6a700201-973c-4697-ae65-027a65d272cb"
+    },
+    "weapon_11": {
+      "__uuid__": "85b98840-bd9c-4187-94f4-232b2b147ad8"
+    },
+    "weapon_2": {
+      "__uuid__": "16535ac0-85a2-45b7-857a-2251e6db4760"
+    },
+    "weapon_3": {
+      "__uuid__": "603ec9a7-3b11-4f88-a357-8c042ca2b2b9"
+    },
+    "weapon_4": {
+      "__uuid__": "14e3c207-2487-49e3-98dc-4668567a41fb"
+    },
+    "weapon_5": {
+      "__uuid__": "bdd17502-1eae-4ea7-9040-2a09263e16d5"
+    },
+    "weapon_6": {
+      "__uuid__": "22114315-78a9-45b3-bc2c-784475395db1"
+    },
+    "weapon_7": {
+      "__uuid__": "7a7c4fdb-cdca-450b-9d84-d64527d96386"
+    },
+    "weapon_8": {
+      "__uuid__": "7ef075c0-c989-47eb-a857-15868b4c31ba"
+    },
+    "weapon_9": {
+      "__uuid__": "9ccf12c2-4aa1-4b5f-8d9d-78fa51ba0c3e"
+    }
+  }
+}

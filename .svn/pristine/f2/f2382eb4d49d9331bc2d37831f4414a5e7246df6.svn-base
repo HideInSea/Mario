@@ -1,0 +1,105 @@
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/script/state/monsterState/fishState.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+cc._RF.push(module, 'a90729ZX/dOmYcIZ9SXF56p', 'fishState', __filename);
+// script/state/monsterState/fishState.js
+
+"use strict";
+
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+var State = require("state");
+//swim
+var Swim = cc.Class({
+    extends: State,
+    onEnter: function onEnter() {
+        this.target.state = ENUM.FISH_STATE.SWIM;
+        this.target.hCurrSpeed = -this.target.hDefSpe;
+        var moveUp = cc.moveBy(5, cc.v2(0, 40));
+        var moveDown = moveUp.reverse();
+        this.target.node.runAction(cc.repeatForever(cc.sequence(moveUp, moveDown)));
+
+        this.playSwimAni();
+    },
+    playSwimAni: function playSwimAni() {
+        switch (this.target.color) {
+            case ENUM.MON_COLOR.RED:
+                this.target.animation.play("fly_red");
+                break;
+            case ENUM.MON_COLOR.GRAY:
+                this.target.animation.play("fly_gray");
+                break;
+        }
+    }
+});
+
+var Fly = cc.Class({
+    extends: State,
+    onEnter: function onEnter() {
+        this.target.state = ENUM.FISH_STATE.FLY;
+
+        this.target.vCurrSpeed = 560;
+        this.target.vCurrAcceleration = -280;
+
+        if (this.target.moveDir === ENUM.FISH_DIR.RIGHT) {
+            this.target.node.x -= 40 * 16;
+            this.target.dir = DIR.DIR_RIGHT;
+        } else {
+            this.target.dir = DIR.DIR_LEFT;
+        }
+        this.target.hCurrSpeed = this.getHSpeed();
+        this.playFlyAni();
+    },
+    playFlyAni: function playFlyAni() {
+
+        this.target.dir === DIR.DIR_LEFT ? this.target.turnLeft() : this.target.turnRight();
+        switch (this.target.color) {
+            case ENUM.MON_COLOR.RED:
+                this.target.animation.play("fly_red");
+                break;
+            case ENUM.MON_COLOR.GRAY:
+                this.target.animation.play("fly_gray");
+                break;
+        }
+    },
+    getHSpeed: function getHSpeed() {
+        return this.target.moveDir === ENUM.FISH_DIR.LEFT ? -320 : 320;
+    }
+});
+
+var Die = cc.Class({
+    extends: State,
+    onEnter: function onEnter() {
+        this.target.state = ENUM.TOP_TURN;
+        this.target.animation.stop();
+        this.target.isDie = true;
+        this.target.node.scaleY = -1;
+        this.target.node.y += 40;
+        this.target.vCurrSpeed = 300;
+        this.target.vCurrAcceleration = -1400;
+        this.target.hCurrSpeed = 0;
+        this.target.hCurrAcceleration = 0;
+        this.target.enableCollsi = false;
+    }
+});
+
+module.exports = { Fly: Fly, Die: Die, Swim: Swim };
+
+cc._RF.pop();
+        }
+        if (CC_EDITOR) {
+            __define(__module.exports, __require, __module);
+        }
+        else {
+            cc.registerModuleFunc(__filename, function () {
+                __define(__module.exports, __require, __module);
+            });
+        }
+        })();
+        //# sourceMappingURL=fishState.js.map
+        

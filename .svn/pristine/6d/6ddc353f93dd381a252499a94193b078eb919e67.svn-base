@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="180" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="35">
+ <tileset firstgid="1" source="map.tsx"/>
+ <layer id="1" name="background" width="180" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAD4MLQAAAQ==
+  </data>
+ </layer>
+ <layer id="2" name="writeflag" width="180" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Abxv4VLSEIsiVYAgAAwHdd1wMAAAAAAAAA2DHH0wAn
+  </data>
+ </layer>
+ <layer id="3" name="scene" width="180" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztV0tSxSAQTM6hh/AA/t3ozr8b3fk7gu/pEfzdTL1DDmJnQRU1BYSBmQe8Sld1VSqBoRkaMnTdjBkzasRB33WH4FFfWklZzHnIz0ENObzC2NfgTYKGGvTbyNGTkwcNlMhtbg5qyyEXLv0b4CbhlqMvbedqI6FHE7FzTYH0XLYRZwfcBffA/UY91yJ+wF/wr7SQNcIp/HsGnoMX4OXs55ViKC1gzXAP/z6Aj+AT+NyIn4+h86QRrSG07mfpf0xuvBd4YgEuwVfwrRGP3ELnXSNaQ5D0c6k9Lr0nc+K9Y/4f4Cf4BX4n5kM7l1rxS3nAjCvphVJ7vAY/j3WGXWvYNYf5xrkraudSK34pD5hx6dq1eEeswc9jnWHXGnbNYb5p3BVj18u0K722tg4NLa61y/WHtmYKo1dqzVLmP9YZdq1h1xzmm9ZdMVbvwGhLIVlHDB1PS+zYPt9JnHdczRSc/A3kOVd/Sv9FP02tu2JIr53HnNyY/7nEmcH1BqeGccWuwc/cOdBxKVL3RyxctQb1rtRdkaPXzqPEXpeIk+sNbuwa/Mwdi45Lkbo/YuGqNTS8O4LWzLTe8p2brtz4+oRitepnOiffv8Y1d1fc2LqacyelmkrVG6uG7/wJafflxtcn9L5FP9PnztF2ql3s+6l4U20Hx3MqtPz8D7+J79o=
+  </data>
+ </layer>
+ <layer id="4" name="obstacle" width="180" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt12ESQCAQhmEu4RKO4+C4iDPoj2GYTGqzW73PzP5Ls/SRug4AAABo06bdAB5mV4urVbuRAg29dgeAHPKMHKT3mND5yDNqQp5RE/JcBs6IYazkOXS9jnHaa3vtQ7uXUFo9/7lmVvKMU4nvihWt5tnKdx6yWs0z6jRGXDMl1sH3zxxz9pGcy7r7Pfn2mpgzydv4L88y5/6Xmj/pAlJI53EHpQxXAQ==
+  </data>
+ </layer>
+ <layer id="5" name="coin" width="180" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt1aENACAMRcG/bldgegwOASgSuEuqq16bAEBSY4Bz7fL+iobhNZqe1WKAtd1eXmjKbQCA//j/AAAAAH/pnL4JgQ==
+  </data>
+ </layer>
+ <layer id="11" name="pipe" width="180" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAD4MLQAAAQ==
+  </data>
+ </layer>
+ <layer id="6" name="endflag" width="180" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzgENADAIA7Dt/kXjAvKkVdAEAACAn7XJ6/UCAAAAAAAAAHYMyLoABg==
+  </data>
+ </layer>
+ <objectgroup id="7" name="prop">
+  <object id="4" name="ladder_big_mh" x="1015" y="298"/>
+  <object id="5" name="spring_gray" x="1537" y="543"/>
+  <object id="6" name="ladder_big_mh" x="1697" y="262"/>
+  <object id="7" name="ladder_mid_mh" x="2139" y="298"/>
+  <object id="8" name="ladder_mid_mh" x="2380" y="182"/>
+  <object id="9" name="wheel_white_mid_0_2_8" x="2861" y="140"/>
+  <object id="11" name="wheel_white_mid_1_2_8" x="3261" y="139"/>
+  <object id="13" name="spring_gray" x="4780" y="540"/>
+  <object id="14" name="ladder_mid_mh" x="4858" y="222"/>
+  <object id="15" name="wheel_white_mid_2_2_8" x="5217" y="140"/>
+  <object id="17" name="ladder_mid_stop" x="5857" y="298"/>
+  <object id="18" name="ladder_mid_stop" x="5978" y="259"/>
+  <object id="19" name="ladder_mid_stop" x="6096" y="263"/>
+  <object id="20" name="ladder_mid_stop" x="6217" y="256"/>
+ </objectgroup>
+ <objectgroup id="8" name="hide"/>
+ <objectgroup id="9" name="monster">
+  <object id="21" name="rocket_white_left" x="1132" y="499"/>
+  <object id="22" name="rocket_white_left" x="1376" y="297"/>
+  <object id="23" name="rocket_white_left" x="2143" y="218"/>
+  <object id="26" name="rocket_white_left" x="2140" y="460"/>
+  <object id="27" name="rocket_white_left" x="2896" y="340"/>
+  <object id="28" name="rocket_white_left" x="2620" y="138"/>
+  <object id="29" name="rocket_white_left" x="3740" y="420"/>
+  <object id="30" name="rocket_white_left" x="4019" y="142"/>
+  <object id="31" name="rocket_white_left" x="4578" y="380"/>
+  <object id="32" name="rocket_white_left" x="5057" y="455"/>
+  <object id="33" name="rocket_white_left" x="5700" y="381"/>
+  <object id="34" name="rocket_white_left" x="5537" y="220"/>
+ </objectgroup>
+ <objectgroup id="10" name="position">
+  <object id="1" name="mapFixed" x="7175" y="16"/>
+  <object id="2" name="end" x="6939" y="540"/>
+  <object id="3" name="start" x="99" y="542"/>
+  <object id="10" name="wheelEnd_0" x="3059" y="138"/>
+  <object id="12" name="wheelEnd_1" x="3415" y="137"/>
+  <object id="16" name="wheelEnd_2" x="5419" y="142"/>
+ </objectgroup>
+</map>

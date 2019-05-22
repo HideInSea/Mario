@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "flash_21",
+    "texture": "a35f8b95-4541-4425-965b-c06cd05afcb9",
+    "atlas": "4f49ce74-0758-480c-a6d8-a20592f604ec",
+    "rect": [
+      44,
+      166,
+      40,
+      80
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      40,
+      80
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="270" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="18" nextobjectid="56">
+ <tileset firstgid="1" source="map.tsx"/>
+ <layer id="1" name="background" width="270" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt1AEJwDAAA8GarH8rszDY4AncQSR87jnnfhjwry89rgz4V92034A9ddN+A/bUTfsN2FM37TdgT92034A9ddN+A/bUTfsN2FM37TdgT92034A9ddN+A/bUTfsN2FM37TdgT92034A9ddN+A/bUTb/ZA9UdLuA=
+  </data>
+ </layer>
+ <layer id="3" name="writeflag" width="270" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzgENAAAIA6Abxv4VjaFzkIAEAAAAAAAAAAAAAIDPurYHAAAAAAC3DWxcACc=
+  </data>
+ </layer>
+ <layer id="2" name="scene" width="270" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt1ktOwmAUQOF2gATUBaBRYBU+WIIgS/A1AicQFEbgBKPIennNPENGDRQCbXq+5CSk/UM6uTd/EEiSJB1OKwyCNr2Hx/4SSeuSPJtDvmlEXwn8NinL9j2bHf6n65xL2sKYnfHt3pCUMN5pJG3LO40kSdrFDfeIW7qje6p5r5AyI+78P3CuTg16pKZ7Q8qMuPP/xLlneqFXenNvSKk2ozktaEmriLNx57/HuQ/6pD4N3BtSqhWY4SKd0hmdR8z0JvOf49kJ5dfe/fD7lyb0R1P3hpRqV8zwNZWpQtWImd5k/ks8u6BLd4MkSTqgf2U7IpI=
+  </data>
+ </layer>
+ <layer id="5" name="obstacle" width="270" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztmG0OwiAMhvEOxjuM2+j9j+Ah/KGJC1JoKaUC75M0y9z4pk+YIQAAAAAAAADAWtwKvyMQVFjDbb/nOHrUb8nTuH4JI/aAB9z1p57X6h2VP6BMz/z9d29cL8YNCFh178MbewBv+LDa3ueuH3VOba0P+LCCN45P1IA37IA39sLaG9KyUo4Ab/Tmdrqma0r129sbHufXnZnZG0eANyzazDlihDdy51Qu8MabUf8BzOqN1BnwxpeYXKXUvjdrZTjfqdz2avXvQgzt62mBtTdK/mttN+cMeOPXF5Q/LPffrnnNpWV+YhjjDWmuznTeoJyxszdqvqC8YbEP4Y0y0vmJAd7QUnLGjt7g+mKkN0AZSX6kzoA35NScwfEG5x0ud2U8EKo4490XSX+p+5Zx59CU954jbWhzcobwnuPZ44x3XyT9pe5bxp1DU957jrThndOceAH6Yddn
+  </data>
+ </layer>
+ <layer id="4" name="coin" width="270" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt2DEKACAMA0Df6w/8vauIQnUQxTvI3jFpSgAAAAAAAPwud7lZf+sLNwMAAGtGHX+n90d3g01Ba7Y77dCYMggAAABwlv8GAMCeCtX4EbA=
+  </data>
+ </layer>
+ <layer id="17" name="pipe" width="270" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt1kkOAiEQBVDurHdor+BwBYcjyhI7II2aRuW9pBawqkDqp0IAAAAAepti7Xo3kTH1bgAokhtAK7kBtJIbQCu5AbSSG8BS+1iHWMcgN9a0ibXt3QQvG/3/zrEusa5BbqzpW/c7HpXywf8tN3/D2vkT/i030v3u1LkX6kr5ULrPzcDou8n8rWrnd6Tzlfr1P0j3u1vnXqhrzY3c/ei7yZq5kc7Xsx4AAEZxB2IHMP4=
+  </data>
+ </layer>
+ <layer id="6" name="endflag" width="270" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzrENAAAEAEH2H5qYgshd8fVHAAAAAADcVpPcvgAAAAAAAAAAAAAA4KsG/i0BAQ==
+  </data>
+ </layer>
+ <objectgroup id="11" name="prop">
+  <object id="44" name="ladder_big_rdown" x="6461" y="17"/>
+  <object id="45" name="ladder_big_rup" x="7101" y="619"/>
+  <object id="47" name="story_2-3-4" x="8419" y="139"/>
+ </objectgroup>
+ <objectgroup id="16" name="monster">
+  <object id="18" name="mushroom_blue" x="1862" y="540"/>
+  <object id="19" name="duck_blue_walk" x="2499" y="539"/>
+  <object id="20" name="duck_blue_walk" x="2579" y="541"/>
+  <object id="21" name="mushroom_blue" x="3180" y="540"/>
+  <object id="22" name="duck_blue_walk" x="3099" y="543"/>
+  <object id="23" name="mushroom_blue" x="3540" y="218"/>
+  <object id="24" name="mushroom_blue" x="3698" y="379"/>
+  <object id="25" name="mushroom_blue" x="3738" y="380"/>
+  <object id="26" name="mushroom_blue" x="4699" y="540"/>
+  <object id="27" name="mushroom_blue" x="4659" y="542"/>
+  <object id="28" name="mushroom_blue" x="4499" y="541"/>
+  <object id="29" name="mushroom_blue" x="4458" y="541"/>
+  <object id="30" name="mushroom_blue" x="6258" y="380"/>
+  <object id="31" name="mushroom_blue" x="6299" y="378"/>
+  <object id="32" name="duck_red_walk_1" x="6938" y="538"/>
+  <object id="40" name="flower_blue" x="4743" y="501"/>
+  <object id="42" name="flower_blue" x="5222" y="540"/>
+  <object id="43" name="flower_blue" x="5425" y="543"/>
+  <object id="48" name="flower_blue" x="7979" y="500"/>
+  <object id="49" name="flower_blue" x="8141" y="501"/>
+  <object id="50" name="flower_blue" x="8301" y="500"/>
+  <object id="54" name="mushroom_blue" x="1298" y="538"/>
+  <object id="55" name="mushroom_blue" x="1259" y="539"/>
+ </objectgroup>
+ <objectgroup id="13" name="hide">
+  <object id="6" name="mushroom_blue" x="1060" y="422"/>
+  <object id="7" name="coin" x="1818" y="380"/>
+  <object id="8" name="star" x="2499" y="337"/>
+  <object id="9" name="mushroom_blue" x="3419" y="382"/>
+  <object id="10" name="coin" x="3579" y="381"/>
+  <object id="11" name="mushroom_life" x="4219" y="138"/>
+  <object id="12" name="mushroom_blue" x="6897" y="378"/>
+  <object id="13" name="coin" x="9015" y="419"/>
+ </objectgroup>
+ <objectgroup id="14" name="position">
+  <object id="1" name="start" x="98" y="542"/>
+  <object id="2" name="end" x="10342" y="538"/>
+  <object id="3" name="pipeStart_air_0_4" x="418" y="542"/>
+  <object id="4" name="pipeEnd_0" x="777" y="180"/>
+  <object id="5" name="mapFixed" x="621" y="20"/>
+  <object id="15" name="pipeStart_land_1_4" x="7539" y="419"/>
+  <object id="16" name="pipeEnd_1" x="9301" y="540"/>
+  <object id="17" name="mapFixed" x="10660" y="20"/>
+  <object id="33" name="pipeStart_air_2_2" x="4740" y="457"/>
+  <object id="35" name="pipeEnd_2" x="8581" y="180"/>
+  <object id="37" name="mapFixed" x="9140" y="22"/>
+  <object id="38" name="pipeStart_land_3_2" x="9060" y="538"/>
+  <object id="39" name="pipeEnd_3" x="5423" y="543"/>
+  <object id="46" name="mapFixed" x="8499" y="22"/>
+  <object id="51" name="round_4" x="7980" y="460"/>
+  <object id="52" name="round_3" x="8143" y="459"/>
+  <object id="53" name="round_2" x="8302" y="460"/>
+ </objectgroup>
+</map>

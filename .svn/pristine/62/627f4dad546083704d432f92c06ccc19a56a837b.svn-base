@@ -1,0 +1,101 @@
+"use strict";
+cc._RF.push(module, '555e9tCEg1OyZQZrA4ag5pZ', 'FSM');
+// script/state/FSM.js
+
+"use strict";
+
+/*
+ * @Description: FSM(finite state machine)有限状态机，管理各个状态的切换
+ * @Author: your name
+ * @LastEditors: Please set LastEditors
+ * @Date: 2019-03-02 10:18:38
+ * @LastEditTime: 2019-03-16 15:49:49
+ */
+
+var FSM = cc.Class({
+    _stateList: null, //状态列表
+    currState: null, //当前状态
+    _stateStack: null, //状态栈
+    subState: null, //子状态，不会影响currState
+    ctor: function ctor() {
+        this._stateList = {};
+        this._stateStack = [];
+    },
+
+    //设置默认转态
+    setDefaultState: function setDefaultState(name) {
+        this.currState = this.getState(name);
+        if (this.currState) {
+            this.currState.onEnter();
+        }
+    },
+    getState: function getState(name) {
+        return this._stateList[name] || null;
+    },
+    handleInput: function handleInput(input) {
+        if (this.currState) this.currState.handleInput(input);
+        if (this.subState) this.subState.handleInput(input);
+    },
+    update: function update(dt) {
+        if (this.currState) this.currState.update(dt);
+        if (this.subState) this.subState.update(dt);
+    },
+
+    /**
+     * 添加状态
+     */
+    addState: function addState(state) {
+        this._stateList[state.name] = state;
+        state.setFsm(this);
+    },
+
+    //切换状态
+    switchState: function switchState(name) {
+        var args = [].slice.call(arguments, 1);
+        this.currState.onExit();
+        this.currState = this.getState(name);
+        this.currState.onEnter.apply(this.currState, args);
+    },
+
+    //切换上一个状态
+    switchPreState: function switchPreState() {
+        this.currState.onExit();
+        this.currState = this._stateStack.pop();
+        this.currState.resume();
+    },
+
+    //切换状态并保存上一个状态
+    switchStateWithStack: function switchStateWithStack(name) {
+        this.currState.pause();
+        this._stateStack.push(this.currState);
+        this.currState = this.getState(name);
+        this.currState.onEnter();
+    },
+
+    //切换子状态
+    switchSubState: function switchSubState(name) {
+        if (this.subState) {
+            this.subState.onExit();
+        }
+        this.subState = this.getState(name);
+        this.subState.onEnter();
+    },
+    clearSubState: function clearSubState() {
+        if (this.subState) {
+            this.subState.onExit();
+        }
+        this.subState = null;
+    },
+
+    //暂停子状态
+    pauseSubState: function pauseSubState() {
+        if (this.subState) this.subState.pause();
+    },
+    resumeSubState: function resumeSubState() {
+        if (this.subState) this.subState.resume();
+    }
+});
+
+module.exports = FSM;
+
+cc._RF.pop();

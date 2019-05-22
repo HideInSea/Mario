@@ -1,0 +1,170 @@
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/script/eventMgr.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+cc._RF.push(module, '7607a1EkZhDvZZNt4lrmp5h', 'eventMgr', __filename);
+// script/eventMgr.js
+
+"use strict";
+
+//事件管理EM(eventMgr)
+
+window.EM = {
+    _eventList: {},
+    _keyList: {},
+    //事件类型
+    type: {},
+    on: function on(type, callback, target, key) {
+        if (key) {
+            this._keyList[type] = this._keyList[type] || [];
+            if (this.exitKey(this._keyList[type], key) != -1) {
+                cc.error(key + ":is already exit!");
+                return;
+            }
+            this._keyList[type].push({ key: key, callback: callback, target: target || null });
+        } else {
+            this._eventList[type] = this._eventList[type] || [];
+            this._eventList[type].push({ callback: callback, target: target || null });
+        }
+    },
+    off: function off(type, key) {
+        if (key) {
+            var list = this._keyList[type];
+            var index = this.exitKey(list, key);
+            if (index == -1) {
+                cc.error(key + ":is not exit!");
+                return;
+            }
+            list.splice(index, 1);
+        } else {
+            delete this._eventList[type];
+        }
+    },
+    emit: function emit(type) {
+        var args = [].slice.call(arguments, 1);
+        var eList = this._eventList[type];
+        var kList = this._keyList[type];
+        if (!kList && !eList) {
+            cc.error(type + ":is not exit!");return;
+        }
+        if (kList) {
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = kList[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var value = _step.value;
+
+                    value.callback.apply(value.target, args);
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
+                }
+            }
+        }
+        if (eList) {
+            var _iteratorNormalCompletion2 = true;
+            var _didIteratorError2 = false;
+            var _iteratorError2 = undefined;
+
+            try {
+                for (var _iterator2 = eList[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                    var _value = _step2.value;
+
+                    _value.callback.apply(_value.target, args);
+                }
+            } catch (err) {
+                _didIteratorError2 = true;
+                _iteratorError2 = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion2 && _iterator2.return) {
+                        _iterator2.return();
+                    }
+                } finally {
+                    if (_didIteratorError2) {
+                        throw _iteratorError2;
+                    }
+                }
+            }
+        }
+    },
+    clear: function clear() {
+        this._keyList = {};
+        this._eventLis = {};
+    },
+
+    //arr是否存在key
+    exitKey: function exitKey(arr, key) {
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].key === key) {
+                return i;
+            }
+        }
+        return -1;
+    }
+};
+
+EM.type.PAUSE_ACTOR = "pause_actor";
+EM.type.RESUME_ACTOR = "resume_actor";
+
+EM.type.UPDATE_SCORE = "update_score";
+EM.type.UPDATE_COIN = "update_coin";
+EM.type.UPDATE_TIME = "update_time";
+
+EM.type.ADD_SCORE = "add_score";
+EM.type.ADD_COIN = "add_coin";
+EM.type.ADD_LIFE = "add_life";
+EM.type.ADD_TIME = "add_time";
+EM.type.CHANGE_STATE = "change_state";
+
+//propMgr注册事件
+EM.type.CREATE_MUSHROOM = "create_mushroom"; //创建道具
+EM.type.CREATE_MONSTER = "create_monster"; //创建怪物
+
+//effectMgr注册事件
+EM.type.PIECES_EFFECT = "pieces_effect";
+EM.type.COIN_EFFECT = "coin_effect";
+EM.type.SCORE_EFFECT = "score_effect";
+EM.type.LIFE_EFFECT = "life_effect";
+
+//bulletMgr
+EM.type.CREATE_P_BULLET = "create_p_bullet";
+
+EM.type.COLLSI_FLAG = "collsi_flag"; //玩家碰到旗杆
+EM.type.FLAG_TOUCH_LAND = "flag_touch_land"; //旗帜碰到地面
+EM.type.PLAYER_TO_END = "player_to_end"; //玩家走到终点
+EM.type.RISE_WRITE_FLAG = "rise_write_flag"; //升起城堡白旗
+EM.type.GAME_OVER = "game_over"; //游戏结束
+EM.type.GAME_PASS = "game_pass"; //过关
+EM.type.STOP_READTIME = "stop_readtime"; //停止读秒
+EM.type.PAUSE_READTIME = "stop_readtime"; //停止读秒
+EM.type.RESUME_READTIME = "resume_readtime"; //恢复读秒
+
+EM.type.SHOW_SELECT_ZOOM = "show_select_zoom"; //显示隐藏关卡
+EM.type.REMOVE_ALL_MON = "remove_all_mon"; //移除所有怪物
+
+EM.type.SHOW_THANK = "show_thank";
+EM.type.SHOW_TIP = "show_tip";
+
+cc._RF.pop();
+        }
+        if (CC_EDITOR) {
+            __define(__module.exports, __require, __module);
+        }
+        else {
+            cc.registerModuleFunc(__filename, function () {
+                __define(__module.exports, __require, __module);
+            });
+        }
+        })();
+        //# sourceMappingURL=eventMgr.js.map
+        

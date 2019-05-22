@@ -1,0 +1,120 @@
+2019-04-05T13:36:53.715Z - normal: Load ~/.CocosCreator/settings.json
+2019-04-05T13:36:54.866Z - normal: Initializing Asset Database
+2019-04-05T13:36:54.870Z - normal: checking language setting...
+2019-04-05T13:36:54.871Z - normal: Language: zh
+2019-04-05T13:36:55.715Z - success: preview server running at http://localhost:7456
+2019-04-05T13:36:55.718Z - success: protocol editor-framework registered
+2019-04-05T13:36:55.718Z - success: protocol app registered
+2019-04-05T13:36:55.718Z - success: protocol theme registered
+2019-04-05T13:36:55.718Z - success: protocol packages registered
+2019-04-05T13:36:55.718Z - success: protocol uuid registerred
+2019-04-05T13:36:55.718Z - success: protocol db registerred
+2019-04-05T13:36:55.718Z - success: protocol thumbnail registerred
+2019-04-05T13:36:55.718Z - success: protocol unpack registerred
+2019-04-05T13:36:55.718Z - success: protocol disable-commonjs registerred
+2019-04-05T13:36:55.927Z - normal: connected!
+2019-04-05T13:36:55.928Z - normal: Check project D:\THB\newMario
+2019-04-05T13:36:55.929Z - normal: Initializing project D:\THB\newMario
+2019-04-05T13:36:56.649Z - normal: Initializing Cocos2d
+2019-04-05T13:36:58.144Z - normal: Initializing engine extends
+2019-04-05T13:36:58.186Z - success: asset-db-debugger loaded
+2019-04-05T13:36:58.202Z - success: code-editor loaded
+2019-04-05T13:36:58.207Z - success: color-picker loaded
+2019-04-05T13:36:58.305Z - success: fb-audience-network loaded
+2019-04-05T13:36:58.375Z - success: fb-live-stream loaded
+2019-04-05T13:36:58.389Z - success: google-play-instant loaded
+2019-04-05T13:36:58.407Z - success: huawei-runtime loaded
+2019-04-05T13:36:58.411Z - success: jsb-adapter loaded
+2019-04-05T13:36:58.424Z - success: oppo-runtime loaded
+2019-04-05T13:36:58.433Z - success: package-manager loaded
+2019-04-05T13:36:58.597Z - success: qqplay-adapter loaded
+2019-04-05T13:36:58.604Z - success: runtime-dev-tools loaded
+2019-04-05T13:36:58.615Z - success: sdkbox loaded
+2019-04-05T13:36:58.625Z - success: tester loaded
+2019-04-05T13:36:58.632Z - success: ui-grid loaded
+2019-04-05T13:36:58.639Z - success: ui-kit-preview-extra loaded
+2019-04-05T13:36:58.646Z - success: ui-kit-preview loaded
+2019-04-05T13:36:58.647Z - success: ui-kit loaded
+2019-04-05T13:36:58.657Z - success: ui-tree loaded
+2019-04-05T13:36:58.669Z - success: vivo-runtime loaded
+2019-04-05T13:36:58.672Z - success: weapp-adapter loaded
+2019-04-05T13:36:58.723Z - success: assets loaded
+2019-04-05T13:36:58.725Z - success: builder loaded
+2019-04-05T13:36:58.975Z - success: cocos-services loaded
+2019-04-05T13:36:58.978Z - success: console loaded
+2019-04-05T13:36:59.007Z - success: fb-instant-games loaded
+2019-04-05T13:36:59.009Z - success: google-instant-games loaded
+2019-04-05T13:36:59.013Z - success: hierarchy loaded
+2019-04-05T13:36:59.016Z - success: inspector loaded
+2019-04-05T13:36:59.017Z - success: keystore loaded
+2019-04-05T13:36:59.021Z - success: node-library loaded
+2019-04-05T13:36:59.022Z - success: package-asset loaded
+2019-04-05T13:36:59.023Z - success: preferences loaded
+2019-04-05T13:36:59.024Z - success: project-exporter loaded
+2019-04-05T13:36:59.025Z - success: project-importer loaded
+2019-04-05T13:36:59.027Z - success: project-settings loaded
+2019-04-05T13:36:59.030Z - success: scene loaded
+2019-04-05T13:36:59.031Z - success: simulator-debugger loaded
+2019-04-05T13:36:59.032Z - success: sprite-editor loaded
+2019-04-05T13:36:59.035Z - success: store loaded
+2019-04-05T13:36:59.037Z - success: timeline loaded
+2019-04-05T13:37:05.161Z - normal: Loading packages
+2019-04-05T13:37:05.167Z - normal: Watching packages
+2019-04-05T13:37:05.693Z - normal: Run Application
+2019-04-05T13:37:05.917Z - info: Cocos Services load base data!
+2019-04-05T13:37:13.177Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T13:37:13.193Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T13:37:13.242Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-04-05T13:37:27.363Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T13:37:27.369Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T13:37:27.391Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-04-05T13:40:41.268Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T13:40:41.269Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T13:40:41.325Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-04-05T14:09:55.839Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:09:56.037Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:09:56.625Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-04-05T14:13:55.649Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:13:55.658Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:13:55.695Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-04-05T14:23:03.761Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:23:03.791Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:23:03.902Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-04-05T14:34:15.422Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:34:15.425Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:34:15.425Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-04-05T14:38:49.146Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:38:49.147Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:38:49.231Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-04-05T14:49:36.235Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:49:36.342Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:49:36.342Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-04-05T14:53:13.648Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:53:13.751Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:53:13.754Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-04-05T14:55:16.695Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:55:16.698Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-05T14:55:16.698Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-04-05T15:12:21.777Z - info: shutdown preview server

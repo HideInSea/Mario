@@ -1,0 +1,92 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "player_2.plist",
+  "_objFlags": 0,
+  "_native": "",
+  "_spriteFrames": {
+    "blue_1": {
+      "__uuid__": "1862beab-fc38-4109-89d1-de5af3496dc6"
+    },
+    "blue_10": {
+      "__uuid__": "f5bb3325-fef2-4ceb-af11-be5b579a7bec"
+    },
+    "blue_11": {
+      "__uuid__": "d7aa55a6-cec7-46bc-a444-baf2cdef661d"
+    },
+    "blue_12": {
+      "__uuid__": "b1950a98-e6bb-4f1c-910c-060bf4ba3780"
+    },
+    "blue_13": {
+      "__uuid__": "fdd9022a-95af-48a5-9c16-34fc44b557e7"
+    },
+    "blue_14": {
+      "__uuid__": "55068086-c415-4e85-afdc-8601ff22bb40"
+    },
+    "blue_15": {
+      "__uuid__": "5a25554d-dc22-4b94-8152-5703a098d038"
+    },
+    "blue_16": {
+      "__uuid__": "1f313edc-d474-4e60-8718-40136607cb38"
+    },
+    "blue_17": {
+      "__uuid__": "d5fbe1d5-71b5-48c0-b632-990cf6fb66d1"
+    },
+    "blue_18": {
+      "__uuid__": "2160bd37-4401-4be8-bf46-bf8d30c90789"
+    },
+    "blue_2": {
+      "__uuid__": "d60bfc85-cdf9-46c4-a03a-f2173e0eb241"
+    },
+    "blue_20": {
+      "__uuid__": "dfb6692d-dcee-4a1d-b014-3a08a3be98be"
+    },
+    "blue_21": {
+      "__uuid__": "fe25945c-e03f-4b60-9aa7-85c725f6bae1"
+    },
+    "blue_22": {
+      "__uuid__": "48756833-bfed-4191-86b1-669273da05ea"
+    },
+    "blue_23": {
+      "__uuid__": "0bf3e15e-b3b7-4fea-84b2-965e1d283d2e"
+    },
+    "blue_24": {
+      "__uuid__": "23b5275a-92b1-4d03-b149-ae05b94f67b8"
+    },
+    "blue_25": {
+      "__uuid__": "4eaccd2d-a561-4f3c-9011-2c0a8354177e"
+    },
+    "blue_26": {
+      "__uuid__": "e96d841a-4604-4664-bc3f-486d229e20d6"
+    },
+    "blue_27": {
+      "__uuid__": "4d66a9c1-34ef-417e-9b04-ed58f0493daf"
+    },
+    "blue_28": {
+      "__uuid__": "c66ead70-4314-4342-8050-2ab42109a8cc"
+    },
+    "blue_29": {
+      "__uuid__": "a1c61b84-c3d7-444f-aa70-3eb7eba191b5"
+    },
+    "blue_3": {
+      "__uuid__": "6ec82931-54f5-4213-b36c-a4224d73d8cc"
+    },
+    "blue_4": {
+      "__uuid__": "8e25474d-271f-4d69-9cec-603da5017364"
+    },
+    "blue_5": {
+      "__uuid__": "afbf0821-b1c0-4cbc-9fde-8b9c0e9174f4"
+    },
+    "blue_6": {
+      "__uuid__": "4fc51b37-c6ea-4498-9fd9-8e511fbbbc21"
+    },
+    "blue_7": {
+      "__uuid__": "43e8e187-5aef-41ec-a7ec-a79e53614e15"
+    },
+    "blue_8": {
+      "__uuid__": "7b030550-2a5b-4914-a990-44ef05610b7e"
+    },
+    "blue_9": {
+      "__uuid__": "037a4e28-c559-4d5e-b506-0efeb976f0e0"
+    }
+  }
+}

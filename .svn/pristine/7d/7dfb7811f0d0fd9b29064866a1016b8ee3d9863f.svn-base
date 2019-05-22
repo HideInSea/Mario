@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="200" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="1">
+ <tileset firstgid="1" source="map.tsx"/>
+ <layer id="1" name="background" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztw0ENAAAMA6EzWf9WZmMPSFg1VVVVVVVVVVVVVVVV3z4UPya9
+  </data>
+ </layer>
+ <layer id="2" name="writeflag" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzjEBAAAIA6AZxv4V7eDjISQgAQAAAAAAAADgg67rAQAAALA1jC0AJw==
+  </data>
+ </layer>
+ <layer id="3" name="scene" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztmFlOwzAQhp07cJeyHIHtCFD6xA5i6VMJqyj0sb1DcjgOwY/USCOrduLY48R0PulXpcaZGU881miUEoS0uMmUus26jqI/ccRgnfYagi7z9Q6/Hz34Vn2Jo8L1m7is595r1/V3Ct9n0HmgGHzzFSsfF/BxCV1B1y39DfDeJrQFbUM7jnZi7dX1m/SpvrliaZr7CdY8QXmkfNTVY+h8/Bj+f4aPF+gVemvpbxfv7UH70AF06GinT+eQC847wOdu98k9555i1+MGo58j2D6GhtAJNErkrIfuGWxw3gGxz1LFf7rXOOvjDrbvoQfoERonkrOuzpXQPzjr4xO2p9AX9A3N5LwJicFVHyPSW+k9Vip9liBw1ceY9Fa0x0qpzxLWkwE5n6b68J3NzkhvRXss6bOElDDVh+9sdprZtYrcYs/2zIdQduvscMXPbZvTR85kNySm+vCdzeq9lW2OtVj+zi32qmcLsr4t9H2bTxdbdXZCxk/9NvHd1I4NjvzPlX/+uTHVh+9sVu+tbHOscvlbQBNNijyr1paqHZXNktguzMsb0SR26scnfqXC70GPhTN+PfZC+eff5EOPP7SPVbNZTp+CIAiC8McvgUx81Q==
+  </data>
+ </layer>
+ <layer id="4" name="land" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztlzsOwyAQRGlTJ23qhDJHyf0vExdJEWsXho9BMu9J05llWWaEHAIAAAAAAAAAAAAA1BC/AoB/YiAfsB6K32MgH7Aeit/32SAfc2DuY1H8bmVjlXu6DK7Ta78f1023yXV69VCL5VVlzorfvWycIR/KjO4daih1Sr9T939sehbWbKlj9eOtTeXGO1dN1iyv5uas+D2VjTPkQ/Fizn+qn1/id6XvR27/0fmw+vHWpmp656o5T+n7ofg9lw31f/4I3igp5tQ2u9k9oOPvmHuun93sHlr1AcdcjL4=
+  </data>
+ </layer>
+ <layer id="5" name="wall" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt170KgzAUBtDkcVsXuxaqi31vL0JRHHTwpxrOgW9PcvkSkhIAXFudU3rlf68CrqmLbnz1A1Y9oifPSKUvRTLWbT5xgE2kdZAw3Ce/lCgv5G5K2AMA9+b9gZE+nOM9y56mM9xrnv4fAAAAAMfoAUrbBrk=
+  </data>
+ </layer>
+ <layer id="6" name="endflag" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzrERAAAEADH2H5qzgU4hKb7+CAAAAGCjJnl9AQAAAAAAAADARw3v+QEB
+  </data>
+ </layer>
+ <objectgroup id="8" name="prop"/>
+ <objectgroup id="9" name="hide"/>
+ <objectgroup id="10" name="monster"/>
+ <objectgroup id="11" name="position"/>
+</map>

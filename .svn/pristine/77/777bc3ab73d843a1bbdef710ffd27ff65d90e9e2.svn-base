@@ -1,0 +1,23 @@
+{
+  "__type__": "cc.TiledMapAsset",
+  "_name": "5-4",
+  "_objFlags": 0,
+  "_native": "",
+  "tmxXmlStr": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<map version=\"1.2\" tiledversion=\"1.2.1\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"170\" height=\"16\" tilewidth=\"40\" tileheight=\"40\" infinite=\"0\" nextlayerid=\"11\" nextobjectid=\"1\">\r\n <tileset firstgid=\"1\" source=\"map.tsx\"/>\r\n <layer id=\"1\" name=\"background\" width=\"170\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB\r\n  </data>\r\n </layer>\r\n <layer id=\"2\" name=\"writeflag\" width=\"170\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB\r\n  </data>\r\n </layer>\r\n <layer id=\"3\" name=\"scene\" width=\"170\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJzt0sENgCAQRUFswooswv4r8U68bUA/zCSbcGX3tcZo5/H+hj/RKQl0SgKdkkCnJNApCXRKAp2SQKck0CkJdEoCnZJAp9+7irODWZ32O63seLW73sXZwaxO+51WdrzaXVf7zwg6rXsAjdMlMQ==\r\n  </data>\r\n </layer>\r\n <layer id=\"4\" name=\"land\" width=\"170\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztmMENhDAMBGmMduiGnvmeToAM9pLFzEgrkQdObFZOwjQBAADAV1iSclmHk6ryrmJ0PRxUxeg88Gn93IpY+BSfOvvUBaVvZnF8lb/eDvXwZR69gKao+sBvHwPIwp4Fb6DqfBV5Nxr/qXPonXMr+3oM1Z1s1J2hUx+/WpfK2i5/z3vjvdhH4zUpfOqL2qdnvbzap1nwqS+d+mmWrj69IvU5tOJ/qyr3yJwRnzp+V6W65fNkXfBpXBsDjEYG\r\n  </data>\r\n </layer>\r\n <layer id=\"5\" name=\"wall\" width=\"170\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJzt1rENACEQA0G6oEZaoAhomfSjJ0LHiRnJ+YYuBQAA3tCjAwAgWP0ZAHBW+yyDGR0AGyM6AACSy/ZPAbjTAsHpBK8=\r\n  </data>\r\n </layer>\r\n <layer id=\"6\" name=\"endflag\" width=\"170\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB\r\n  </data>\r\n </layer>\r\n <objectgroup id=\"7\" name=\"prop\"/>\r\n <objectgroup id=\"8\" name=\"hide\"/>\r\n <objectgroup id=\"9\" name=\"monster\"/>\r\n <objectgroup id=\"10\" name=\"position\"/>\r\n</map>\r\n",
+  "textures": [
+    {
+      "__uuid__": "81eafc24-8d63-49b3-bd6b-3ba6786befd2"
+    }
+  ],
+  "textureNames": [
+    "map.png"
+  ],
+  "tsxFiles": [
+    {
+      "__uuid__": "c744d921-a195-4ec1-b087-16fc3d0e70df"
+    }
+  ],
+  "tsxFileNames": [
+    "map.tsx"
+  ]
+}

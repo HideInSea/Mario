@@ -1,0 +1,276 @@
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/script/prop/ladder.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+cc._RF.push(module, '82bb9MI5ttLyYpJUoQZSWyd', 'ladder', __filename);
+// script/prop/ladder.js
+
+"use strict";
+
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+var Actor = require("actor");
+cc.Class({
+    extends: Actor,
+
+    properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
+        big: cc.Prefab,
+        mid: cc.Prefab,
+        small: cc.Prefab,
+        white: cc.Prefab
+    },
+
+    // LIFE-CYCLE CALLBACKS:
+
+    // onLoad () {},
+    init: function init() {
+        this.currSkin = null;
+        this.actorType = arguments[0];
+        this.moveType = arguments[2];
+        this.currLadder = null;
+        this.backPos = null;
+        this.skinType = arguments[1];
+        this.isOnLadder = false;
+
+        switch (this.skinType) {
+            case ENUM.LADDER_TYPE.SMALL:
+                this.currSkin = this.small;
+                break;
+            case ENUM.LADDER_TYPE.MID:
+                this.currSkin = this.mid;
+                break;
+            case ENUM.LADDER_TYPE.BIG:
+                this.currSkin = this.big;
+                break;
+            case ENUM.LADDER_TYPE.WHITE:
+                this.currSkin = this.white;
+                break;
+        }
+
+        this.generateLadder();
+    },
+    generateLadder: function generateLadder() {
+        var ladder = null;
+        switch (this.moveType) {
+            case ENUM.LADDER_MOVE_TYPE.MV:
+                ladder = cc.instantiate(this.currSkin);
+                this.node.addChild(ladder);
+                var moveUp = cc.moveBy(4, cc.v2(0, 320)).easing(cc.easeCubicActionInOut());
+                var moveDown = cc.moveBy(4, cc.v2(0, -320)).easing(cc.easeCubicActionInOut());
+                this.node.runAction(cc.repeatForever(cc.sequence(moveUp, moveDown)));
+                break;
+            case ENUM.LADDER_MOVE_TYPE.MH:
+                ladder = cc.instantiate(this.currSkin);
+                this.node.addChild(ladder);
+                var moveRight = cc.moveBy(3, cc.v2(240, 0)).easing(cc.easeCubicActionInOut());
+                var moveLeft = cc.moveBy(3, cc.v2(-240, 0)).easing(cc.easeCubicActionInOut());
+                this.node.runAction(cc.repeatForever(cc.sequence(moveRight, moveLeft)));
+                break;
+            case ENUM.LADDER_MOVE_TYPE.RUP:
+                this.rUp();
+                this.schedule(this.rUp, 2);
+                break;
+            case ENUM.LADDER_MOVE_TYPE.RDOWN:
+                this.rDown();
+                this.schedule(this.rDown, 2);
+                break;
+            case ENUM.LADDER_MOVE_TYPE.STOP:
+                ladder = cc.instantiate(this.currSkin);
+                this.node.addChild(ladder);
+                break;
+            default:
+                ladder = cc.instantiate(this.currSkin);
+                this.node.addChild(ladder);
+                break;
+        }
+    },
+    rUp: function rUp() {
+        var ladder = cc.instantiate(this.currSkin);
+        var moveUp = cc.moveBy(1, cc.v2(0, 120));
+        this.node.addChild(ladder);
+        ladder.setPosition(cc.v2(0, -40));
+        ladder.runAction(cc.repeatForever(moveUp));
+    },
+    rDown: function rDown() {
+        var ladder = cc.instantiate(this.currSkin);
+        var moveDown = cc.moveBy(1, cc.v2(0, -120));
+        this.node.addChild(ladder);
+        ladder.setPosition(cc.v2(0, 40));
+        ladder.runAction(cc.repeatForever(moveDown));
+    },
+    interactive: function interactive(actor) {
+        if (gm.playerScript.isOnLadder) return;
+        var sizeOne = actor.getSize();
+        //let oldLocalPos=cc.v2(actor.oldPos.x-sizeOne.width/2,actor.oldPos.y);
+        var playerBox = cc.rect(sizeOne.x - sizeOne.width / 2, sizeOne.y, sizeOne.width, sizeOne.height);
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+            for (var _iterator = this.node.children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                var value = _step.value;
+
+                var box = value.getBoundingBox();
+                var ladderBox = cc.rect(box.x + this.node.x, box.y + this.node.y, box.width, box.height);
+                if (cc.Intersection.rectRect(playerBox, ladderBox)) {
+
+                    //向上碰撞
+                    var headPos = cc.v2(playerBox.x + playerBox.width / 2, playerBox.y + playerBox.height);
+                    if (ladderBox.contains(headPos) && actor.isUpOrDown()) {
+                        actor.vCurrSpeed = -50;
+                        actor.node.y = ladderBox.y - sizeOne.height - 1;
+                        return;
+                    }
+
+                    //向下碰撞
+                    if (playerBox.y < ladderBox.y + ladderBox.height && playerBox.y > ladderBox.y && (playerBox.x > ladderBox.x && playerBox.x < ladderBox.x + ladderBox.width || playerBox.x + sizeOne.width > ladderBox.x && playerBox.x + sizeOne.width < ladderBox.x + ladderBox.width) && !actor.isUpOrDown()) {
+
+                        actor.node.y = ladderBox.y + ladderBox.height + 6;
+                        actor.isOnLand = true;
+                        actor.isOnLadder = true;
+                        this.isOnLadder = true;
+                        this.currLadder = value;
+                        this.backPos = this.node.position;
+
+                        //碰到静止状态的云梯
+                        if (this.moveType === ENUM.LADDER_MOVE_TYPE.STOP) {
+                            this.vCurrAcceleration = -1000;
+                        }
+
+                        //碰到天空云梯
+                        if (this.skinType === ENUM.LADDER_TYPE.WHITE) {
+                            this.hCurrSpeed = 150;
+                        }
+
+                        return;
+                    }
+
+                    // //左//右
+                    if (actor.node.x > this.node.x) {
+                        actor.node.x = ladderBox.x + ladderBox.width + sizeOne.width / 2;
+                        actor.hCurrSpeed = 0;
+                    } else {
+                        actor.node.x = ladderBox.x - sizeOne.width / 2;
+                        actor.hCurrSpeed = 0;
+                    }
+                    return;
+                }
+            }
+        } catch (err) {
+            _didIteratorError = true;
+            _iteratorError = err;
+        } finally {
+            try {
+                if (!_iteratorNormalCompletion && _iterator.return) {
+                    _iterator.return();
+                }
+            } finally {
+                if (_didIteratorError) {
+                    throw _iteratorError;
+                }
+            }
+        }
+    },
+    collsiWithPlayerBullet: function collsiWithPlayerBullet(bullet) {
+        if (this.isDie || bullet.isDie) return;
+        var sizeOne = bullet.getSize();
+    },
+    onCollsiWithPBullet: function onCollsiWithPBullet(bullet) {},
+    isOutScreen: function isOutScreen() {
+        var pos = this.node.convertToWorldSpace(cc.v2(0, 0));
+        if (pos.x > global.winSize.width + 40 * 11 || pos.x < -40 * 10 || pos.y < -120 || pos.y > global.winSize.height + 80) {
+            return true;
+        }
+        return false;
+    },
+    update: function update(dt) {
+
+        this.move(dt);
+
+        if (this.isOutScreen()) {
+            this.node.removeFromParent();
+        }
+
+        //移除屏幕之外的ladder
+        var child = this.node.children;
+        for (var i = 0; i < child.length; i++) {
+            if (child[i].y < -40 * 16 || child[i].y > global.winSize.height) {
+                child[i].removeFromParent();
+                i--;
+            }
+        }
+
+        //云梯带着人物移动
+        if (this.isOnLadder && gm.playerScript.getPlayerState() != PLAYER_STATE.JUMP) {
+            //垂直方向的移动
+            var box = this.currLadder.getBoundingBox();
+            var ladderBox = cc.rect(box.x + this.node.x, box.y + this.node.y, box.width, box.height);
+            gm.currPlayer.y = ladderBox.y + box.height;
+
+            //水平方向的移动
+            if (this.moveType === ENUM.LADDER_MOVE_TYPE.MH && this.backPos) {
+                gm.currPlayer.x += this.node.x - this.backPos.x;
+                this.backPos = this.node.position;
+            }
+        }
+
+        //检测人物是否在云梯上
+        if (this.isOnLadder) {
+            if (gm.playerScript.getPlayerState() === PLAYER_STATE.JUMP) {
+                gm.playerScript.isOnLadder = false;
+                this.isOnLadder = false;
+                this.vCurrAcceleration = 0;
+                this.vCurrSpeed = 0;
+            } else {
+                var sizeOne = gm.playerScript.getSize();
+                var playerBox = cc.rect(sizeOne.x - sizeOne.width / 2, sizeOne.y, sizeOne.width, sizeOne.height);
+                var _box = this.currLadder.getBoundingBox();
+                var _ladderBox = cc.rect(_box.x + this.node.x, _box.y + this.node.y, _box.width, _box.height);
+                if (playerBox.x < _ladderBox.x - playerBox.width || playerBox.x > _ladderBox.x + _ladderBox.width) {
+                    gm.playerScript.isOnLadder = false;
+                    this.isOnLadder = false;
+                    gm.playerScript.fsm.switchState("fall");
+                    this.vCurrAcceleration = 0;
+                    this.vCurrSpeed = 0;
+                }
+            }
+        }
+    },
+    getSize: function getSize() {
+        return cc.rect(this.node.x, this.node.y, 0, 0);
+    }
+});
+
+cc._RF.pop();
+        }
+        if (CC_EDITOR) {
+            __define(__module.exports, __require, __module);
+        }
+        else {
+            cc.registerModuleFunc(__filename, function () {
+                __define(__module.exports, __require, __module);
+            });
+        }
+        })();
+        //# sourceMappingURL=ladder.js.map
+        

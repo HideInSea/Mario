@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "big_walk",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.26666666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "2",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "55068086-c415-4e85-afdc-8601ff22bb40"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "1f313edc-d474-4e60-8718-40136607cb38"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "5a25554d-dc22-4b94-8152-5703a098d038"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "55068086-c415-4e85-afdc-8601ff22bb40"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

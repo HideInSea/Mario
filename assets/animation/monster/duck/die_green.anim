@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "die_green",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.016666666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "722908f5-73a5-41fb-a47b-35fc3e1c8dbe"
+            }
+          }
+        ]
+      }
+    },
+    "props": {
+      "angle": []
+    }
+  },
+  "events": []
+}

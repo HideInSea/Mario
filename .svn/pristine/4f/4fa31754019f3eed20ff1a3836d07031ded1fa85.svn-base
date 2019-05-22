@@ -1,0 +1,92 @@
+{
+  "version": "1.1.1",
+  "windows": {
+    "main": {
+      "main": true,
+      "url": "app://editor/index.html",
+      "windowType": "dockable",
+      "x": -8,
+      "y": -8,
+      "width": 1936,
+      "height": 1056,
+      "layout": {
+        "children": [
+          {
+            "active": 0,
+            "children": [
+              "hierarchy"
+            ],
+            "height": 935.21875,
+            "type": "panel",
+            "width": 255
+          },
+          {
+            "active": 0,
+            "children": [
+              "assets"
+            ],
+            "height": 935.21875,
+            "type": "panel",
+            "width": 251
+          },
+          {
+            "active": 0,
+            "children": [
+              "inspector",
+              "cocos-services",
+              "node-library"
+            ],
+            "height": 935.21875,
+            "type": "panel",
+            "width": 384
+          },
+          {
+            "children": [
+              {
+                "active": 0,
+                "children": [
+                  "scene"
+                ],
+                "height": 467.109375,
+                "type": "panel",
+                "width": 1023.984375
+              },
+              {
+                "active": 1,
+                "children": [
+                  "console",
+                  "timeline"
+                ],
+                "height": 466.109375,
+                "type": "panel",
+                "width": 1023.984375
+              }
+            ],
+            "height": 935.21875,
+            "type": "dock-v",
+            "width": 1023.984375
+          }
+        ],
+        "type": "dock-h"
+      },
+      "panels": [
+        "hierarchy",
+        "assets",
+        "inspector",
+        "cocos-services",
+        "node-library",
+        "console",
+        "timeline",
+        "scene"
+      ]
+    }
+  },
+  "panels": {
+    "project-settings": {
+      "x": 509,
+      "y": 133,
+      "width": 601,
+      "height": 566
+    }
+  }
+}

@@ -1,0 +1,118 @@
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/script/uiMgr.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+cc._RF.push(module, '60c69S8bmpHTIZ7E3JeUzLl', 'uiMgr', __filename);
+// script/uiMgr.js
+
+"use strict";
+
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
+        score: cc.Label,
+        coin: cc.Label,
+        level: cc.Label,
+        time: cc.Label,
+        round2_3_4: cc.Node,
+        round6_7_8: cc.Node,
+        round5: cc.Node,
+        thank: cc.Node,
+        tip: cc.Node
+    },
+
+    // LIFE-CYCLE CALLBACKS:
+
+    onLoad: function onLoad() {
+        EM.on(EM.type.UPDATE_SCORE, this.updateScore, this);
+        EM.on(EM.type.UPDATE_COIN, this.updateCoin, this);
+        EM.on(EM.type.UPDATE_TIME, this.updateTime, this);
+        EM.on(EM.type.SHOW_SELECT_ZOOM, this.showSelectZoom, this);
+        EM.on(EM.type.SHOW_THANK, function () {
+            this.thank.active = true;
+        }, this);
+        EM.on(EM.type.SHOW_TIP, function () {
+            this.tip.active = true;
+        }, this);
+
+        this.updateLevel(global.getRoundString());
+        this.updateTime(global.getTime());
+        this.updateCoin(global.getCoin());
+        this.updateScore(global.getScore());
+    },
+    showSelectZoom: function showSelectZoom(type) {
+        switch (type) {
+            case ENUM.STORY_TYPE["2_3_4"]:
+                this.round2_3_4.active = true;
+                break;
+            case ENUM.STORY_TYPE["6_7_8"]:
+                this.round6_7_8.active = true;
+                break;
+            case ENUM.STORY_TYPE["5"]:
+                this.round5.active = true;
+                break;
+        }
+    },
+    updateScore: function updateScore(score) {
+        this.score.string = this.preFix(score, 6);
+    },
+    updateCoin: function updateCoin(coin) {
+        this.coin.string = "x " + this.preFix(coin, 2);
+    },
+    updateLevel: function updateLevel(lv) {
+        this.level.string = lv;
+    },
+    updateTime: function updateTime(time) {
+        this.time.string = this.preFix(time, 3);
+    },
+
+    // update (dt) {},
+    onDestroy: function onDestroy() {
+        EM.off(EM.type.UPDATE_SCORE);
+        EM.off(EM.type.UPDATE_COIN);
+        EM.off(EM.type.UPDATE_TIME);
+        EM.off(EM.type.SHOW_SELECT_ZOOM);
+        EM.off(EM.type.SHOW_THANK);
+        EM.off(EM.type.SHOW_TIP);
+    },
+    preFix: function preFix(num, len) {
+        return (Array(len).join("0") + num).slice(-len);
+    }
+});
+
+cc._RF.pop();
+        }
+        if (CC_EDITOR) {
+            __define(__module.exports, __require, __module);
+        }
+        else {
+            cc.registerModuleFunc(__filename, function () {
+                __define(__module.exports, __require, __module);
+            });
+        }
+        })();
+        //# sourceMappingURL=uiMgr.js.map
+        

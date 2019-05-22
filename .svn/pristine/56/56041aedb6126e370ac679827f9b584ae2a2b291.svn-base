@@ -1,0 +1,23 @@
+{
+  "__type__": "cc.TiledMapAsset",
+  "_name": "6-1",
+  "_objFlags": 0,
+  "_native": "",
+  "tmxXmlStr": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<map version=\"1.2\" tiledversion=\"1.2.1\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"200\" height=\"16\" tilewidth=\"40\" tileheight=\"40\" infinite=\"0\" nextlayerid=\"12\" nextobjectid=\"8\">\r\n <tileset firstgid=\"1\" source=\"map.tsx\"/>\r\n <layer id=\"1\" name=\"background\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAB4NjIAAAE=\r\n  </data>\r\n </layer>\r\n <layer id=\"2\" name=\"writeflag\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztzjEBAAAIA6AZxv4VjeDpISQgAQAAAAAAAADgs67rAQAAALAZiJ0AJw==\r\n  </data>\r\n </layer>\r\n <layer id=\"3\" name=\"scene\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztmEdOw0AUhu0FINoBANEOQAfRjkA7QigrOsiUFT0olPPSdnyDTGRZbmOP4zh5n/RtHPv5f2OPMxrLEgShUZzZlnVup79+n2sP8DBDjbRkzS4EY3Jci3w/TFAl93NE9iN+O8YTPA0474Zjt3hXQP9x2RVx+dPQLM88rxxJxvWfuLmU5P0w3ccidZZwGVdwNaCuqW/APTUe8BGfcnwf8vovyCN/lm+CTp8m3r280ZlLYZjuY40667iBm7gVUNdE7kZStrxp0emzXcbENBXGbBt3cBf3ZAwFoY7DfLjAS7zCa5kfglCnxnx4wVd8w3eZH4Lwh3dt5V1jVVwFoZ3xrq28ayzHVRBakSR7tgrv2sq7xqq5CkIrkmTPVuHY0TY7H/iJX/iNP8XG0abs+ctK0j1b/9pKdx+rg3M6saugudTNfXuwF/uwXzNH2fMriu4hC0VlT7pn619bxe1jTXNsBmdxDgdwEIdC6s9zfCFj7xNcP4lTAXWGOTaCoziG4xH38mdXxOU3RVgPOvkVaXrI+gyixl8H3ewm7htWQ/ZsBUEQhDz5BRZUYiM=\r\n  </data>\r\n </layer>\r\n <layer id=\"4\" name=\"obstacle\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztlssNxCAMRE0PaYJytv8WtogoUg4WguWTARzvPMlKDsgebE8UEUIIIYQQQgjp47tbACGGOcJuBYTYxYs/wh2EtBDvqOHFHx655heE3p8B/fFuWufnBf0tWFWP/ngnUWz6Y9YOr7prTN7/xR+lfQqy7//kycwt+2NGzvSuKzzo3R9RbO/RiK6onqWd2TkudJ9XzTBXw6M/0n5a88XFqD593uL90Hpqs0R9D0o1vPgj10dLe6NB6bR2z9b/19ZVWjXTXzVaa47q+oCjJ29NE0ojIg+yZ8hcCA0p+gwyN7I3PTktxWgvcn1B9QCRJ6fPQi6EhhR9Bpkb2ZuenE/iBGKjeyw=\r\n  </data>\r\n </layer>\r\n <layer id=\"5\" name=\"coin\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJzt0sEJADAIBEHbTQup3k8eKUBBYQa2geMiAAAAAAAAAJjifHW4L+pt3bb7cwAAAADUSH/RBF8=\r\n  </data>\r\n </layer>\r\n <layer id=\"11\" name=\"pipe\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJzt08ENADAIAzF2bnegY5ctAMmW7p9PIgAAAAAAAAAAgG1OdbtHwFBZve4RMJR/AMBeH59YAwY=\r\n  </data>\r\n </layer>\r\n <layer id=\"6\" name=\"endflag\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztzrENADAIwDD6/6kcAeoHbFSVPWROBAAAwFxuD8DD6uZsXwAAAAAAAAAA8KMGdZoB7A==\r\n  </data>\r\n </layer>\r\n <objectgroup id=\"7\" name=\"prop\"/>\r\n <objectgroup id=\"8\" name=\"hide\"/>\r\n <objectgroup id=\"9\" name=\"monster\">\r\n  <object id=\"1\" name=\"skyShoot\" x=\"778\" y=\"100\"/>\r\n  <object id=\"7\" name=\"flower_green\" x=\"4104\" y=\"498\"/>\r\n </objectgroup>\r\n <objectgroup id=\"10\" name=\"position\">\r\n  <object id=\"2\" name=\"start\" x=\"139\" y=\"543\"/>\r\n  <object id=\"3\" name=\"end\" x=\"7700\" y=\"542\"/>\r\n  <object id=\"4\" name=\"mapFixed\" x=\"7861\" y=\"22\"/>\r\n  <object id=\"5\" name=\"shootEnd\" x=\"6701\" y=\"99\"/>\r\n </objectgroup>\r\n</map>\r\n",
+  "textures": [
+    {
+      "__uuid__": "81eafc24-8d63-49b3-bd6b-3ba6786befd2"
+    }
+  ],
+  "textureNames": [
+    "map.png"
+  ],
+  "tsxFiles": [
+    {
+      "__uuid__": "c744d921-a195-4ec1-b087-16fc3d0e70df"
+    }
+  ],
+  "tsxFileNames": [
+    "map.tsx"
+  ]
+}

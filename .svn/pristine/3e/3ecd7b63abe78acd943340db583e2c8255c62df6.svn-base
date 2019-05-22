@@ -1,0 +1,79 @@
+2019-03-31T12:14:45.650Z - normal: Load ~/.CocosCreator/settings.json
+2019-03-31T12:14:46.835Z - normal: Initializing Asset Database
+2019-03-31T12:14:46.838Z - normal: checking language setting...
+2019-03-31T12:14:46.838Z - normal: Language: zh
+2019-03-31T12:14:47.679Z - success: preview server running at http://localhost:7456
+2019-03-31T12:14:47.681Z - success: protocol editor-framework registered
+2019-03-31T12:14:47.681Z - success: protocol app registered
+2019-03-31T12:14:47.681Z - success: protocol theme registered
+2019-03-31T12:14:47.681Z - success: protocol packages registered
+2019-03-31T12:14:47.682Z - success: protocol uuid registerred
+2019-03-31T12:14:47.682Z - success: protocol db registerred
+2019-03-31T12:14:47.682Z - success: protocol thumbnail registerred
+2019-03-31T12:14:47.682Z - success: protocol unpack registerred
+2019-03-31T12:14:47.682Z - success: protocol disable-commonjs registerred
+2019-03-31T12:14:47.886Z - normal: connected!
+2019-03-31T12:14:47.888Z - normal: Check project D:\THB\newMario
+2019-03-31T12:14:47.891Z - normal: Initializing project D:\THB\newMario
+2019-03-31T12:14:48.639Z - normal: Initializing Cocos2d
+2019-03-31T12:14:50.098Z - normal: Initializing engine extends
+2019-03-31T12:14:50.121Z - success: asset-db-debugger loaded
+2019-03-31T12:14:50.129Z - success: code-editor loaded
+2019-03-31T12:14:50.132Z - success: color-picker loaded
+2019-03-31T12:14:50.247Z - success: fb-audience-network loaded
+2019-03-31T12:14:50.319Z - success: fb-live-stream loaded
+2019-03-31T12:14:50.338Z - success: google-play-instant loaded
+2019-03-31T12:14:50.357Z - success: huawei-runtime loaded
+2019-03-31T12:14:50.363Z - success: jsb-adapter loaded
+2019-03-31T12:14:50.379Z - success: oppo-runtime loaded
+2019-03-31T12:14:50.389Z - success: package-manager loaded
+2019-03-31T12:14:50.594Z - success: qqplay-adapter loaded
+2019-03-31T12:14:50.600Z - success: runtime-dev-tools loaded
+2019-03-31T12:14:50.612Z - success: sdkbox loaded
+2019-03-31T12:14:50.621Z - success: tester loaded
+2019-03-31T12:14:50.628Z - success: ui-grid loaded
+2019-03-31T12:14:50.634Z - success: ui-kit-preview-extra loaded
+2019-03-31T12:14:50.640Z - success: ui-kit-preview loaded
+2019-03-31T12:14:50.642Z - success: ui-kit loaded
+2019-03-31T12:14:50.648Z - success: ui-tree loaded
+2019-03-31T12:14:50.660Z - success: vivo-runtime loaded
+2019-03-31T12:14:50.663Z - success: weapp-adapter loaded
+2019-03-31T12:14:50.714Z - success: assets loaded
+2019-03-31T12:14:50.716Z - success: builder loaded
+2019-03-31T12:14:50.974Z - success: cocos-services loaded
+2019-03-31T12:14:50.977Z - success: console loaded
+2019-03-31T12:14:51.006Z - success: fb-instant-games loaded
+2019-03-31T12:14:51.008Z - success: google-instant-games loaded
+2019-03-31T12:14:51.013Z - success: hierarchy loaded
+2019-03-31T12:14:51.015Z - success: inspector loaded
+2019-03-31T12:14:51.017Z - success: keystore loaded
+2019-03-31T12:14:51.020Z - success: node-library loaded
+2019-03-31T12:14:51.022Z - success: package-asset loaded
+2019-03-31T12:14:51.023Z - success: preferences loaded
+2019-03-31T12:14:51.024Z - success: project-exporter loaded
+2019-03-31T12:14:51.027Z - success: project-importer loaded
+2019-03-31T12:14:51.028Z - success: project-settings loaded
+2019-03-31T12:14:51.031Z - success: scene loaded
+2019-03-31T12:14:51.032Z - success: simulator-debugger loaded
+2019-03-31T12:14:51.033Z - success: sprite-editor loaded
+2019-03-31T12:14:51.036Z - success: store loaded
+2019-03-31T12:14:51.039Z - success: timeline loaded
+2019-03-31T12:14:56.120Z - normal: Loading packages
+2019-03-31T12:14:56.127Z - normal: Watching packages
+2019-03-31T12:14:56.679Z - info: Cocos Services load base data!
+2019-03-31T12:14:56.680Z - normal: Run Application
+2019-03-31T12:15:03.924Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-31T12:15:03.942Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-31T12:15:03.977Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-31T12:27:27.257Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-31T12:27:27.272Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-31T12:27:27.395Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-31T12:35:47.421Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-31T12:35:47.436Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-31T12:35:47.568Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]

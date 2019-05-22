@@ -1,0 +1,7 @@
+{
+  "__type__": "cc.TextAsset",
+  "_name": "map",
+  "_objFlags": 0,
+  "_native": "",
+  "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<tileset version=\"1.2\" tiledversion=\"1.2.1\" name=\"mario\" tilewidth=\"40\" tileheight=\"40\" tilecount=\"400\" columns=\"20\">\r\n <image source=\"map.png\" width=\"800\" height=\"800\"/>\r\n</tileset>\r\n"
+}

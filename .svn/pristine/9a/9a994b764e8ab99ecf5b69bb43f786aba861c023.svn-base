@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="200" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="39">
+ <tileset firstgid="1" source="map.tsx"/>
+ <layer id="1" name="background" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztw0ENAAAMA6EzWf9WZmMPSFg1VVVVVVVVVVVVVVVV3z4UPya9
+  </data>
+ </layer>
+ <layer id="2" name="writeflag" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzjEBAAAIA6AZxv4V7eDjISQgAQAAAAAAAADgg67rAQAAALA1jC0AJw==
+  </data>
+ </layer>
+ <layer id="3" name="scene" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztmEluwzAMReVTpcMROh2hQ1adW3TIKnFHNG2WyR3sY/a3iAFCSGTJEmU55gM+vJBMUtQAgkoJQre4y5S6z9qOIp04YtCntYagzXx9wO9nAnuVShwVrnviMp97rW3fv3P4voAuA8Xgm69Y+biCj2voBrpt6G+A/7agbWgH2nW0E2utrnuS0v3misU292PMmUB5pHzU3cdYe/MCH6/QG/Te0N8e/tuHDqBD6MjRTkrnkAvON8DnbffJPeeaYt9HTo6xhhPoFDqDhh1ZU+iawQTnG9DWWerDuxaCB+ToEXqCnqFRR3K2SW+UkC5fOF9T6Bv6gWZy3gThnyGprfQaqyt1liBwMSK1Fa2xulRnCf1kYHE+fXuzM1Jb0RpL6ixhE/DtzU4zs1aRG+yZxnwIZbfODlf83LY5feRMdmPg25vVaytTH2ux/M4N9qqxBZnfFPq/yaeLrTo7IeOnfm1829oxwZH/ufLPf1v49mb12srUxyqX3wIaa1JkrJpbqmZUNktiu1g/3Qqb2Kkfn/iVCr8GPRbO+PXYC+Wf/3U+9PhD+1jVm+X0KQiCIAh//AIz4Hss
+  </data>
+ </layer>
+ <layer id="4" name="obstacle" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztl80NAiEQRocebIJyLEO9aAHqRbu1CDloYswuzP6wMJP3ku+4yQDfy4IIAABA35yDyCW0ngKgTx7JjSd+QAVerQdYmUPy5JhywheXbH2sO2c9uqb13FLuztYFbbDuR/iJR0Im1uhpDfGTEtb9AJhKFPwA3wz9fzR9j4If4I/SfUzT93838GNbvmcYZb37Ne+PMpq+D7mBH2AFTVfHviv1fcwN/AArzPFD0/ecG/gBVpjqh6bvJTe07/ka7Ek27NOyvWs9A6l/xpzz/L1rPcPSvAE4/Y5a
+  </data>
+ </layer>
+ <layer id="5" name="coin" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt07EOQFAQRNF9n4uG9iVo+G9bUyht4pxk+mluBADUNreIpX39Amo6so1TH/BqyE7G3KQXeFiziy236wMAAADK6rcBAAAA8E8X/0MGlQ==
+  </data>
+ </layer>
+ <layer id="12" name="pipe" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt1bEOQDAQBmCrmdXM6v1fjlWieo0LCd+XdNO/14u2XQcAAAAAAADwff3bBQAQknVfR3Oy34dhH+PLOVk1ZPIO10V6NCVkRHJav4uuP+9jacy8k3NWT2nu1bkp7SvrrLX2+Y8iPar9f9E+r8HvWu+12vpPn4+zekpzrzJL+8raj/cDAI42T+sE5w==
+  </data>
+ </layer>
+ <layer id="6" name="endflag" width="200" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzrERAAAEADH2H5qzgU4hKb7+CAAAAGCjJnl9AQAAAAAAAADARw3v+QEB
+  </data>
+ </layer>
+ <objectgroup id="8" name="prop">
+  <object id="36" name="spring_red" x="6018" y="544"/>
+ </objectgroup>
+ <objectgroup id="9" name="hide">
+  <object id="8" name="mushroom_life" x="1099" y="263"/>
+  <object id="35" name="mushroom_red" x="6022" y="183"/>
+ </objectgroup>
+ <objectgroup id="10" name="monster">
+  <object id="4" name="rocketFire_black" x="738" y="502"/>
+  <object id="5" name="rocketFire_black" x="1100" y="459"/>
+  <object id="6" name="rocketFire_black" x="1101" y="542"/>
+  <object id="7" name="rocketFire_black" x="1421" y="503"/>
+  <object id="9" name="duck_green_jump" x="1018" y="541"/>
+  <object id="10" name="helmet_red" x="2621" y="542"/>
+  <object id="11" name="duck_green_jump" x="2377" y="542"/>
+  <object id="12" name="duck_green_jump" x="1779" y="541"/>
+  <object id="13" name="duck_green_jump" x="2183" y="540"/>
+  <object id="14" name="rocketFire_black" x="1820" y="460"/>
+  <object id="15" name="rocketFire_black" x="2219" y="460"/>
+  <object id="16" name="rocketFire_black" x="2221" y="543"/>
+  <object id="17" name="rocketFire_black" x="2540" y="382"/>
+  <object id="18" name="rocketFire_black" x="2698" y="500"/>
+  <object id="19" name="flower_green" x="3019" y="502"/>
+  <object id="20" name="ninjia_black" x="3379" y="382"/>
+  <object id="21" name="ninjia_black" x="3498" y="383"/>
+  <object id="22" name="flower_green" x="3743" y="501"/>
+  <object id="25" name="rocketFire_black" x="4140" y="500"/>
+  <object id="26" name="flower_green" x="4340" y="499"/>
+  <object id="27" name="flower_green" x="4579" y="538"/>
+  <object id="28" name="duck_green_walk" x="4541" y="541"/>
+  <object id="29" name="rocketFire_black" x="4859" y="498"/>
+  <object id="30" name="flower_green" x="5103" y="540"/>
+  <object id="31" name="ninjia_black" x="5378" y="381"/>
+  <object id="32" name="ninjia_black" x="5460" y="382"/>
+  <object id="33" name="rocketFire_black" x="5821" y="540"/>
+  <object id="34" name="rocketFire_black" x="5820" y="458"/>
+  <object id="37" name="helmet_red" x="6301" y="301"/>
+  <object id="38" name="helmet_red" x="6698" y="261"/>
+ </objectgroup>
+ <objectgroup id="11" name="position">
+  <object id="1" name="start" x="140" y="544"/>
+  <object id="2" name="end" x="7460" y="536"/>
+  <object id="3" name="mapFixed" x="7658" y="19"/>
+ </objectgroup>
+</map>

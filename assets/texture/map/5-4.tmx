@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="170" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="30">
+ <tileset firstgid="1" source="map.tsx"/>
+ <layer id="1" name="background" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB
+  </data>
+ </layer>
+ <layer id="2" name="writeflag" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB
+  </data>
+ </layer>
+ <layer id="3" name="scene" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt0sENgCAQRUFtwooswqqs2bvx5Ebww0yyCUdY3rLwtW19PsOf6JQEOiWBTkmgUxLolAQ6JYFOSaBTEuiUBLN1eva+AK/M1imZdNrfXpwZtOr0vtPKjkf716M4M2jV6X2nlR2P9q+jvecLOq27ABrTJb8=
+  </data>
+ </layer>
+ <layer id="4" name="obstacle" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztmMENhDAMBGmMduiGnvmeToAM9pLFzEgrkQdObFZOwjQBAADAV1iSclmHk6ryrmJ0PRxUxeg88Gn93IpY+BSfOvvUBaVvZnF8lb/eDvXwZR69gKao+sBvHwPIwp4Fb6DqfBV5Nxr/qXPonXMr+3oM1Z1s1J2hUx+/WpfK2i5/z3vjvdhH4zUpfOqL2qdnvbzap1nwqS+d+mmWrj69IvU5tOJ/qyr3yJwRnzp+V6W65fNkXfBpXBsDjEYG
+  </data>
+ </layer>
+ <layer id="5" name="coin" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt1qERACAQA8HvghppgeqxKNQzEezOnI9MFQAA/GGlBwBA2LgEALw1jwAAIM0/BaDDBiCxA5I=
+  </data>
+ </layer>
+ <layer id="11" name="pipe" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB
+  </data>
+ </layer>
+ <layer id="6" name="endflag" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB
+  </data>
+ </layer>
+ <objectgroup id="7" name="prop">
+  <object id="17" name="ladder_small_rup" x="3579" y="623"/>
+  <object id="18" name="ladder_small_rdown" x="3696" y="19"/>
+  <object id="26" name="aex" x="6019" y="381"/>
+  <object id="28" name="baby" x="6458" y="540"/>
+ </objectgroup>
+ <objectgroup id="8" name="hide">
+  <object id="6" name="mushroom_red" x="940" y="178"/>
+ </objectgroup>
+ <objectgroup id="9" name="monster">
+  <object id="3" name="fire_updown" x="698" y="620"/>
+  <object id="4" name="fire_updown" x="1222" y="619"/>
+  <object id="5" name="fireBall_big" x="940" y="338"/>
+  <object id="9" name="fireBall_small" x="1821" y="578"/>
+  <object id="10" name="fireBall_small" x="2303" y="577"/>
+  <object id="11" name="fireBall_small" x="2062" y="421"/>
+  <object id="12" name="fireBall_small" x="2299" y="259"/>
+  <object id="13" name="fireBall_small" x="2538" y="421"/>
+  <object id="14" name="fireBall_small" x="2780" y="582"/>
+  <object id="15" name="fireBall_small" x="3060" y="421"/>
+  <object id="16" name="fireBall_small" x="3379" y="298"/>
+  <object id="19" name="fire_left" x="4019" y="261"/>
+  <object id="20" name="fire_left" x="4620" y="419"/>
+  <object id="21" name="fire_left" x="4896" y="338"/>
+  <object id="22" name="fire_left" x="5258" y="382"/>
+  <object id="23" name="boss" x="5897" y="419"/>
+  <object id="24" name="fire_left" x="5577" y="417"/>
+  <object id="25" name="fire_left" x="5741" y="339"/>
+ </objectgroup>
+ <objectgroup id="10" name="position">
+  <object id="1" name="start" x="99" y="297"/>
+  <object id="27" name="mapFixed" x="6055" y="19"/>
+  <object id="29" name="mapFixed" x="6742" y="19"/>
+ </objectgroup>
+</map>

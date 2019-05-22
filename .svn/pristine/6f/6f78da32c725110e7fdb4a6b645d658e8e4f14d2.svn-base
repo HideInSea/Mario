@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="170" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="1">
+ <tileset firstgid="1" source="map.tsx"/>
+ <layer id="1" name="background" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB
+  </data>
+ </layer>
+ <layer id="2" name="writeflag" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB
+  </data>
+ </layer>
+ <layer id="3" name="scene" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt0sENgCAQRUFswooswv4r8U68bUA/zCSbcGX3tcZo5/H+hj/RKQl0SgKdkkCnJNApCXRKAp2SQKck0CkJdEoCnZJAp9+7irODWZ32O63seLW73sXZwaxO+51WdrzaXVf7zwg6rXsAjdMlMQ==
+  </data>
+ </layer>
+ <layer id="4" name="land" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztmMENhDAMBGmMduiGnvmeToAM9pLFzEgrkQdObFZOwjQBAADAV1iSclmHk6ryrmJ0PRxUxeg88Gn93IpY+BSfOvvUBaVvZnF8lb/eDvXwZR69gKao+sBvHwPIwp4Fb6DqfBV5Nxr/qXPonXMr+3oM1Z1s1J2hUx+/WpfK2i5/z3vjvdhH4zUpfOqL2qdnvbzap1nwqS+d+mmWrj69IvU5tOJ/qyr3yJwRnzp+V6W65fNkXfBpXBsDjEYG
+  </data>
+ </layer>
+ <layer id="5" name="wall" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt1rENACEQA0G6oEZaoAhomfSjJ0LHiRnJ+YYuBQAA3tCjAwAgWP0ZAHBW+yyDGR0AGyM6AACSy/ZPAbjTAsHpBK8=
+  </data>
+ </layer>
+ <layer id="6" name="endflag" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB
+  </data>
+ </layer>
+ <objectgroup id="7" name="prop"/>
+ <objectgroup id="8" name="hide"/>
+ <objectgroup id="9" name="monster"/>
+ <objectgroup id="10" name="position"/>
+</map>

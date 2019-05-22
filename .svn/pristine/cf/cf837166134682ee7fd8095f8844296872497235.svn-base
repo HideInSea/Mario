@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "boss_fire",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "2ae6ced2-c0f5-42b1-801f-aaffa283311e"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "d722262f-d6d1-479b-94e4-46f30b44c0e5"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "2ae6ced2-c0f5-42b1-801f-aaffa283311e"
+            }
+          },
+          {
+            "frame": 0.75,
+            "value": {
+              "__uuid__": "d722262f-d6d1-479b-94e4-46f30b44c0e5"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "2ae6ced2-c0f5-42b1-801f-aaffa283311e"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

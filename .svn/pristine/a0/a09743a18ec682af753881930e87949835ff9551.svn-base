@@ -1,0 +1,174 @@
+"use strict";
+cc._RF.push(module, 'ee12bV9ldFDnIXjeOuAKUJa', 'monsterMgr');
+// script/monsterMgr.js
+
+"use strict";
+
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
+        mushroom: cc.Prefab,
+        duck: cc.Prefab,
+        mflower: cc.Prefab,
+        fire: cc.Prefab,
+        fireBall: cc.Prefab,
+        boss: cc.Prefab
+    },
+
+    // LIFE-CYCLE CALLBACKS:
+
+    // onLoad () {},
+
+    init: function init() {
+        this.monsterObjs = gm.mapMgr.monsterLayer.getObjects();
+    },
+    onLoad: function onLoad() {
+        EM.on(EM.type.PAUSE_ACTOR, this.pauseActor, this);
+        EM.on(EM.type.RESUME_ACTOR, this.resumeActor, this);
+        EM.on(EM.type.REMOVE_ALL_MON, function () {
+            this.node.removeAllChildren();
+        }, this);
+        EM.on(EM.type.CREATE_MONSTER, this.createMonster, this);
+    },
+    pauseActor: function pauseActor() {
+        var children = this.node.children;
+        for (var i = 0; i < children.length; i++) {
+            children[i].getComponent(children[i].name).pause();
+        }
+    },
+    resumeActor: function resumeActor() {
+        var children = this.node.children;
+        for (var i = 0; i < children.length; i++) {
+            children[i].getComponent(children[i].name).resume();
+        }
+    },
+    createMonster: function createMonster(pos, monName) {
+        var args = monName.split("_");
+        var mon = null;
+        var script = null;
+        switch (args[0]) {
+            case ENUM.MON_TYPE.MUSHROOM:
+                mon = cc.instantiate(this.mushroom);
+                script = mon.getComponent(mon.name);
+                break;
+            case ENUM.MON_TYPE.DUCK:
+                mon = cc.instantiate(this.duck);
+                script = mon.getComponent(mon.name);
+                break;
+            case ENUM.MON_TYPE.FLOWER:
+                mon = cc.instantiate(this.mflower);
+                script = mon.getComponent(mon.name);
+                pos = cc.v2(pos.x + 20, pos.y);
+                break;
+            case ENUM.MON_TYPE.FIRE:
+                mon = cc.instantiate(this.fire);
+                script = mon.getComponent(mon.name);
+                break;
+            case ENUM.MON_TYPE.FIRE_BALL:
+                mon = cc.instantiate(this.fireBall);
+                script = mon.getComponent(mon.name);
+                pos = cc.v2(pos.x, pos.y + 20);
+                break;
+            case ENUM.MON_TYPE.BOSS:
+                mon = cc.instantiate(this.boss);
+                script = mon.getComponent(mon.name);
+                break;
+        }
+        this.node.addChild(mon);
+        mon.setPosition(pos);
+        script.init.apply(script, args);
+    },
+    update: function update(dt) {
+        //怪物与玩家的碰撞检测
+        this.collsitionWithPlayer();
+
+        //怪物与怪物的碰撞检测
+        this.collsitionWithMonster();
+
+        //与玩家子弹的碰撞检测
+        this.collsitionWithBullet();
+
+        //遍历怪物对象组
+        this.iteratorMonsterObjects();
+    },
+    onDestroy: function onDestroy() {
+
+        EM.off(EM.type.PAUSE_ACTOR);
+        EM.off(EM.type.RESUME_ACTOR);
+        EM.off(EM.type.REMOVE_ALL_MON);
+        EM.off(EM.type.CREATE_MONSTER);
+    },
+    collsiWithPushWall: function collsiWithPushWall(wallBox) {
+        var children = this.node.children;
+        for (var i = 0; i < children.length; i++) {
+            children[i].getComponent(children[i].name).collsiWithPushWall(wallBox);
+        }
+    },
+    collsitionWithPlayer: function collsitionWithPlayer() {
+        var children = this.node.children;
+        for (var i = 0; i < children.length; i++) {
+            children[i].getComponent(children[i].name).interactive(gm.playerScript);
+        }
+    },
+    collsitionWithMonster: function collsitionWithMonster() {
+        var children = this.node.children;
+        for (var i = 0; i < children.length; i++) {
+            var one = children[i].getComponent(children[i].name);
+            for (var j = 0; j < children.length; j++) {
+                if (i == j) continue;
+                one.collsiWithMon(children[j].getComponent(children[j].name));
+            }
+        }
+    },
+    collsitionWithBullet: function collsitionWithBullet() {
+        var children = this.node.children;
+        for (var i = 0; i < children.length; i++) {
+            var mon = children[i].getComponent(children[i].name);
+            var pBullets = gm.bulletMgr.getPBullet();
+            for (var j = 0; j < pBullets.length; j++) {
+                mon.collsiWithPlayerBullet(pBullets[j].getComponent(pBullets[j].name));
+            }
+        }
+    },
+
+    //遍历怪物对象组，找出出现在当前屏幕中的对象
+    iteratorMonsterObjects: function iteratorMonsterObjects() {
+        for (var i = 0; i < this.monsterObjs.length; i++) {
+            if (gm.mapMgr.isObjectInScreen(this.monsterObjs[i])) {
+                var obj = this.monsterObjs.splice(i, 1);
+                i--;
+                var tPos = gm.mapMgr.toTiledPos(cc.v2(obj[0].x, obj[0].y));
+                var pos = gm.mapMgr.tilePosToPos(tPos);
+                this.createMonster(cc.v2(pos.x + 20, pos.y), obj[0].name);
+            }
+        }
+    }
+});
+
+cc._RF.pop();

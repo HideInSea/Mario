@@ -1,0 +1,121 @@
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/script/effects.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+cc._RF.push(module, '5d131yYQANJRLeyoaAoLAse', 'effects', __filename);
+// script/effects.js
+
+"use strict";
+
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
+        pieces: cc.Prefab,
+        coin: cc.Prefab,
+        score: cc.Prefab
+    },
+
+    // LIFE-CYCLE CALLBACKS:
+
+    onLoad: function onLoad() {
+
+        EM.on(EM.type.PIECES_EFFECT, this.piecesEffect, this);
+        EM.on(EM.type.COIN_EFFECT, this.coinEffect, this);
+        EM.on(EM.type.SCORE_EFFECT, this.scoreEffect, this);
+        EM.on(EM.type.LIFE_EFFECT, this.lifeEffect, this);
+    },
+    start: function start() {},
+    piecesEffect: function piecesEffect(pos, gid) {
+        var pieces = cc.instantiate(this.pieces);
+        this.node.addChild(pieces);
+        pieces.x = pos.x;
+        pieces.y = pos.y;
+        var script = pieces.getComponent("wall_effect");
+        script.init(gid);
+    },
+    coinEffect: function coinEffect(pos, score) {
+        EM.emit(EM.type.ADD_COIN, 1);
+
+        var coin = cc.instantiate(this.coin);
+        this.node.addChild(coin);
+        coin.x = pos.x;
+        coin.y = pos.y;
+
+        var moveUp = cc.moveBy(0.25, cc.v2(0, 80)).easing(cc.easeCubicActionOut());
+        var moveDown = cc.moveBy(0.25, cc.v2(0, -80)).easing(cc.easeCubicActionIn());
+        coin.runAction(cc.sequence(moveUp, moveDown, cc.callFunc(function (target, data) {
+            this.scoreEffect(data.pos, data.score);
+        }.bind(this), this, { pos: pos, score: score }), cc.removeSelf()));
+    },
+    scoreEffect: function scoreEffect(pos, score) {
+        EM.emit(EM.type.ADD_SCORE, score);
+        var scor = cc.instantiate(this.score);
+        this.node.addChild(scor);
+        var label = scor.getComponent(cc.Label);
+        scor.x = pos.x;
+        scor.y = pos.y;
+        label.string = score;
+
+        var moveUp = cc.moveBy(0.5, cc.v2(0, 60));
+        var fadeOut = cc.fadeOut(0.5);
+        scor.runAction(cc.sequence(moveUp, fadeOut, cc.removeSelf()));
+    },
+    lifeEffect: function lifeEffect(pos) {
+        var scor = cc.instantiate(this.score);
+        this.node.addChild(scor);
+        var label = scor.getComponent(cc.Label);
+        scor.x = pos.x;
+        scor.y = pos.y;
+        label.string = "1 UP";
+
+        var moveUp = cc.moveBy(0.5, cc.v2(0, 60));
+        var fadeOut = cc.fadeOut(0.5);
+        scor.runAction(cc.sequence(moveUp, fadeOut, cc.removeSelf()));
+    },
+    onDestroy: function onDestroy() {
+        EM.off(EM.type.PIECES_EFFECT);
+        EM.off(EM.type.COIN_EFFECT);
+        EM.off(EM.type.SCORE_EFFECT);
+        EM.off(EM.type.LIFE_EFFECT);
+    }
+    //update (dt) {},
+
+});
+
+cc._RF.pop();
+        }
+        if (CC_EDITOR) {
+            __define(__module.exports, __require, __module);
+        }
+        else {
+            cc.registerModuleFunc(__filename, function () {
+                __define(__module.exports, __require, __module);
+            });
+        }
+        })();
+        //# sourceMappingURL=effects.js.map
+        

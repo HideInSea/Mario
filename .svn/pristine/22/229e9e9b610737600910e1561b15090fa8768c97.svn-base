@@ -1,0 +1,77 @@
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/script/prop/story.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+cc._RF.push(module, '131141jq6ZNHJCrw+4HXRnO', 'story', __filename);
+// script/prop/story.js
+
+"use strict";
+
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+var Actor = require("actor");
+cc.Class({
+    extends: Actor,
+
+    properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
+    },
+
+    // LIFE-CYCLE CALLBACKS:
+    init: function init() {
+        this.type = arguments[1];
+    },
+    interactive: function interactive(actor) {
+        if (actor.node.y > this.node.y) return;
+        switch (this.type) {
+            case ENUM.STORY_TYPE["2_3_4"]:
+            case ENUM.STORY_TYPE["6_7_8"]:
+            case ENUM.STORY_TYPE["5"]:
+                EM.emit(EM.type.SHOW_SELECT_ZOOM, this.type);
+                EM.emit(EM.type.REMOVE_ALL_MON);
+                this.node.removeFromParent();
+                break;
+            case ENUM.STORY_TYPE.SKY:
+                break;
+        }
+    },
+
+    //onLoad () {}
+    update: function update(dt) {
+        if (this.isOutScreen()) {
+            this.removeFromParent();
+        }
+    }
+});
+
+cc._RF.pop();
+        }
+        if (CC_EDITOR) {
+            __define(__module.exports, __require, __module);
+        }
+        else {
+            cc.registerModuleFunc(__filename, function () {
+                __define(__module.exports, __require, __module);
+            });
+        }
+        })();
+        //# sourceMappingURL=story.js.map
+        

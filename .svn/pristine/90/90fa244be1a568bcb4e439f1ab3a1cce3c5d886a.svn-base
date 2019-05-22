@@ -1,0 +1,23 @@
+{
+  "__type__": "cc.TiledMapAsset",
+  "_name": "1-4",
+  "_objFlags": 0,
+  "_native": "",
+  "tmxXmlStr": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<map version=\"1.2\" tiledversion=\"1.2.1\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"200\" height=\"16\" tilewidth=\"40\" tileheight=\"40\" infinite=\"0\" nextlayerid=\"12\" nextobjectid=\"26\">\r\n <tileset firstgid=\"1\" source=\"map.tsx\"/>\r\n <layer id=\"1\" name=\"background\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAB4NjIAAAE=\r\n  </data>\r\n </layer>\r\n <layer id=\"2\" name=\"writeflag\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAB4NjIAAAE=\r\n  </data>\r\n </layer>\r\n <layer id=\"3\" name=\"scene\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJzt07EJwDAMRUENpyG0/yRu3MUGxzaBwB38RqDyRQAAAAAAAAAAAPCV7AOequ+NjHFXszt35eFYt9NHxfhvdueuOhzr9PE/+tjTAFmxF5E=\r\n  </data>\r\n </layer>\r\n <layer id=\"4\" name=\"obstacle\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztl0sOgCAMBVl4La/jbbyzcWskQFso0JnkxfgLbeGRkhIAAAAAWHIhhNwkwTvmlhxq3lvWpkTPsXrGPSv4Q5fDqcilB/hjHSL4IxLUw5bS3mr1n+X30phhT9gnAfLQSwDkmanf9j5n1Jw/Sv2Xpj87PteZmGF9eKBZL9I19t6fmeeRJKGmtn+6lcIfY/3RMre7SoLUH1rwB/7AH3XjRgJ/xJAW7/hXkqRmuVozB2PnTIp3/F56ADRXwCM=\r\n  </data>\r\n </layer>\r\n <layer id=\"5\" name=\"coin\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztzkENACAMBLDpngiwjAU+5JbQKmgVAAAAAADc63QAAHhupwMw1EoHAAAAgK8dnE8BmA==\r\n  </data>\r\n </layer>\r\n <layer id=\"11\" name=\"pipe\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAB4NjIAAAE=\r\n  </data>\r\n </layer>\r\n <layer id=\"6\" name=\"endflag\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAB4NjIAAAE=\r\n  </data>\r\n </layer>\r\n <objectgroup id=\"7\" name=\"prop\"/>\r\n <objectgroup id=\"8\" name=\"hide\">\r\n  <object id=\"1\" name=\"mushroom_red\" x=\"1220\" y=\"299\"/>\r\n  <object id=\"19\" name=\"mushroom_red\" x=\"3979\" y=\"418\"/>\r\n </objectgroup>\r\n <objectgroup id=\"9\" name=\"monster\">\r\n  <object id=\"2\" name=\"fire_updown\" x=\"1098\" y=\"621\"/>\r\n  <object id=\"3\" name=\"fire_updown\" x=\"1339\" y=\"621\"/>\r\n  <object id=\"7\" name=\"fireBall_small\" x=\"941\" y=\"300\"/>\r\n  <object id=\"8\" name=\"fireBall_small\" x=\"1980\" y=\"300\"/>\r\n  <object id=\"9\" name=\"fireBall_small\" x=\"2459\" y=\"301\"/>\r\n  <object id=\"10\" name=\"fireBall_small\" x=\"2739\" y=\"300\"/>\r\n  <object id=\"11\" name=\"fireBall_small\" x=\"3062\" y=\"420\"/>\r\n  <object id=\"12\" name=\"fireBall_small\" x=\"3221\" y=\"220\"/>\r\n  <object id=\"13\" name=\"fireBall_small\" x=\"3381\" y=\"418\"/>\r\n  <object id=\"17\" name=\"fireBall_small\" x=\"1498\" y=\"300\"/>\r\n  <object id=\"20\" name=\"fire_left\" x=\"4457\" y=\"420\"/>\r\n  <object id=\"21\" name=\"fire_left\" x=\"4858\" y=\"377\"/>\r\n  <object id=\"22\" name=\"fire_left\" x=\"5139\" y=\"419\"/>\r\n  <object id=\"25\" name=\"boss\" x=\"5381\" y=\"420\"/>\r\n </objectgroup>\r\n <objectgroup id=\"10\" name=\"position\">\r\n  <object id=\"4\" name=\"start\" x=\"97\" y=\"299\"/>\r\n  <object id=\"23\" name=\"mapFixed\" x=\"6263\" y=\"16\"/>\r\n </objectgroup>\r\n</map>\r\n",
+  "textures": [
+    {
+      "__uuid__": "81eafc24-8d63-49b3-bd6b-3ba6786befd2"
+    }
+  ],
+  "textureNames": [
+    "map.png"
+  ],
+  "tsxFiles": [
+    {
+      "__uuid__": "c744d921-a195-4ec1-b087-16fc3d0e70df"
+    }
+  ],
+  "tsxFileNames": [
+    "map.tsx"
+  ]
+}

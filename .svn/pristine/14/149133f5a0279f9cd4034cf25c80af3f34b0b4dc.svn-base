@@ -1,0 +1,65 @@
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+var Actor=require("actor");
+cc.Class({
+    extends:Actor,
+
+    properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
+    },
+
+    // LIFE-CYCLE CALLBACKS:
+    init(){
+        this.isCollsi=false;
+    },
+    getSize(){
+        let size=this.node.getContentSize();
+        return cc.rect(this.node.x,this.node.y,size.width,size.height);
+    },
+    // onLoad () {},
+    interactive(actor){
+        if(this.isCollsi)return;
+        let sizeOne=actor.getSize();
+        let sizeTwo=this.getSize();
+        let rectOne=cc.rect(sizeOne.x-sizeOne.width/2,sizeOne.y,sizeOne.width,sizeOne.height);
+        let rectTwo=cc.rect(sizeTwo.x-sizeTwo.width/2,sizeTwo.y,sizeTwo.width,sizeTwo.height);
+        if(cc.Intersection.rectRect(rectOne,rectTwo)){
+            this.isCollsi=true;
+            gm.currPlayer.x=sizeTwo.x-sizeTwo.width/2-sizeOne.width/2;
+            gm.playerScript.fsm.switchState("stand");
+            //显示文字
+            EM.emit(EM.type.SHOW_THANK);
+            setTimeout(() => {
+                EM.emit(EM.type.SHOW_TIP);
+            },1000);
+            setTimeout(()=>{
+                global.nextRound();
+                EM.emit(EM.type.GAME_PASS);
+            },4000);
+        }
+    }
+    // onLoad () {},
+
+    // update (dt) {},
+});

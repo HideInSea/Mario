@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="300" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="66">
+ <tileset firstgid="1" source="map.tsx"/>
+ <layer id="1" name="background" width="300" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt1EEJADAAxLCZnH8rg5m4PhKohZ4D1F39gL71JyoBfetPVAL61p+oBPStP1EJ6Ft/ohLQt/5EJaBv/YlKQN/6E5WAvvUnKgF9609UAvrWn6gE9K0/UQnoW3+iEtC3/kQloG/9iUoPWO9esA==
+  </data>
+ </layer>
+ <layer id="11" name="water" width="300" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt1EENwDAAxLByG4jxZ1KpJC4PWwqFnAMAAABA0acX0PfrBfStP1EJ6Ft/ohLQt/5EJaBv/YlKQN/6E5WAvvUnKgF9609UAvrWn6gE9K0/UQnoW3+iEtC3/kSlC+G2Hn4=
+  </data>
+ </layer>
+ <layer id="2" name="writeflag" width="300" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzjERAAAIBKA3jP0rmsLTARKQAAAAAAAAAAAAAAAA8EXX9QAAAAAAAGDfAAQzACc=
+  </data>
+ </layer>
+ <layer id="3" name="scene" width="300" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztlldOxDAURZMPQLQFAKItgA6iLYG2BNoXHUT7ooNo66X9cSKBNEQzxJ44k3aPdBQpsRM/Pz/HnieEEMI1h77nHflpj8KcvI23Gq5i2OId27iT8/kQxcF2be/Sdg/38cCg3z1tHupY72ntG/WON4zLWredC5MYTPJ4wf1LvIp4l0msSeTTdi2K/GNbn9e0vcFbvEtwjcTZN7JwRjKtdRNc7aGVuMyjSaxZj0GkR9nP8UnUxi/6pwvhFpf/dvEX/dOzTxbO10IIYUKS52shhBBCCCHSZpqz7gzO4hzO6+wrSoZqID8skJtFXMJlXFGuRMkI14DILqvkZw3XcQM3c5ivN3zHD/zErwb3zxJFiKXRMRShBsrCMbk5wVM8w3PLXDXRvhlbUsxxK99uw3bswE7LscTtH5CFeQgoQixxY7Adf9waEI3jkdw84TO+4GtEroZ4PowjP+26uHZjT5V+k9ybcpD78DfD9HK/D/txAAcjvjnK8zEcxwk/fv+A/+YhCWrNiW0sAeF4asUSlYc0Y6jENhe2NSCEEEIIIURR+AZ3z1wZ
+  </data>
+ </layer>
+ <layer id="4" name="obstacle" width="300" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztmu0NwiAQhiFxBNMdGKfu0C0c2SH8owlirxzH1wHvk1ysVbjWlkegGAMAAAAAAAAAAAAwPy9BmS3YpiKnbEqdtTg+wd3fgsP0zQ9AT+42vQzHGxxfaQe+AkAXq/nqmfDdVF8dRJSkla+sFysSnrdlhCQHlUfKqNfNfSIGfFW37tL50L8Cs+FMO19deelszqnXHFSLdl7SV7Hjha/ADDjT3lecufEteJ2RFv2rLxp8xb3HwC/UeG3UsZyU0FU9x4M1ympHq69y2sFNUCYHbr5cV1qvDuvtG80V4W9wda21/b+M5quU9Qs1PVdzToubjztmxfzVmlBtWZN/UhnRV7Xy+MR8RH1eaz1Djh/hq/W4asva+kwxXLANX/0zi69aPTcAeoi15ZF8FR6rxFeScx1t/moGX50959wR3YJCUs/OLCvNsXo8Oge1LjM3QqTrQqn3paP3fbByUEjq2ZllpTlWD/hKh6/eGTLwaQ==
+  </data>
+ </layer>
+ <layer id="5" name="coin" width="300" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt2LsJACAUA0DHfbj/ALYWWogifu4gK4SQlAAAAAAAAACAntwIc6IKsI6+AtgrBgP8o7XLft1puhAAAADgPK/+Vz4oAIA7FVo0FCE=
+  </data>
+ </layer>
+ <layer id="12" name="pipe" width="300" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt2E0SwiAMhuHeWe+gV1DPoF5RXLBhCgUSGn7eZ6a7NlBpPmm3DQAAAAAAAJpundQAgCPkFYBRkFcARkFezeXijqv1JARGn3+p1e5Xiryay38t7kZja/Se5fwtrHa/UuSV3MMdT+tJnCiWSxq9t1r/rna/UuSV3NsdnwZ1c/Yrmu8TubVqe4x3nzJnrv8oa0Ne9SsnFzT/n3Nr1Y45816iRb+nfi8/Xuyc0vmMsjbkVb+keeWfWe19k0Ze1fS3NBPC6zUzpkW/79UMcyo2bul8es8r/83lZVwDcdK8Onqma8YrOS91XU0NaU+F11vsTaU1wzVdJa/8N5evcQ0AAAAg5QdIKFYr
+  </data>
+ </layer>
+ <layer id="6" name="endflag" width="300" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzrERAAAEADH2H5ozhKNIiq8/AgAAAACAD2qS1xcAAAAAAAAAAAAAAAAA+xqeFgEB
+  </data>
+ </layer>
+ <objectgroup id="7" name="prop">
+  <object id="56" name="ladder_big_rdown" x="10298" y="16"/>
+  <object id="57" name="ladder_big_rdown" x="10539" y="15"/>
+ </objectgroup>
+ <objectgroup id="8" name="hide">
+  <object id="2" name="mushroom_red" x="455" y="420"/>
+  <object id="13" name="coin" x="8618" y="338"/>
+  <object id="16" name="mushroom_life" x="1021" y="262"/>
+  <object id="38" name="coin" x="9257" y="420"/>
+ </objectgroup>
+ <objectgroup id="9" name="monster">
+  <object id="3" name="flower_green" x="783" y="463"/>
+  <object id="4" name="flower_green" x="1141" y="459"/>
+  <object id="5" name="flower_green" x="1301" y="340"/>
+  <object id="6" name="flower_green" x="1420" y="541"/>
+  <object id="7" name="duck_green_walk" x="1096" y="538"/>
+  <object id="17" name="helmet_red" x="2218" y="544"/>
+  <object id="18" name="flower_green" x="1903" y="461"/>
+  <object id="19" name="flower_green" x="2302" y="419"/>
+  <object id="29" name="flower_green" x="3503" y="541"/>
+  <object id="30" name="flower_green" x="2542" y="378"/>
+  <object id="31" name="flower_green" x="2860" y="460"/>
+  <object id="32" name="flower_green" x="3222" y="341"/>
+  <object id="34" name="flower_green" x="4303" y="538"/>
+  <object id="35" name="flower_green" x="5064" y="502"/>
+  <object id="42" name="helmet_red" x="5538" y="542"/>
+  <object id="43" name="helmet_red" x="5818" y="540"/>
+  <object id="44" name="flower_green" x="5623" y="338"/>
+  <object id="45" name="flower_green" x="5902" y="462"/>
+  <object id="46" name="flower_green" x="6102" y="541"/>
+  <object id="48" name="flower_green" x="6263" y="461"/>
+  <object id="49" name="flower_green" x="6505" y="502"/>
+  <object id="51" name="helmet_red" x="6860" y="543"/>
+  <object id="52" name="flower_green" x="6983" y="458"/>
+  <object id="53" name="octopus" x="10099" y="422"/>
+  <object id="54" name="fish_red_swim" x="10220" y="299"/>
+  <object id="55" name="fish_red_swim" x="10377" y="178"/>
+  <object id="59" name="octopus" x="10821" y="416"/>
+  <object id="60" name="fish_red_swim" x="11061" y="298"/>
+  <object id="61" name="fish_red_swim" x="11341" y="341"/>
+  <object id="64" name="fish_red_swim" x="11499" y="466"/>
+  <object id="65" name="fish_red_swim" x="11781" y="221"/>
+ </objectgroup>
+ <objectgroup id="10" name="position">
+  <object id="1" name="start" x="97" y="538"/>
+  <object id="9" name="pipeStart_air_0_2" x="780" y="417"/>
+  <object id="10" name="pipeEnd_0" x="8140" y="138"/>
+  <object id="11" name="mapFixed" x="8016" y="23"/>
+  <object id="12" name="mapFixed" x="8695" y="20"/>
+  <object id="14" name="pipeStart_land_1_2" x="8579" y="543"/>
+  <object id="15" name="pipeEnd_1" x="1421" y="540"/>
+  <object id="21" name="pipeStart_air_2_2" x="2301" y="378"/>
+  <object id="22" name="pipeEnd_2" x="9423" y="181"/>
+  <object id="25" name="mapFixed" x="9339" y="23"/>
+  <object id="26" name="mapFixed" x="11977" y="19"/>
+  <object id="27" name="pipeStart_land_3_2" x="11898" y="377"/>
+  <object id="28" name="pipeEnd_3" x="3501" y="542"/>
+  <object id="36" name="pipeStart_air_4_1" x="5059" y="459"/>
+  <object id="37" name="pipeEnd_4" x="8739" y="137"/>
+  <object id="39" name="pipeStart_land_5_2" x="9257" y="539"/>
+  <object id="40" name="pipeEnd_5" x="6103" y="540"/>
+ </objectgroup>
+</map>

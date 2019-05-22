@@ -1,0 +1,363 @@
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
+        maps:{
+            type:cc.TiledMapAsset,
+            default:[]
+        },
+        coin:cc.Prefab,
+        question:cc.Prefab
+    },
+
+    // LIFE-CYCLE CALLBACKS:
+
+    init(player){
+        //解析地图数据
+        let order=1;
+        this.tm=this.node.getComponent(cc.TiledMap);
+        this.tm.tmxAsset=this.maps[globalMgr.getRound()];
+        this.mapSize=this.tm.getMapSize();
+        this.currCol=0;
+
+        //初始化各层之间的层级关系
+        this.node.addChild(player);
+
+        this.waterLayer=this.tm.getLayer("water");
+
+        let propMgr=this.node.getChildByName("propMgr");
+        let monsterMgr=this.node.getChildByName("monsterMgr");
+
+        this.writeflagLayer=this.tm.getLayer("writeflag");
+        this.writeflagLayer.node.zIndex=order++;
+        this.sceneLayer=this.tm.getLayer("scene");
+        this.sceneLayer.node.zIndex=order++;
+
+        propMgr.zIndex=order++;
+
+        this.obstacleLayer=this.tm.getLayer("obstacle");
+        this.obstacleLayer.node.zIndex=order++;
+
+        this.coinLayer=this.tm.getLayer("coin");
+        this.coinLayer.node.zIndex=order++;
+
+        this.endflag=this.tm.getLayer("endflag");
+        this.endflag.node.zIndex=order++;
+
+        monsterMgr.zIndex=order++;
+        player.zIndex=order++;
+
+        this.pipeLayer=this.tm.getLayer("pipe");
+        this.pipeLayer.node.zIndex=order++;
+
+        this.posLayer=this.tm.getObjectGroup("position");
+        this.monsterLayer=this.tm.getObjectGroup("monster");
+        this.propLayer=this.tm.getObjectGroup("prop");
+        this.hideLayer=this.tm.getObjectGroup("hide");
+        //this.positionObjs=this.getObjects();
+        this.hideObjs=this.hideLayer.getObjects();
+
+        //解析一次全屏tile
+        this.paseTile(true);
+
+        EM.on(EM.type.COLLSI_FLAG,this.collsiFlag,this);
+        EM.on(EM.type.RISE_WRITE_FLAG,this.riseWriteFlag,this);
+        //this.obstacleLayer.setTileGIDAt(0,cc.v2(0,15));
+    },
+    //更改障碍物层某tile的gid 
+    setObstacleGidAt(pos,gid){
+        this.obstacleLayer.setTileGIDAt(gid,pos);
+    },
+    //升城堡旗帜
+    riseWriteFlag(){
+        let moveUp=cc.moveBy(1,cc.v2(0,80));
+        this.writeflagLayer.node.runAction(cc.sequence(moveUp,cc.callFunc(function(){
+            setTimeout(function(){
+                globalMgr.nextRound();
+                EM.emit(EM.type.GAME_PASS);
+            },2000);
+        },this)));
+    },
+    //白旗降到地面
+    collsiFlag(){
+        let moveDown=cc.moveBy(1.2,cc.v2(0,-320));
+        this.endflag.node.runAction(cc.sequence(moveDown,cc.callFunc(function(){
+            EM.emit(EM.type.FLAG_TOUCH_LAND);
+        },this)));
+    },
+    //玩家走到终点
+    playerToEnd(){
+
+    },
+    onDestroy(){
+        EM.off(EM.type.COLLSI_FLAG);
+        EM.off(EM.type.RISE_WRITE_FLAG);
+    },
+    //将屏幕坐标转换成地图坐标
+    screenPosToMapPos(pos){
+        return this.node.parent.convertToWorldSpace(pos);
+    },
+    //将地图坐标转换为屏幕坐标
+    mapPosToScreenPos(pos){
+        return this.node.convertToWorldSpace(pos);
+    },
+    //点坐标转换为tile坐标
+    toTiledPos(pos){
+        return new cc.Vec2(Math.floor(pos.x/40),Math.ceil(15-pos.y/40));
+    },
+    //将格子坐标转换为地图坐标
+    tilePosToPos(tilePos){
+        return new cc.Vec2(tilePos.x*40,(15-tilePos.y)*40);
+    },
+    //获取某地图坐标障碍物tiled
+    getObstacleTileAt(pos){
+        let tilePos=this.toTiledPos(pos);
+        if(tilePos.y<0||tilePos.y>15||tilePos.x<0||tilePos.x>this.mapSize.width-1)return{type:null,tile:null};
+        let gid=this.obstacleLayer.getTileGIDAt(tilePos);
+        if(gid){
+            let type=this.paseObstacleGid(gid);
+            let tile=this.obstacleLayer.getTiledTileAt(tilePos.x,tilePos.y,true);
+            return {type:type,tile:tile};
+        }
+        gid=this.pipeLayer.getTileGIDAt(tilePos);
+        if(gid){
+            let type=this.paseObstacleGid(gid);
+            let tile=this.pipeLayer.getTiledTileAt(tilePos.x,tilePos.y,true);
+            return {type:type,tile:tile};
+        }
+        gid=this.coinLayer.getTileGIDAt(tilePos);
+        if(gid){
+            let type=this.paseObstacleGid(gid);
+            let tile=this.coinLayer.getTiledTileAt(tilePos.x,tilePos.y,true);
+            return {type:type,tile:tile};
+        }
+        return {type:null,tile:null};
+    },
+
+    //解析障碍物的类型
+    paseObstacleGid(gid){
+        if(this.isArrContainGid(GID.WALL,gid)){
+            return TILE_TYPE.WALL;
+        }else if(this.isArrContainGid(GID.ROPE,gid)){
+            return TILE_TYPE.ROPE;
+        }else if(this.isArrContainGid(GID.QUESTION,gid)){
+            return TILE_TYPE.QUESTION;
+        }else if(this.isArrContainGid(GID.HIDE_QUESTION,gid)){
+            return TILE_TYPE.HIDE_QUESTION;
+        }else if(this.isArrContainGid(GID.COIN,gid)){
+            return TILE_TYPE.COIN;
+        }else if(this.isArrContainGid(GID.PIPE_H_ENTRY,gid)){
+            return TILE_TYPE.PIPE_H_ENTRY;
+        }else if(this.isArrContainGid(GID.PIPE_V_ENTRY,gid)){
+            return TILE_TYPE.PIPE_V_ENTRY;;
+        }else if(this.isArrContainGid(GID.FLAG,gid)){
+            return TILE_TYPE.FLAG;
+        }else{
+            return TILE_TYPE.LAND;
+        }
+    },
+    isArrContainGid(arr,gid){
+        for(let value of arr){
+            if(value===gid)return true;
+        }
+        return false;
+    },
+    //解析tile，根据tile的类型去添加相应的动画
+    paseTile(isFullScreen){  
+        let row=16;
+        let col=0,offset=0;
+        if(isFullScreen){
+            offset=16;
+            let localPos=this.screenPosToMapPos(cc.v2(1,0));
+            cc.log(localPos);
+            let tilePos=this.toTiledPos(localPos);
+            cc.log(tilePos);
+            col=tilePos.x;
+            this.currCol=col;
+        }else{
+            col=this.currCol;
+            offset=1;
+        }
+
+        for(let i=col;i<col+offset;i++){
+            this.currCol++;
+            for(let j=0;j<row;j++){
+                if(col>=this.mapSize.width)return;
+                
+                let gid=this.coinLayer.getTileGIDAt(i,j);
+                let type=this.paseObstacleGid(gid);
+                switch(type){
+                    case TILE_TYPE.QUESTION:
+                        this.addQuestionAni(this.coinLayer.getTiledTileAt(i,j,true));
+                    break;
+                    case TILE_TYPE.COIN:
+                        this.addCoinAni(this.coinLayer.getTiledTileAt(i,j,true));
+                    break;
+                }
+            }
+        }
+        //cc.log(count);
+        //cc.log(Date.now());
+    },
+    addCoinAni(tile){
+        let coin=cc.instantiate(this.coin);
+        coin.getComponent("coin").init(tile);
+    },
+    addQuestionAni(tile){
+        let question=cc.instantiate(this.question);
+        question.getComponent("question").init(tile);
+    },
+    addBrockAni(tile){
+        tile.gid=0;
+    },
+    update (dt) {
+        //dt>0.02?cc.log(dt):dt;
+        let start=Date.now();
+        let mapPos=this.tilePosToPos(new cc.Vec2(this.currCol,0));
+        let screenPos=this.mapPosToScreenPos(mapPos);
+        if(screenPos.x<680){
+            this.paseTile(false);
+        }
+        // let end=Date.now();
+        //cc.log((end-start)/1000);
+
+    },
+    //添加砖块被顶动作,如果存在隐藏对象，动画结束创建隐藏对象
+    addPushAni(tile,hideObj) {
+        var moveup = cc.moveBy(0.1, cc.v2(0, 20));
+        var movedown = moveup.reverse();
+        tile.node.runAction(cc.sequence(moveup, movedown,cc.callFunc(function(target,data){
+            if(data.hideObj)EM.emit(EM.type.CREATE_PROP,data.pos,data.hideObj);
+        },this,{pos:cc.v2(tile.node.x+20,tile.node.y),hideObj:hideObj})));
+    },
+
+    //顶问号墙
+    pushQuestion(tile) {
+        tile.node.removeAllChildren();
+        let hideObj=this.getObjectAt(this.hideObjs,cc.v2(tile.x,tile.y));
+        this.collsiWithPushWall(tile);
+        //红色
+        if (tile.gid === GID.QUESTION[1]||tile.gid===GID.HIDE_QUESTION[0]) {
+            tile.gid=GID.SOLID[1];
+        }
+        //蓝色
+        else if (tile.gid === GID.QUESTION[0]||tile.gid===GID.HIDE_QUESTION[1]) {
+            tile.gid=GID.SOLID[0];
+        }
+        this.addPushAni(tile,hideObj);
+        if(!hideObj){
+            EM.emit(EM.type.COIN_EFFECT, cc.v2(tile.node.x + 20, tile.node.y + 80), 200);
+        }
+    },
+
+    //顶到隐藏的问号
+    pushHideQuestion(tile){
+        this.pushQuestion(tile);
+    },
+    //顶普通墙
+    pushWall(tile) {
+        let hideObj=this.getObjectAt(this.hideObjs,cc.v2(tile.x,tile.y));
+        this.collsiWithPushWall(tile);
+        //大形态且没有隐藏道具将墙顶碎
+        if (globalMgr.getPlayerState()!==FORM_STATE.SMALL&&!hideObj) {
+            EM.emit(EM.type.PIECES_EFFECT, cc.v2(tile.node.x + 20, tile.node.y + 60), tile.gid);
+            tile.gid = 0;
+        }else{
+            if(hideObj){  
+                let solid=true;
+                if(hideObj===ENUM.PROP_TYPE.COIN&&tile.count===undefined){
+                    tile.count=Math.floor(Math.random()*3+4);
+                    EM.emit(EM.type.COIN_EFFECT, cc.v2(tile.node.x + 20, tile.node.y + 80), 200);
+                    solid=false;
+                }else if(hideObj===ENUM.PROP_TYPE.COIN&&tile.count>0){
+                    tile.count--;
+                    EM.emit(EM.type.COIN_EFFECT, cc.v2(tile.node.x + 20, tile.node.y + 80), 200);
+                    solid=false;
+                }else if(hideObj===ENUM.PROP_TYPE.COIN&&tile.count===0){
+                    EM.emit(EM.type.COIN_EFFECT, cc.v2(tile.node.x + 20, tile.node.y + 80), 200);
+                }
+
+                if(solid){
+                    switch(tile.gid){
+                        case GID.WALL[0]:                   //红色
+                        case GID.WALL[3]:
+                            tile.gid=GID.SOLID[1];
+                        break;          
+                        case GID.WALL[1]:                   //蓝色
+                        case GID.WALL[4]:
+                            tile.gid=GID.SOLID[0];
+                        break;
+                        case GID.WALL[2]:                   //灰色
+                        case GID.WALL[5]:
+                            tile.gid=GID.SOLID[2];
+                        break;
+                    }
+                }
+            }
+            this.addPushAni(tile,hideObj);
+        }
+    },
+
+    //碰到金币
+    collsiCoin(tile) {
+        tile.gid = 0;
+        tile.node.removeAllChildren();
+        EM.emit(EM.type.ADD_COIN, 1);
+    },
+
+    //获取某对象数组指定坐标的对象
+    getObjectAt(arr,tilePos){
+        for(let value of arr){
+            let pos=this.toTiledPos(cc.v2(value.x,value.y));
+            if(tilePos.x===pos.x&&tilePos.y===pos.y){
+                return value.name;
+            }
+        }
+        return null;
+    },
+    //判断某个对象是否出现在当前屏幕中
+    isObjectInScreen(obj){
+        let pos=this.node.convertToWorldSpace(cc.v2(obj.x,obj.y));
+        if(pos.x<globalMgr.winSize.width+40&&pos.x>-40){
+            return true;
+        }
+        return false;
+    },
+    collsiWithPushWall(tile){
+        let t=this.getObstacleTileAt(cc.v2(tile.node.x,tile.node.y+40));
+        if(!t.type){
+            let wallBox=cc.rect(tile.node.x+20,tile.node.y+40,30,40);
+            gm.monsterMgr.collsiWithPushWall(wallBox);
+            gm.propMgr.collsiWithPushWall(wallBox);
+        }else if(t.type===TILE_TYPE.COIN){
+            t.tile.node.removeAllChildren();
+            t.tile.gid=0; 
+            EM.emit(EM.type.COIN_EFFECT, cc.v2(tile.node.x + 20, tile.node.y + 80), 200);
+        }
+    }
+});

@@ -1,0 +1,192 @@
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/script/posMgr.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+cc._RF.push(module, '1efa87dBcxCg6A9B2T4fxTp', 'posMgr', __filename);
+// script/posMgr.js
+
+"use strict";
+
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+var _require = require("aiCtrl"),
+    MoveCmd = _require.MoveCmd;
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
+    },
+    init: function init() {
+        this.currMapFixed = 0;
+        global.isGameOver = false;
+        this.posLayer = gm.mapMgr.posLayer;
+        this.posObjects = this.posLayer.getObjects();
+        var startObj = this.posLayer.getObject("start");
+        var endObj = this.posLayer.getObject("end");
+        var startPos = this.objectPosToMapPos(cc.v2(startObj.x, startObj.y));
+        var endPos = null;
+        if (endObj) {
+            endPos = this.objectPosToMapPos(cc.v2(endObj.x, endObj.y));
+            this.endPos = cc.v2(endPos.x + 20, endPos.y);
+        }
+        this.startPos = cc.v2(startPos.x + 20, startPos.y);
+
+        gm.currPlayer.setPosition(this.startPos);
+        if (config.mapConfig.startType[global.getRound()]) {
+            gm.playerScript.enableInput = false;
+            gm.playerScript.aiCtrl.addCmd(new MoveCmd(gm.playerScript, cc.macro.KEY.d, "keydown"));
+        }
+        //地图固定点
+        this.mapFixeds = [];
+        for (var i = 0; i < this.posObjects.length; i++) {
+            if (this.posObjects[i].name === ENUM.POSITION_TYPE.MAP_FIXED) {
+                this.mapFixeds.push(this.posObjects.splice(i, 1)[0]);
+                i--;
+            }
+        }
+    },
+    update: function update(dt) {
+        //检测玩家是否走到终点
+        if (this.endPos && gm.currPlayer.x >= this.endPos.x && gm.currPlayer.x <= this.endPos.x + 20 && !global.isGameOver) {
+            gm.currPlayer.active = false;
+            global.isGameOver = true;
+            EM.emit(EM.type.PLAYER_TO_END);
+        }
+
+        //检测地图固定点
+        this.mapFixed();
+    },
+    setMapToPos: function setMapToPos(pos) {
+        gm.node.setPosition(pos);
+        gm.mapMgr.paseTile(true);
+    },
+    objectPosToMapPos: function objectPosToMapPos(pos) {
+        return gm.mapMgr.tilePosToPos(gm.mapMgr.toTiledPos(pos));
+    },
+    hPipeEntry: function hPipeEntry(type, pos) {
+        var args = type.split("_");
+        var desObj = this.posLayer.getObject("pipeEnd_" + args[2]);
+        var mapPos = this.objectPosToMapPos(cc.v2(desObj.x, desObj.y));
+        //let screenPos=gm.mapMgr.mapPosToScreenPos(mapPos);
+        var desPos = cc.v2(mapPos.x + 40, mapPos.y);
+        var desMapPos = cc.v2(-desPos.x + 40 * parseInt(args[3]) - 320, gm.node.y);
+        var moveLeft = cc.moveTo(1, pos);
+
+        switch (args[1]) {
+            case ENUM.PIPE_POS_TYPE.LAND:
+                gm.currPlayer.runAction(cc.sequence(moveLeft, cc.callFunc(this.landCallBack, this, { desPos: desPos, desMapPos: desMapPos })));
+                break;
+            case ENUM.PIPE_POS_TYPE.AIR:
+                gm.currPlayer.runAction(cc.sequence(moveLeft, cc.callFunc(this.airCallBack, this, { desPos: desPos, desMapPos: desMapPos })));
+                break;
+        }
+    },
+    vPipeEntry: function vPipeEntry(type, pos) {
+        var args = type.split("_");
+        var moveDown = cc.moveBy(1, cc.v2(0, -80));
+
+        if (args[0] === ENUM.POSITION_TYPE.ROUND) {
+            gm.currPlayer.runAction(cc.sequence(moveDown, cc.callFunc(this.selectRound, this)));
+            return;
+        }
+
+        var desObj = this.posLayer.getObject("pipeEnd_" + args[2]);
+        var mapPos = this.objectPosToMapPos(cc.v2(desObj.x, desObj.y));
+        //let screenPos=gm.mapMgr.mapPosToScreenPos(mapPos);
+        var desPos = cc.v2(mapPos.x + 40, mapPos.y);
+        var desMapPos = cc.v2(-desPos.x + 40 * parseInt(args[3]) - 320, gm.node.y);
+
+        switch (args[1]) {
+            case ENUM.PIPE_POS_TYPE.LAND:
+                gm.currPlayer.runAction(cc.sequence(moveDown, cc.callFunc(this.landCallBack, this, { desPos: desPos, desMapPos: desMapPos })));
+                break;
+            case ENUM.PIPE_POS_TYPE.AIR:
+                gm.currPlayer.runAction(cc.sequence(moveDown, cc.callFunc(this.airCallBack, this, { desPos: desPos, desMapPos: desMapPos })));
+                break;
+        }
+    },
+    selectRound: function selectRound() {
+        cc.log("next");
+    },
+    landCallBack: function landCallBack(target, data) {
+        var fadeOut = cc.fadeOut(0.05);
+        var fadeIn = cc.fadeIn(0.05);
+        var delay = cc.delayTime(0.2);
+        gm.node.runAction(cc.sequence(fadeOut, cc.callFunc(function (target, data) {
+            gm.currPlayer.setPosition(cc.v2(data.desPos.x, data.desPos.y));
+            this.setMapToPos(data.desMapPos);
+            gm.playerScript.fsm.switchState("stand");
+        }, this, data), delay, fadeIn, cc.callFunc(function () {
+            gm.currPlayer.runAction(cc.sequence(cc.moveBy(1, cc.v2(0, 80)), cc.callFunc(function () {
+                gm.playerScript.isPause = false;
+                gm.playerScript.enableInput = true;
+                gm.enableMapMove = true;
+            }, this)));
+        }, this)));
+    },
+    airCallBack: function airCallBack(target, data) {
+        var fadeOut = cc.fadeOut(0.05);
+        var fadeIn = cc.fadeIn(0.05);
+        var delay = cc.delayTime(0.5);
+        gm.node.runAction(cc.sequence(fadeOut, cc.callFunc(function (target, data) {
+            gm.currPlayer.setPosition(data.desPos);
+            this.setMapToPos(data.desMapPos);
+            gm.playerScript.fsm.switchState("stand");
+        }, this, data), delay, fadeIn, cc.callFunc(function () {
+            gm.playerScript.isPause = false;
+            gm.playerScript.enableInput = true;
+            gm.enableMapMove = true;
+        }, this)));
+    },
+    mapFixed: function mapFixed() {
+        if (!gm.enableMapMove) return;
+        for (var i = 0; i < this.mapFixeds.length; i++) {
+            //cc.log(this.mapFixeds[i]);
+            var pos = this.objectPosToMapPos(cc.v2(this.mapFixeds[i].x, this.mapFixeds[i].y));
+            var worldPos = gm.node.convertToWorldSpace(cc.v2(pos.x + 39, pos.y));
+            if (worldPos.x > 0 && worldPos.x <= 640) {
+                this.currMapFixed = i;
+                gm.node.x += 640 - worldPos.x - 1;
+                gm.enableMapMove = false;
+                return;
+            }
+        }
+    },
+    removeCurrMapFixed: function removeCurrMapFixed() {
+        this.mapFixeds.splice(this.currMapFixed, 1);
+    }
+});
+
+cc._RF.pop();
+        }
+        if (CC_EDITOR) {
+            __define(__module.exports, __require, __module);
+        }
+        else {
+            cc.registerModuleFunc(__filename, function () {
+                __define(__module.exports, __require, __module);
+            });
+        }
+        })();
+        //# sourceMappingURL=posMgr.js.map
+        

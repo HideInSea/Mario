@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "flower_blue",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.16666666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "2",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "160c227a-5ecb-4b5e-a744-ca18d934be34"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "e21a0ae4-a056-46dc-a184-8f87fa9ba6ab"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "094eb8e6-d0bc-45b1-98d9-07d4f2e34ba0"
+            }
+          },
+          {
+            "frame": 0.15,
+            "value": {
+              "__uuid__": "160c227a-5ecb-4b5e-a744-ca18d934be34"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

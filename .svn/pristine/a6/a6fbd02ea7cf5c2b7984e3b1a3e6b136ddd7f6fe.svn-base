@@ -1,0 +1,127 @@
+"use strict";
+cc._RF.push(module, '617aeCCH+FMRr0ntbWocxcR', 'globalData');
+// script/globalData.js
+
+"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+
+var PlayeData = function PlayeData() {
+    _classCallCheck(this, PlayeData);
+
+    this.id = 0;
+    this.round = 0; //26
+    this.score = 0;
+    this.coin = 0;
+    this.life = 3;
+    this.formState = FORM_STATE.BIG;
+};
+
+window.global = {
+    time: 300,
+    isGameOver: false,
+    aniSynTime: Date.now(),
+    winSize: null,
+    players: [],
+    currPlayer: null,
+    init: function init(players) {
+        for (var i = 0; i < players; i++) {
+            var player = new PlayeData();
+            player.id = i;
+            this.players.push(player);
+        }
+        this.currPlayer = this.players[0];
+        this.winSize = cc.size(640, 640);
+
+        EM.on(EM.type.ADD_SCORE, this.addScore, this);
+        EM.on(EM.type.ADD_COIN, this.addCoin, this);
+        EM.on(EM.type.ADD_LIFE, this.addLife, this);
+        EM.on(EM.type.ADD_TIME, this.addTime, this);
+        EM.on(EM.type.CHANGE_STATE, this.changeFormState, this);
+    },
+    isOneOrTwo: function isOneOrTwo() {
+        return this.players.length === 1 ? true : false;
+    },
+    getPlayerId: function getPlayerId() {
+        return this.currPlayer.id;
+    },
+    getTime: function getTime() {
+        return this.time;
+    },
+    addTime: function addTime(time) {
+        this.time += time;
+        EM.emit(EM.type.UPDATE_TIME, this.time);
+    },
+    nextRound: function nextRound() {
+        this.currPlayer.round += 1;
+    },
+    setRound: function setRound(round) {
+        this.currPlayer.round = round;
+    },
+    getRound: function getRound() {
+        return this.currPlayer.round;
+    },
+    getLife: function getLife() {
+        return this.currPlayer.life;
+    },
+    getCoin: function getCoin() {
+        return this.currPlayer.coin;
+    },
+    getScore: function getScore() {
+        return this.currPlayer.score;
+    },
+    getRoundString: function getRoundString() {
+        var main = 1 + Math.floor(this.currPlayer.round / 4);
+        var sub = 1 + this.currPlayer.round % 4;
+        return main + "-" + sub;
+    },
+    nextPlayer: function nextPlayer() {
+        this.currPlayer = this.players[(this.currPlayer.id + 1) % this.players.length];
+    },
+    addScore: function addScore(score) {
+        this.currPlayer.score += score;
+        EM.emit(EM.type.UPDATE_SCORE, this.currPlayer.score);
+    },
+    addCoin: function addCoin(coin) {
+        this.currPlayer.coin += coin;
+        if (this.currPlayer.coin >= 100) {
+            this.currPlayer.coin %= 100;
+            this.currPlayer.life++;
+        }
+        EM.emit(EM.type.UPDATE_COIN, this.currPlayer.coin);
+    },
+    addLife: function addLife(life) {
+        this.currPlayer.life += life;
+    },
+    changeFormState: function changeFormState(state) {
+        this.currPlayer.formState = state;
+    },
+    getPlayerState: function getPlayerState() {
+        return this.currPlayer.formState;
+    },
+    resetTime: function resetTime() {
+        this.time = 300;
+    },
+    restart: function restart() {
+        this.time = 300, this.isGameOver = false;
+        this.players = [];
+        this.currPlayer = null;
+        EM.off(EM.type.ADD_SCORE);
+        EM.off(EM.type.ADD_COIN);
+        EM.off(EM.type.ADD_LIFE);
+        EM.off(EM.type.ADD_TIME);
+        EM.off(EM.type.CHANGE_STATE);
+    }
+};
+
+cc._RF.pop();

@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "sky_star",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.85,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "2",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "379fbc48-0265-4424-911b-ed478168ac57"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "ce006ba0-378f-417e-9e10-8745d5301332"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "0b086fd4-76f5-4405-8101-4db4ca88099c"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "379fbc48-0265-4424-911b-ed478168ac57"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

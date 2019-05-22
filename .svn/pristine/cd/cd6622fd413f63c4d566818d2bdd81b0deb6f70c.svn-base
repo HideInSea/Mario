@@ -1,0 +1,968 @@
+2019-03-29T02:33:45.484Z - normal: Load ~/.CocosCreator/settings.json
+2019-03-29T02:33:46.612Z - normal: Initializing Asset Database
+2019-03-29T02:33:46.617Z - normal: checking language setting...
+2019-03-29T02:33:46.617Z - normal: Language: zh
+2019-03-29T02:33:47.432Z - success: preview server running at http://localhost:7456
+2019-03-29T02:33:47.434Z - success: protocol editor-framework registered
+2019-03-29T02:33:47.434Z - success: protocol app registered
+2019-03-29T02:33:47.434Z - success: protocol theme registered
+2019-03-29T02:33:47.434Z - success: protocol packages registered
+2019-03-29T02:33:47.435Z - success: protocol uuid registerred
+2019-03-29T02:33:47.435Z - success: protocol db registerred
+2019-03-29T02:33:47.435Z - success: protocol thumbnail registerred
+2019-03-29T02:33:47.435Z - success: protocol unpack registerred
+2019-03-29T02:33:47.435Z - success: protocol disable-commonjs registerred
+2019-03-29T02:33:47.610Z - normal: connected!
+2019-03-29T02:33:47.611Z - normal: Check project D:\THB\newMario
+2019-03-29T02:33:47.613Z - normal: Initializing project D:\THB\newMario
+2019-03-29T02:33:48.373Z - normal: Initializing Cocos2d
+2019-03-29T02:33:49.154Z - normal: Initializing engine extends
+2019-03-29T02:33:49.181Z - success: asset-db-debugger loaded
+2019-03-29T02:33:49.184Z - success: code-editor loaded
+2019-03-29T02:33:49.185Z - success: color-picker loaded
+2019-03-29T02:33:49.283Z - success: fb-audience-network loaded
+2019-03-29T02:33:49.346Z - success: fb-live-stream loaded
+2019-03-29T02:33:49.350Z - success: google-play-instant loaded
+2019-03-29T02:33:49.355Z - success: huawei-runtime loaded
+2019-03-29T02:33:49.356Z - success: jsb-adapter loaded
+2019-03-29T02:33:49.360Z - success: oppo-runtime loaded
+2019-03-29T02:33:49.363Z - success: package-manager loaded
+2019-03-29T02:33:49.505Z - success: qqplay-adapter loaded
+2019-03-29T02:33:49.507Z - success: runtime-dev-tools loaded
+2019-03-29T02:33:49.510Z - success: sdkbox loaded
+2019-03-29T02:33:49.514Z - success: tester loaded
+2019-03-29T02:33:49.516Z - success: ui-grid loaded
+2019-03-29T02:33:49.519Z - success: ui-kit-preview-extra loaded
+2019-03-29T02:33:49.521Z - success: ui-kit-preview loaded
+2019-03-29T02:33:49.522Z - success: ui-kit loaded
+2019-03-29T02:33:49.524Z - success: ui-tree loaded
+2019-03-29T02:33:49.528Z - success: vivo-runtime loaded
+2019-03-29T02:33:49.528Z - success: weapp-adapter loaded
+2019-03-29T02:33:49.585Z - success: assets loaded
+2019-03-29T02:33:49.587Z - success: builder loaded
+2019-03-29T02:33:49.883Z - success: cocos-services loaded
+2019-03-29T02:33:49.887Z - success: console loaded
+2019-03-29T02:33:49.920Z - success: fb-instant-games loaded
+2019-03-29T02:33:49.923Z - success: google-instant-games loaded
+2019-03-29T02:33:49.928Z - success: hierarchy loaded
+2019-03-29T02:33:49.930Z - success: inspector loaded
+2019-03-29T02:33:49.932Z - success: keystore loaded
+2019-03-29T02:33:49.936Z - success: node-library loaded
+2019-03-29T02:33:49.938Z - success: package-asset loaded
+2019-03-29T02:33:49.939Z - success: preferences loaded
+2019-03-29T02:33:49.940Z - success: project-exporter loaded
+2019-03-29T02:33:49.941Z - success: project-importer loaded
+2019-03-29T02:33:49.943Z - success: project-settings loaded
+2019-03-29T02:33:49.947Z - success: scene loaded
+2019-03-29T02:33:49.949Z - success: simulator-debugger loaded
+2019-03-29T02:33:49.950Z - success: sprite-editor loaded
+2019-03-29T02:33:49.954Z - success: store loaded
+2019-03-29T02:33:49.959Z - success: timeline loaded
+2019-03-29T02:33:49.966Z - warn: 'Editor.projectInfo.path' has been deprecated, please use 'Editor.Project.path'.
+2019-03-29T02:33:49.967Z - normal: [LuaCPP Support] version 0.4
+2019-03-29T02:33:49.967Z - success: creator-luacpp-support loaded
+2019-03-29T02:33:52.334Z - normal: Loading packages
+2019-03-29T02:33:52.342Z - normal: Watching packages
+2019-03-29T02:33:52.778Z - info: Cocos Services load base data!
+2019-03-29T02:33:53.132Z - normal: Run Application
+2019-03-29T02:34:00.017Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T02:34:00.039Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T02:34:00.067Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T02:35:58.918Z - normal: cocos2d: TMXFormat: Unsupported TMX version: 1.2
+2019-03-29T02:36:24.826Z - success: oppo-runtime unloaded
+2019-03-29T02:36:24.828Z - success: oppo-runtime loaded
+2019-03-29T02:48:12.090Z - normal: cocos2d: TMXFormat: Unsupported TMX version: 1.2
+2019-03-29T03:28:41.463Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:28:41.485Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:28:41.519Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T03:28:44.047Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:28:44.053Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:28:44.067Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T03:34:33.544Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:34:33.563Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:34:33.588Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T03:38:01.169Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:38:01.174Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:38:01.189Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T03:51:46.792Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:51:46.803Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:51:46.815Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T03:53:40.675Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:53:40.683Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:53:40.696Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T03:54:58.578Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:54:58.591Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:54:58.603Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T03:55:24.678Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:55:24.685Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:55:24.696Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T03:59:05.580Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:59:05.700Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T03:59:05.701Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T04:00:15.278Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T04:00:15.279Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T04:00:15.279Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T04:02:11.179Z - normal: cocos2d: TMXFormat: Unsupported TMX version: 1.2
+2019-03-29T05:42:35.768Z - failed: [db-task][sync-changes] Failed to import asset D:\THB\newMario\assets\script\posMgr.js, message: Compile error: SyntaxError: D:/THB/newMario/assets/script/posMgr.js: Unexpected token (93:8)
+  91 |         let args=type.split("_");
+  92 |         if(args[0]===ENUM)
+> 93 |         let desObj=this.posLayer.getObject("pipeEnd_"+args[2]);
+     |         ^
+  94 |         let mapPos=this.objectPosToMapPos(cc.v2(desObj.x,desObj.y));
+  95 |         //let screenPos=gm.mapMgr.mapPosToScreenPos(mapPos);
+  96 |         let desPos=cc.v2(mapPos.x+40,mapPos.y);
+    at Parser.pp$5.raise (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp$1.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1858:30)
+    at Parser.pp$1.parseIfStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:2059:26)
+    at Parser.pp$1.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1846:19)
+    at Parser.pp$1.parseBlockBody (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:2268:21)
+    at Parser.pp$1.parseBlock (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:2247:8)
+    at Parser.pp$3.parseFunctionBody (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4235:22)
+    at Parser.pp$3.parseMethod (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4180:8)
+    at Parser.pp$3.parseObjectMethod (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4097:10)
+2019-03-29T05:42:36.227Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T05:42:36.229Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T05:42:36.229Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T05:42:37.284Z - normal: cocos2d: TMXFormat: Unsupported TMX version: 1.2
+2019-03-29T05:48:23.090Z - normal: cocos2d: TMXFormat: Unsupported TMX version: 1.2
+2019-03-29T05:48:23.696Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T05:48:23.715Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T05:48:23.737Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T05:48:24.860Z - normal: cocos2d: TMXFormat: Unsupported TMX version: 1.2
+2019-03-29T05:50:42.391Z - normal: cocos2d: TMXFormat: Unsupported TMX version: 1.2
+2019-03-29T05:51:05.070Z - normal: cocos2d: TMXFormat: Unsupported TMX version: 1.2
+2019-03-29T06:04:13.129Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:04:13.183Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:04:13.183Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:10:04.075Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:10:04.078Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:10:04.193Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:19:17.454Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:19:17.495Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:19:17.539Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:22:30.334Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:22:30.337Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:22:30.337Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:31:47.568Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:31:47.572Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:31:47.584Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:38:33.159Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:38:33.181Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:38:33.213Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:38:35.926Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:38:35.939Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:38:35.954Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:39:31.591Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:39:31.601Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:39:31.614Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:39:49.920Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:39:49.925Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:39:49.938Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:42:51.962Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:42:51.980Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:42:52.007Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:42:55.905Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:42:55.913Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:42:55.925Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:45:07.190Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:45:07.195Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:45:07.206Z - failed: load script [D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\fireState.js] failed : ReferenceError: Walk is not defined
+    at __define (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\fireState.js:51:26)
+    at D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\fireState.js:56:13
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\fireState.js:63:11)
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\fireState.js:66:3)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+2019-03-29T06:45:07.207Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:58:27.165Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:58:27.171Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:58:27.184Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T06:58:58.695Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:58:58.700Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T06:58:58.714Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:12:27.355Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:12:27.371Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:12:27.399Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:24:11.983Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:24:11.995Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:24:12.017Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:24:50.871Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:24:50.874Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:24:50.899Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:25:33.932Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:25:33.942Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:25:33.996Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:27:05.867Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:27:05.868Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:27:05.868Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:27:25.359Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:27:25.372Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:27:25.384Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:27:59.454Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:27:59.460Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:27:59.472Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:28:58.298Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:28:58.304Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:28:58.316Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:29:34.881Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:29:34.894Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:29:34.925Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:30:08.744Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:30:08.756Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:30:08.771Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:31:17.920Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:31:17.926Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:31:17.942Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:32:50.450Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:32:50.455Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:32:50.468Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:33:41.455Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:33:41.456Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:33:41.458Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:34:42.149Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:34:42.149Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:34:42.150Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:35:18.168Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:35:18.169Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:35:18.169Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:38:11.855Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:38:11.857Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:38:11.857Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:40:14.595Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:40:14.604Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:40:14.616Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:44:21.966Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:44:21.968Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:44:21.993Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:44:29.557Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:44:29.570Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:44:29.632Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:44:59.509Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:44:59.523Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:44:59.580Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T07:48:39.182Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:48:39.183Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T07:48:39.184Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T08:05:34.750Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:05:34.766Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:05:34.798Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T08:05:55.966Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:05:55.967Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:05:55.985Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T08:29:54.016Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:29:54.035Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:29:54.064Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T08:36:03.514Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:36:03.515Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:36:03.516Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T08:37:30.697Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:37:30.698Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:37:30.698Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T08:42:53.158Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:42:53.164Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:42:53.174Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T08:52:15.556Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:52:15.561Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:52:15.581Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T08:54:55.625Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:54:55.631Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T08:54:55.642Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:00:07.127Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:00:07.136Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:00:07.150Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:01:17.397Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:01:17.398Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:01:17.399Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:02:40.682Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:02:40.687Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:02:40.704Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:03:21.965Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:03:21.971Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:03:21.983Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:04:40.644Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:04:40.651Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:04:40.665Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:12:18.843Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:12:18.856Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:12:18.868Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:12:46.801Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:12:46.802Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:12:46.802Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:20:05.830Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:20:05.832Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:20:05.832Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:20:59.282Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:20:59.282Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:20:59.289Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:26:33.341Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:26:33.343Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:26:33.343Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:27:48.998Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:27:48.999Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:27:49.000Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:34:50.066Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:34:50.071Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:34:50.083Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:35:25.152Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:35:25.200Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:35:25.202Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:38:39.256Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:38:39.263Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:38:39.272Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:40:15.483Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:40:15.490Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:40:15.549Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:45:42.367Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:45:42.396Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:45:42.440Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:49:38.169Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:49:38.175Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:49:38.250Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:49:54.156Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:49:54.163Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:49:54.172Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:51:52.345Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:51:52.347Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:51:52.348Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:51:54.193Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:51:54.200Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:51:54.210Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:52:21.326Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:52:21.326Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T09:52:21.327Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T09:56:42.870Z - error: animation not added or already removed
+    at Object.cc.errorID (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:167:16)
+    at AnimationAnimator.p.removeAnimation (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\animation-animator.js:72:20)
+    at AnimationState.proto.onStop (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\animation-state.js:107:31)
+    at AnimationState.prototype.stop (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\playable.js:52:22)
+    at AnimationState.process [as _process] (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\animation-state.js:145:22)
+    at AnimationState.proto.update (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\animation-state.js:189:18)
+    at CCClass.update (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\animation-manager.js:28:30)
+    at cc.Scheduler.update (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\core\CCScheduler.js:262:38)
+    at cc.Director.mainLoop.CC_EDITOR._purgeDirectorInNextLoop [as mainLoop] (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\core\CCDirector.js:435:41)
+2019-03-29T10:00:02.491Z - error: animation not added or already removed
+    at Object.cc.errorID (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:167:16)
+    at AnimationAnimator.p.removeAnimation (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\animation-animator.js:72:20)
+    at AnimationState.proto.onStop (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\animation-state.js:107:31)
+    at AnimationState.prototype.stop (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\playable.js:52:22)
+    at AnimationState.process [as _process] (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\animation-state.js:145:22)
+    at AnimationState.proto.update (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\animation-state.js:189:18)
+    at CCClass.update (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\animation\animation-manager.js:28:30)
+    at cc.Scheduler.update (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\core\CCScheduler.js:262:38)
+    at cc.Director.mainLoop.CC_EDITOR._purgeDirectorInNextLoop [as mainLoop] (C:\CocosCreator\resources\engine\bin\.cache\dev\cocos2d\core\CCDirector.js:435:41)
+2019-03-29T10:01:25.101Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:01:25.118Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:01:25.163Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:10:23.927Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:10:24.014Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:10:24.015Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:11:21.308Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:11:21.319Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:11:21.331Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:11:24.575Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:11:24.583Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:11:24.634Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:14:53.356Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:14:53.365Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:14:53.460Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:20:05.054Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:20:05.161Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:20:05.161Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:23:09.156Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:23:09.210Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:23:09.210Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:30:37.660Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:30:37.666Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:30:37.677Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:32:37.892Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:32:37.900Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:32:37.982Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:35:39.899Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:35:39.921Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:35:39.963Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:39:43.624Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:39:43.631Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:39:43.719Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:39:53.141Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:39:53.148Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:39:53.202Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T10:39:59.139Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:39:59.148Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T10:39:59.164Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:07:45.296Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:07:45.304Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:07:45.319Z - failed: load script [D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js] failed : ReferenceError: Flat is not defined
+    at __define (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:131:38)
+    at D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:136:13
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:143:11)
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:146:3)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+2019-03-29T11:07:45.321Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:23:05.869Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:23:05.870Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:23:05.870Z - failed: load script [bossState] failed : ReferenceError: Flat is not defined
+    at __define (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:123:38)
+    at D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:128:13
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:135:11)
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:138:3)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+2019-03-29T11:23:05.870Z - failed: load script [D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js] failed : TypeError: Cannot read property 'Walk' of undefined
+    at __define (D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:21:20)
+    at D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:70:13
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:77:11)
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:80:3)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+2019-03-29T11:23:05.881Z - failed: load script [D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js] failed : ReferenceError: Flat is not defined
+    at __define (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:123:38)
+    at D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:128:13
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:135:11)
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:138:3)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+2019-03-29T11:23:05.926Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:23:06.075Z - warn: Script attached to "boss" in prefab "boss.prefab" is missing or invalid. Detailed information:
+Node path: "boss"
+Asset url: "db://assets/prefab/monster/boss.prefab"
+Script UUID: "a4ffc67b-40f0-441d-917c-f15e67a5e025"
+Class ID: "a4ffcZ7QPBEHZF88V5npeAl"
+
+2019-03-29T11:23:40.313Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:23:40.314Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:23:40.314Z - failed: load script [bossState] failed : ReferenceError: Flat is not defined
+    at __define (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:123:38)
+    at D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:128:13
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:135:11)
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:138:3)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+2019-03-29T11:23:40.314Z - failed: load script [D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js] failed : TypeError: Cannot read property 'Walk' of undefined
+    at __define (D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:21:20)
+    at D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:70:13
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:77:11)
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:80:3)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+2019-03-29T11:23:40.318Z - failed: load script [D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js] failed : ReferenceError: Flat is not defined
+    at __define (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:123:38)
+    at D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:128:13
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:135:11)
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:138:3)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+2019-03-29T11:23:40.320Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:23:40.503Z - warn: Script attached to "boss" in prefab "boss.prefab" is missing or invalid. Detailed information:
+Node path: "boss"
+Asset url: "db://assets/prefab/monster/boss.prefab"
+Script UUID: "a4ffc67b-40f0-441d-917c-f15e67a5e025"
+Class ID: "a4ffcZ7QPBEHZF88V5npeAl"
+
+2019-03-29T11:25:10.942Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:25:10.943Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:25:10.943Z - failed: load script [bossState] failed : ReferenceError: Flat is not defined
+    at __define (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:123:38)
+    at D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:128:13
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:135:11)
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:138:3)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+2019-03-29T11:25:10.943Z - failed: load script [D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js] failed : TypeError: Cannot read property 'Walk' of undefined
+    at __define (D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:21:20)
+    at D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:70:13
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:77:11)
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\monster\boss.js:80:3)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+2019-03-29T11:25:10.943Z - failed: load script [D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js] failed : ReferenceError: Flat is not defined
+    at __define (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:123:38)
+    at D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:128:13
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:135:11)
+    at Object.<anonymous> (D:\THB\newMario\temp\quick-scripts\assets\script\state\monsterState\bossState.js:138:3)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+2019-03-29T11:25:10.943Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:25:11.083Z - warn: Script attached to "boss" in prefab "boss.prefab" is missing or invalid. Detailed information:
+Node path: "boss"
+Asset url: "db://assets/prefab/monster/boss.prefab"
+Script UUID: "a4ffc67b-40f0-441d-917c-f15e67a5e025"
+Class ID: "a4ffcZ7QPBEHZF88V5npeAl"
+
+2019-03-29T11:25:16.407Z - warn: Script attached to "boss" in prefab "boss.prefab" is missing or invalid. Detailed information:
+Node path: "boss"
+Asset url: "db://assets/prefab/monster/boss.prefab"
+Script UUID: "a4ffc67b-40f0-441d-917c-f15e67a5e025"
+Class ID: "a4ffcZ7QPBEHZF88V5npeAl"
+
+2019-03-29T11:25:24.448Z - error: Can not find cc.Component in the script a4ffcZ7QPBEHZF88V5npeAl.
+    at Object.addComponent (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\utils\scene.js:1:5981)
+    at HTMLElement.add-component (C:\CocosCreator\resources\app.asar\editor\builtin\scene\panel\messages\scene-operation.js:1:1166)
+    at Object.e._dispatch (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\panel.js:1:1941)
+    at EventEmitter.o.on.s (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-03-29T11:26:06.505Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:26:06.505Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:26:06.505Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:27:45.664Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:27:45.664Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:27:45.664Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:28:25.361Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:28:25.391Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:28:25.409Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:28:50.047Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:28:50.058Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:28:50.080Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:30:54.553Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:30:54.639Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:30:54.731Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:33:08.817Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:33:08.824Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:33:08.918Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:35:08.396Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:35:08.397Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:35:08.397Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:35:39.763Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:35:39.763Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:35:39.766Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:36:09.859Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:36:09.934Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:36:09.934Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:37:40.524Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:37:40.524Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:37:40.525Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:39:42.869Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:39:42.882Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:39:42.903Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:40:56.119Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:40:56.121Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:40:56.122Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T11:49:20.188Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:49:20.304Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T11:49:20.304Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:00:56.339Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:00:56.341Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:00:56.341Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:01:17.503Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:01:17.503Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:01:17.504Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:02:33.166Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:02:33.166Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:02:33.167Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:03:17.319Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:03:17.320Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:03:17.320Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:04:08.562Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:04:08.562Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:04:08.562Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:12:16.022Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:12:16.369Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:12:16.370Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:13:43.970Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:13:44.042Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:13:44.042Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:14:15.985Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:14:15.985Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:14:15.992Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:14:51.338Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:14:51.338Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:14:51.338Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:16:11.491Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:16:11.492Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:16:11.570Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:16:31.758Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:16:31.759Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:16:31.759Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:18:00.643Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:18:00.659Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:18:00.659Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:19:26.839Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:19:26.848Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:19:26.902Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:20:02.685Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:20:02.685Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:20:02.686Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:20:56.775Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:20:56.833Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:20:56.833Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:23:28.019Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:23:28.020Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:23:28.021Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:25:47.585Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:25:47.586Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:25:47.586Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:34:08.659Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:34:08.668Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:34:08.746Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:42:29.063Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:42:29.191Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:42:29.191Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:44:00.922Z - error: Failed to apply "boss" because the prefab asset is missing, please save the prefab to a new asset by dragging and drop the node from Node Tree into Assets.
+    at Object.applyPrefab (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:5787)
+    at Object.save (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\edit-mode\modes\prefab.js:1:2317)
+    at Object.run (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\edit-mode\index.js:1:2078)
+    at _queue.s.queue (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\lib\tasks.js:1:539)
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:987:13
+    at Immediate.process (C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:953:21)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+2019-03-29T12:44:01.467Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:44:01.473Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:44:01.488Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:44:28.502Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:44:28.503Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:44:28.504Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:45:33.136Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:45:33.137Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:45:33.137Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:46:15.222Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:46:15.223Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:46:15.223Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:47:46.575Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:47:46.599Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:47:46.655Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:50:05.609Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:50:05.611Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:50:05.612Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:55:16.251Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:55:16.344Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:55:16.345Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:56:00.987Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:56:00.988Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:56:01.050Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:57:12.367Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:57:12.368Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:57:12.368Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T12:58:46.533Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:58:46.535Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T12:58:46.535Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T13:03:50.181Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T13:03:50.183Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T13:03:50.184Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T13:07:42.853Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T13:07:42.854Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-03-29T13:07:42.854Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]
+2019-03-29T13:09:22.791Z - info: shutdown preview server

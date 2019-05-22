@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "small_walk",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.26666666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "2",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "c41278a6-79f8-49d1-b864-51ad5acb5726"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "5058fcc9-aa19-47c9-8afd-c0400fa76102"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "470ac7ad-3ec7-40ef-ab08-26d1b3aee584"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "c41278a6-79f8-49d1-b864-51ad5acb5726"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

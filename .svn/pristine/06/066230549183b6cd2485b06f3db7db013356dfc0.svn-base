@@ -1,0 +1,69 @@
+2019-04-24T01:12:54.851Z - normal: Load ~/.CocosCreator/settings.json
+2019-04-24T01:12:56.022Z - normal: Initializing Asset Database
+2019-04-24T01:12:56.069Z - normal: checking language setting...
+2019-04-24T01:12:56.069Z - normal: Language: zh
+2019-04-24T01:12:56.818Z - success: preview server running at http://localhost:7456
+2019-04-24T01:12:56.818Z - success: protocol editor-framework registered
+2019-04-24T01:12:56.818Z - success: protocol app registered
+2019-04-24T01:12:56.818Z - success: protocol theme registered
+2019-04-24T01:12:56.818Z - success: protocol packages registered
+2019-04-24T01:12:56.818Z - success: protocol uuid registerred
+2019-04-24T01:12:56.818Z - success: protocol db registerred
+2019-04-24T01:12:56.818Z - success: protocol thumbnail registerred
+2019-04-24T01:12:56.818Z - success: protocol unpack registerred
+2019-04-24T01:12:56.818Z - success: protocol disable-commonjs registerred
+2019-04-24T01:12:57.006Z - normal: connected!
+2019-04-24T01:12:57.006Z - normal: Check project D:\THB\newMario
+2019-04-24T01:12:57.006Z - normal: Initializing project D:\THB\newMario
+2019-04-24T01:12:57.709Z - normal: Initializing Cocos2d
+2019-04-24T01:12:58.381Z - normal: Initializing engine extends
+2019-04-24T01:12:58.412Z - success: asset-db-debugger loaded
+2019-04-24T01:12:58.412Z - success: code-editor loaded
+2019-04-24T01:12:58.412Z - success: color-picker loaded
+2019-04-24T01:12:58.490Z - success: fb-audience-network loaded
+2019-04-24T01:12:58.552Z - success: fb-live-stream loaded
+2019-04-24T01:12:58.552Z - success: google-play-instant loaded
+2019-04-24T01:12:58.568Z - success: huawei-runtime loaded
+2019-04-24T01:12:58.568Z - success: jsb-adapter loaded
+2019-04-24T01:12:58.568Z - success: oppo-runtime loaded
+2019-04-24T01:12:58.568Z - success: package-manager loaded
+2019-04-24T01:12:58.693Z - success: qqplay-adapter loaded
+2019-04-24T01:12:58.693Z - success: runtime-dev-tools loaded
+2019-04-24T01:12:58.693Z - success: sdkbox loaded
+2019-04-24T01:12:58.693Z - success: tester loaded
+2019-04-24T01:12:58.709Z - success: ui-grid loaded
+2019-04-24T01:12:58.709Z - success: ui-kit-preview-extra loaded
+2019-04-24T01:12:58.709Z - success: ui-kit-preview loaded
+2019-04-24T01:12:58.709Z - success: ui-kit loaded
+2019-04-24T01:12:58.709Z - success: ui-tree loaded
+2019-04-24T01:12:58.709Z - success: vivo-runtime loaded
+2019-04-24T01:12:58.709Z - success: weapp-adapter loaded
+2019-04-24T01:12:58.771Z - success: assets loaded
+2019-04-24T01:12:58.771Z - success: builder loaded
+2019-04-24T01:12:59.021Z - success: cocos-services loaded
+2019-04-24T01:12:59.021Z - success: console loaded
+2019-04-24T01:12:59.052Z - success: fb-instant-games loaded
+2019-04-24T01:12:59.052Z - success: google-instant-games loaded
+2019-04-24T01:12:59.052Z - success: hierarchy loaded
+2019-04-24T01:12:59.068Z - success: inspector loaded
+2019-04-24T01:12:59.068Z - success: keystore loaded
+2019-04-24T01:12:59.068Z - success: node-library loaded
+2019-04-24T01:12:59.068Z - success: package-asset loaded
+2019-04-24T01:12:59.068Z - success: preferences loaded
+2019-04-24T01:12:59.068Z - success: project-exporter loaded
+2019-04-24T01:12:59.068Z - success: project-importer loaded
+2019-04-24T01:12:59.068Z - success: project-settings loaded
+2019-04-24T01:12:59.084Z - success: scene loaded
+2019-04-24T01:12:59.084Z - success: simulator-debugger loaded
+2019-04-24T01:12:59.084Z - success: sprite-editor loaded
+2019-04-24T01:12:59.084Z - success: store loaded
+2019-04-24T01:12:59.084Z - success: timeline loaded
+2019-04-24T01:13:04.139Z - normal: Loading packages
+2019-04-24T01:13:04.139Z - normal: Watching packages
+2019-04-24T01:13:04.232Z - info: Cocos Services load base data!
+2019-04-24T01:13:04.826Z - normal: Run Application
+2019-04-24T01:13:11.159Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-24T01:13:11.176Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2019-04-24T01:13:11.225Z - warn: Modified global variable while loading common project scripts: global
+Before: [object global]
+After: [object Object]

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="170" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="23">
+ <tileset firstgid="1" source="map.tsx"/>
+ <tileset firstgid="401" source="../../../../../../THB/newMario/assets/texture/map/map.tsx"/>
+ <layer id="2" name="background" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztlDESgCAMwPgk/+Nr/sTBtZTK1UIlQyYPbUPOWkqpAAAAAAAAAAAPTcH1W5fABvtDDpqCeGa2M+9Oaf1oWj2kU/7t/4ZOv3G5epYTkZzT6XgGOo11ulOnlhmzdNp7Tt9zTunU36m2M53OOaVT25x06u915LTXpHY+ah9LI9E+LU7f3s3qdiJZ3anFee8do7kydio5zNrpDXQIFck=
+  </data>
+ </layer>
+ <layer id="1" name="writeflag" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzjEBAAAIA6AZxv4VLeCvByQgAQAAYNN1PQAAAAAAAAD4aQCEmwAn
+  </data>
+ </layer>
+ <layer id="3" name="scene" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztmFkOgjAQhuFUbkdwOwIuT+4aFZ7cNW6X9jeBpGkwVlpgKvMlX8KDhdqZdhgch2HoMXYdZwKncObmPRu6DLA2QzjSWKM5xi4UxlOLCYX57PHcAzzCU0pzMBHjvOewwbgt3Gn8hzPGXhTGZxGTX9Cdj+r+1IVCjHWhMIeioro/RUr4fRlWYBXWFMarxDirPUMVCjXDZuT8qeO6AZuwBduG1jXJnqGGTq7xea2HnD8erjuwC3uwT3hdsz6jONfosEQMVnANfRgQjgnnjT2Yfu+74l43eIcP+OQcYAxg6r3vXe+9sN7LeoJJ+iwmfYrSp/phnY9qvlj7RdPqsxg9/qFPVeER1vmo5ou1X9SmPkumKGfOPxP1T9+0qc+SoXbm2LJvKH37FfMvrvYHodxnmYPavvkEpe8qYv7F1f4n5yTDMIxRXnCAYDQ=
+  </data>
+ </layer>
+ <layer id="4" name="obstacle" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt2NENgkAMgGHcgSVuHPcGJnEISMSENFyoV0x79f+SvvnQmP/wcBgAAACA33h5LwAojA/vDe43bTOfzOK5FEwidyp78+rsuAet36vscyVyp1mcPd/p/Y1OcVS7C3mdmSLmSu+dRrkb4DsZOo129rU+e0feUat2J7fe1WWfPXeKvOgUPfwv0WOnrd9rpt/Xf9PaqeYz0tM4UWjOSe09LeP7m/X8W7uINsjJuys5K+9baik=
+  </data>
+ </layer>
+ <layer id="11" name="pipe" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB
+  </data>
+ </layer>
+ <layer id="5" name="coin" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt1TEKgEAMRcFcN1fw9DbayAoWQj7LDKR/RbJbBQAwp68BYK1r/q3syui4PTtSutjDl31K3bnULuBfSX8ypHMvAO+O6QAAAGALJ7uTCrw=
+  </data>
+ </layer>
+ <layer id="6" name="endflag" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzrENAAAEAEH2H5qYQsRd8fVHAAAA/FST3L4AAAAAAAAAuKcBnC4BAQ==
+  </data>
+ </layer>
+ <objectgroup id="7" name="prop">
+  <object id="6" name="ladder_big_mv" x="2257.33" y="581.333"/>
+  <object id="12" name="ladder_big_mh" x="3376.67" y="301.333"/>
+  <object id="13" name="ladder_big_mh" x="3778.67" y="300.333"/>
+  <object id="19" name="ladder_big_mh" x="5377.33" y="301"/>
+ </objectgroup>
+ <objectgroup id="8" name="monster">
+  <object id="2" name="duck_red_walk_1" x="1217.33" y="218.667"/>
+  <object id="3" name="mushroom_red" x="1777.33" y="178.667"/>
+  <object id="4" name="mushroom_red" x="1818.67" y="177.333"/>
+  <object id="5" name="duck_red_updown" x="1937.33" y="457.333"/>
+  <object id="7" name="duck_red_walk_1" x="2538.67" y="220"/>
+  <object id="8" name="mushroom_red" x="3220" y="261.333"/>
+  <object id="9" name="mushroom_red" x="3256" y="260"/>
+  <object id="10" name="duck_red_updown" x="2657.33" y="458.667"/>
+  <object id="16" name="mushroom_red" x="4616" y="296"/>
+  <object id="17" name="mushroom_red" x="4577.33" y="301.333"/>
+  <object id="18" name="duck_red_walk_1" x="5697.33" y="538.667"/>
+ </objectgroup>
+ <objectgroup id="9" name="hide">
+  <object id="1" name="mushroom_red" x="2378.67" y="458.667"/>
+ </objectgroup>
+ <objectgroup id="10" name="position">
+  <object id="20" name="start" x="100" y="538.667"/>
+  <object id="21" name="end" x="6497.33" y="541.333"/>
+  <object id="22" name="mapFixed" x="6778.67" y="20"/>
+ </objectgroup>
+</map>

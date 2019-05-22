@@ -1,0 +1,61 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "fire_swim",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.6833333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "1",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "2c8187c9-c9bd-441c-911f-b2641b9b8d3b"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "e36088a9-cf63-4994-9bab-d5850f13243d"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "7129284e-3bb7-424e-81dc-52b50d2dc647"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "2c8187c9-c9bd-441c-911f-b2641b9b8d3b"
+            }
+          },
+          {
+            "frame": 0.4166666666666667,
+            "value": {
+              "__uuid__": "e36088a9-cf63-4994-9bab-d5850f13243d"
+            }
+          },
+          {
+            "frame": 0.5833333333333334,
+            "value": {
+              "__uuid__": "7129284e-3bb7-424e-81dc-52b50d2dc647"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "14c1f4cf-1e01-4a9d-92dc-17fbf2c44a04"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

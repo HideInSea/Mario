@@ -1,0 +1,103 @@
+"use strict";
+cc._RF.push(module, 'ba3f0c2os9K1KQvqBq4KqOg', 'aex');
+// script/prop/aex.js
+
+"use strict";
+
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+var Actor = require("actor");
+
+var _require = require("aiCtrl"),
+    MoveCmd = _require.MoveCmd;
+
+cc.Class({
+    extends: Actor,
+
+    properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
+    },
+
+    // LIFE-CYCLE CALLBACKS:
+    getSize: function getSize() {
+        var size = this.node.getContentSize();
+        return cc.rect(this.node.x, this.node.y, size.width, size.height);
+    },
+    init: function init() {
+        this.isCollsi = false;
+    },
+    interactive: function interactive(actor) {
+        if (this.isCollsi) return;
+        if (this.node.x < actor.node.x) {
+            this.isCollsi = true;
+            if (gm.monsterMgr.isBossDie) {
+                gm.playerScript.enableInput = false;
+                gm.playerScript.releaseAllKey();
+                gm.playerScript.aiCtrl.addCmd(new MoveCmd(gm.playerScript, cc.macro.KEY.d, "keydown"));
+                gm.posMgr.removeCurrMapFixed();
+                gm.enableMapMove = true;
+                gm.fixOffset(gm.playerScript.node.position);
+            } else {
+                gm.playerScript.pause();
+                gm.playerScript.enableInput = false;
+                gm.playerScript.releaseAllKey();
+                //播放拆桥动画
+                this.playDropAni();
+                gm.monsterMgr.currBoss.fsm.switchState("die");
+                setTimeout(function () {
+                    gm.playerScript.resume();
+                    gm.playerScript.aiCtrl.addCmd(new MoveCmd(gm.playerScript, cc.macro.KEY.d, "keydown"));
+                    gm.posMgr.removeCurrMapFixed();
+                    gm.enableMapMove = true;
+                    gm.fixOffset(gm.playerScript.node.position);
+                }, 3000);
+            }
+            var boss = gm.monsterMgr.currBoss;
+            boss.node.removeFromParent();
+            gm.monsterMgr.node.removeAllChildren();
+            gm.monsterMgr.node.addChild(boss.node);
+        }
+    },
+    playDropAni: function playDropAni() {
+        this.rosePos = gm.mapMgr.toTiledPos(cc.v2(this.node.x - 40, this.node.y - 40));
+        this.node.runAction(cc.sequence(cc.delayTime(0.5), cc.callFunc(function () {
+            gm.mapMgr.sceneLayer.setTileGIDAt(0, this.rosePos);
+            this.rosePos.y++;
+            this.schedule(function () {
+                gm.mapMgr.setObstacleGidAt(cc.v2(this.rosePos.x--, this.rosePos.y, 0));
+            }.bind(this), 0.1, 15);
+        }, this)));
+    },
+
+
+    // onLoad () {},
+
+    update: function update(dt) {
+        if (this.isOutScreen()) {
+            this.node.removeFromParent();
+        }
+    }
+});
+
+cc._RF.pop();

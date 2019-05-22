@@ -1,0 +1,173 @@
+// Learn cc.Class:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
+// Learn Attribute:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
+//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
+//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+var {MoveCmd}=require("aiCtrl");
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
+    },
+    init(){
+        this.currMapFixed=0;
+        global.isGameOver=false;
+        this.posLayer=gm.mapMgr.posLayer;
+        this.posObjects=utils.deepClone(this.posLayer.getObjects());
+        let startObj=this.posLayer.getObject("start");
+        let endObj=this.posLayer.getObject("end");
+        let startPos=this.objectPosToMapPos(cc.v2(startObj.x,startObj.y));
+        let endPos=null;
+        if(endObj){
+            endPos=this.objectPosToMapPos(cc.v2(endObj.x,endObj.y));
+            this.endPos=cc.v2(endPos.x+20,endPos.y);
+        }
+        this.startPos=cc.v2(startPos.x+20,startPos.y);
+
+        gm.currPlayer.setPosition(this.startPos);
+        if(config.mapConfig.startType[global.getRound()]){
+            gm.playerScript.enableInput=false;
+            gm.playerScript.aiCtrl.addCmd(new MoveCmd(gm.playerScript,cc.macro.KEY.d,"keydown"));
+        }
+        //地图固定点
+        this.mapFixeds=[];
+        for(let i=0;i<this.posObjects.length;i++){
+            if(this.posObjects[i].name===ENUM.POSITION_TYPE.MAP_FIXED){
+                this.mapFixeds.push(this.posObjects.splice(i,1)[0]);
+                i--;
+            }
+        }
+    },
+    resetObjects(){
+        this.posObjects=utils.deepClone(this.posLayer.getObjects());
+    },
+    update (dt) {
+        //检测玩家是否走到终点
+        if(this.endPos&&gm.currPlayer.x>=this.endPos.x&&gm.currPlayer.x<=this.endPos.x+20&&!global.isGameOver){
+            gm.currPlayer.active=false;
+            global.isGameOver=true;
+            EM.emit(EM.type.PLAYER_TO_END);
+        }
+
+        //检测地图固定点
+        this.mapFixed();
+    },
+    setMapToPos(pos){
+        gm.node.setPosition(pos);
+        gm.mapMgr.paseTile(true);
+    },
+    objectPosToMapPos(pos){
+        return gm.mapMgr.tilePosToPos(gm.mapMgr.toTiledPos(pos));
+    },
+    hPipeEntry(type,pos){
+        let args=type.split("_");
+        let desObj=this.posLayer.getObject("pipeEnd_"+args[2]);
+        let mapPos=this.objectPosToMapPos(cc.v2(desObj.x,desObj.y));
+        //let screenPos=gm.mapMgr.mapPosToScreenPos(mapPos);
+        let desPos=cc.v2(mapPos.x+40,mapPos.y);
+        let desMapPos=cc.v2(-desPos.x+40*parseInt(args[3])-320,gm.node.y);
+        let moveLeft=cc.moveTo(1,pos);
+
+        switch(args[1]){
+            case ENUM.PIPE_POS_TYPE.LAND:
+                gm.currPlayer.runAction(cc.sequence(moveLeft,cc.callFunc(this.landCallBack,this,{desPos:desPos,desMapPos:desMapPos})));
+            break;
+            case ENUM.PIPE_POS_TYPE.AIR:
+                gm.currPlayer.runAction(cc.sequence(moveLeft,cc.callFunc(this.airCallBack,this,{desPos:desPos,desMapPos:desMapPos})));
+            break;
+        }
+    },
+    vPipeEntry(type,pos){
+        let args=type.split("_");
+        let moveDown=cc.moveBy(1,cc.v2(0,-80));
+
+        if(args[0]===ENUM.POSITION_TYPE.ROUND){
+            gm.currPlayer.runAction(cc.sequence(moveDown,cc.callFunc(this.selectRound,this)));
+            return;
+        }
+
+        let desObj=this.posLayer.getObject("pipeEnd_"+args[2]);
+        let mapPos=this.objectPosToMapPos(cc.v2(desObj.x,desObj.y));
+        //let screenPos=gm.mapMgr.mapPosToScreenPos(mapPos);
+        let desPos=cc.v2(mapPos.x+40,mapPos.y);
+        let desMapPos=cc.v2(-desPos.x+40*parseInt(args[3])-320,gm.node.y);
+
+        switch(args[1]){
+            case ENUM.PIPE_POS_TYPE.LAND:
+                gm.currPlayer.runAction(cc.sequence(moveDown,cc.callFunc(this.landCallBack,this,{desPos:desPos,desMapPos:desMapPos})));
+            break;
+            case ENUM.PIPE_POS_TYPE.AIR:
+                gm.currPlayer.runAction(cc.sequence(moveDown,cc.callFunc(this.airCallBack,this,{desPos:desPos,desMapPos:desMapPos})));
+            break;
+        }
+    },  
+    selectRound(){
+        cc.log("next");
+    },
+    landCallBack(target,data){
+        let fadeOut=cc.fadeOut(0.05);
+        let fadeIn=cc.fadeIn(0.05);
+        let delay=cc.delayTime(0.2);
+        gm.node.runAction(cc.sequence(fadeOut,cc.callFunc(function(target,data){
+            gm.currPlayer.setPosition(cc.v2(data.desPos.x,data.desPos.y));
+            this.setMapToPos(data.desMapPos);
+            gm.playerScript.fsm.switchState("stand");
+        },this,data),delay,cc.callFunc(function(){
+            gm.currPlayer.runAction(cc.sequence(cc.moveBy(1,cc.v2(0,80)),cc.callFunc(function(){
+                gm.playerScript.isPause=false;
+                gm.playerScript.enableInput=true;
+                gm.enableMapMove=true;
+            },this)));
+        },this),fadeIn));
+    },
+    airCallBack(target,data){
+        let fadeOut=cc.fadeOut(0.05);
+        let fadeIn=cc.fadeIn(0.05);
+        let delay=cc.delayTime(0.5);
+        gm.node.runAction(cc.sequence(fadeOut,cc.callFunc(function(target,data){
+            gm.currPlayer.setPosition(data.desPos);
+            this.setMapToPos(data.desMapPos);
+            gm.playerScript.fsm.switchState("stand");
+        },this,data),delay,fadeIn,cc.callFunc(function(){
+            gm.playerScript.isPause=false;
+            gm.playerScript.enableInput=true;
+            gm.enableMapMove=true;
+        },this)));
+    },
+    mapFixed(){
+        if(!gm.enableMapMove)return;
+        for(let i=0;i<this.mapFixeds.length;i++){
+            //cc.log(this.mapFixeds[i]);
+            let pos=this.objectPosToMapPos(cc.v2(this.mapFixeds[i].x,this.mapFixeds[i].y));
+            let worldPos=gm.node.convertToWorldSpace(cc.v2(pos.x+39,pos.y));
+            if(worldPos.x>0&&worldPos.x<=640){
+                this.currMapFixed=i;
+                gm.node.x+=640-worldPos.x-1;
+                gm.enableMapMove=false;
+                return;
+            }
+        }
+    },
+    removeCurrMapFixed(){
+        this.mapFixeds.splice(this.currMapFixed,1);
+    }
+});

@@ -1,0 +1,92 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "player_1.plist",
+  "_objFlags": 0,
+  "_native": "",
+  "_spriteFrames": {
+    "red_1": {
+      "__uuid__": "4f4c112d-0d9d-4878-8b2a-57625e6cd9d7"
+    },
+    "red_10": {
+      "__uuid__": "8d24f785-3960-4a62-a98e-e3ab75a78b7c"
+    },
+    "red_11": {
+      "__uuid__": "184bbe76-fb04-4d9b-b795-9aba4fabcc23"
+    },
+    "red_12": {
+      "__uuid__": "19b059b6-8954-443b-ad2f-dc6ddce0c15c"
+    },
+    "red_13": {
+      "__uuid__": "4ba343ac-9ce0-4850-90c2-e7cbad78e50f"
+    },
+    "red_14": {
+      "__uuid__": "e2dec804-b00f-463b-b810-c56d3db37b08"
+    },
+    "red_15": {
+      "__uuid__": "0d734c25-5195-48e2-9093-eeedd9df6907"
+    },
+    "red_16": {
+      "__uuid__": "462f63be-7ab9-4c4d-8878-9092ba7a061d"
+    },
+    "red_17": {
+      "__uuid__": "268613f9-7146-465c-8fb3-336c2c694460"
+    },
+    "red_18": {
+      "__uuid__": "631f9fb2-326d-4b07-88fa-a51a6ecbf058"
+    },
+    "red_2": {
+      "__uuid__": "c41278a6-79f8-49d1-b864-51ad5acb5726"
+    },
+    "red_20": {
+      "__uuid__": "39b8a14d-7614-470a-9e34-176eefd8710c"
+    },
+    "red_21": {
+      "__uuid__": "839f17c3-017b-4da6-bd2d-89d92bfe9cb9"
+    },
+    "red_22": {
+      "__uuid__": "8a969663-943b-43b5-bea5-beda9b23f468"
+    },
+    "red_23": {
+      "__uuid__": "542bf1ff-9d01-4088-af7c-29c18673cbb1"
+    },
+    "red_24": {
+      "__uuid__": "3b355f72-85d6-41a3-94d2-d8dafbc8d263"
+    },
+    "red_25": {
+      "__uuid__": "25850e27-af10-4865-938d-721fe8c129a3"
+    },
+    "red_26": {
+      "__uuid__": "8eca782d-07d3-4d0b-97e9-3455ce3be70e"
+    },
+    "red_27": {
+      "__uuid__": "886bea85-4bb3-4313-a2a6-b63607fa957e"
+    },
+    "red_28": {
+      "__uuid__": "c067745c-59aa-4996-a15b-b7a04d9aace1"
+    },
+    "red_29": {
+      "__uuid__": "666dd705-0fb0-44d6-8a90-e1d6917d38b0"
+    },
+    "red_3": {
+      "__uuid__": "470ac7ad-3ec7-40ef-ab08-26d1b3aee584"
+    },
+    "red_4": {
+      "__uuid__": "5058fcc9-aa19-47c9-8afd-c0400fa76102"
+    },
+    "red_5": {
+      "__uuid__": "a2e548b3-7f58-44c8-b4e6-526df8a84124"
+    },
+    "red_6": {
+      "__uuid__": "4bca4c55-0727-445b-97aa-d1bef51ee6f8"
+    },
+    "red_7": {
+      "__uuid__": "d323710d-acbe-420e-9f31-66d458a62ffb"
+    },
+    "red_8": {
+      "__uuid__": "8304c9c7-cef4-4306-a1f9-44856cc26007"
+    },
+    "red_9": {
+      "__uuid__": "b03226f7-f86f-4d3a-a910-911f85854c7e"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="170" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="40">
+ <tileset firstgid="1" source="map.tsx"/>
+ <layer id="1" name="background" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwwENAAAMw6CanH8rt3ABkLBqqqqqqqqqqqqqqvp8Be2HTg==
+  </data>
+ </layer>
+ <layer id="2" name="writeflag" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzjEBAAAIA6AZxv4VvcygByQgAQAAYHVdDwAAAAAAAAD+G4ZjACc=
+  </data>
+ </layer>
+ <layer id="3" name="scene" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztWVtOwzAQTE/F6wjlcQSg/QJ+QOXxBfy0Ko9TchMmUissa+3Y63XWDh5pVClx1lPvxKt1uq6hoSEE97Oue5hpq/jDDbTcgncKmjTnToG0bipejrWJibnGmE1BeXmFljfwXUETd25tf0uvGRUvR160cq2dLy1ovltcHEDrIXgEHoMnFWlPRY35+q+YI0en4Bl4Dl60nDUUiEv48gq8BhfgsnKf/hBsyI/c/e0KsR/BJ/AZfGHOJa2T47Neg7RPm9fDIN3f2r3DFr8f4Cf4BX4z55LWyfHZOtGn1LuW6tMp7+0591CzdzBrvln7F7t7Nsfsubi5TfEp9a7V5lPq/+ead6wzQrPmm7W/54pgaT0XlYecdZ9zjjVln44Fs+abtb/ndkfTp2P0XDHrHONTbo0yY/jOsUI0UmOGvB+rO9anrvv76yV8/9vvnS5Se6pEz+VDLp9ya1TofsT16dAZbqxuaZ+W8P3Prvm2B22PSvVcPuTyaaqekHG+5yW0UHGH5kv1aQmwa77tQdunkuCus8uTvufHQPPpNKHt05A8uGIM6XKNLcWn1HqFxq8Bv7oqNvU=
+  </data>
+ </layer>
+ <layer id="4" name="obstacle" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt2FsKwjAQQNG4h26iy3HfbVfiIlSwUEJChww4j9wD8+fHIDc1tRQAAABA72W9ACCwPKw3+I/tM3tjDsulIBat07o3q86ue9D6uPU3d6J1mkXr+T5j73SKq969x+p8rNXcydipl7sB+rJ26u15IHXu7XnHlt79W3svr/vM1ilyoFN8ef8fIkuno99z1N/X2Yx2KvmMxFM5XkjOSe89Lfr7m/asaxuIMIjPuiHJvAEMhm1T
+  </data>
+ </layer>
+ <layer id="5" name="coin" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt2DEKACAIBdCu6xU6fUtbQVOo8B78xemDTo4BAJAndgA4xSUVemR2eM3gp0o3V6kL9gEAQD8zuwAApWX/gwHoYwFV7ApT
+  </data>
+ </layer>
+ <layer id="11" name="pipe" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/hAFUBAAAAAAAAAAAAwG8qgAAB
+  </data>
+ </layer>
+ <layer id="6" name="endflag" width="170" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztzrEJAAAIBDHdf2jFKYQnKa6+KgAAgHxz6e8LAAAAAAAAgAwLsC4BAQ==
+  </data>
+ </layer>
+ <objectgroup id="7" name="prop">
+  <object id="11" name="ladder_big_mv" x="2259" y="581"/>
+  <object id="16" name="ladder_big_mh" x="3701" y="303"/>
+  <object id="17" name="ladder_big_mh" x="3341" y="299"/>
+  <object id="27" name="ladder_big_mh" x="5179" y="339"/>
+ </objectgroup>
+ <objectgroup id="8" name="hide">
+  <object id="12" name="mushroom_red" x="2380" y="458"/>
+ </objectgroup>
+ <objectgroup id="9" name="monster">
+  <object id="4" name="duck_red_walk_1" x="1215" y="221"/>
+  <object id="7" name="mushroom_red" x="1777" y="175"/>
+  <object id="9" name="mushroom_red" x="1817" y="180"/>
+  <object id="10" name="duck_red_updown" x="1937" y="460"/>
+  <object id="13" name="duck_red_walk_1" x="2537" y="219"/>
+  <object id="14" name="duck_red_updown" x="2620" y="461"/>
+  <object id="15" name="duck_red_updown" x="2978" y="501"/>
+  <object id="20" name="mushroom_red" x="4418" y="299"/>
+  <object id="21" name="mushroom_red" x="4375" y="298"/>
+  <object id="23" name="duck_red_updown" x="4579" y="460"/>
+  <object id="24" name="duck_red_walk_1" x="5496" y="540"/>
+  <object id="28" name="rocket_black_left" x="1422" y="341"/>
+  <object id="29" name="rocket_black_left" x="1657" y="180"/>
+  <object id="30" name="rocket_black_left" x="2378" y="418"/>
+  <object id="31" name="rocket_black_left" x="2820" y="219"/>
+  <object id="35" name="rocket_black_left" x="3619" y="221"/>
+  <object id="36" name="rocket_black_left" x="4097" y="381"/>
+  <object id="38" name="rocket_black_left" x="4855" y="339"/>
+  <object id="39" name="rocket_black_left" x="5099" y="259"/>
+ </objectgroup>
+ <objectgroup id="10" name="position">
+  <object id="1" name="end" x="6383" y="539"/>
+  <object id="2" name="mapFixed" x="6578" y="21"/>
+  <object id="3" name="start" x="101" y="542"/>
+ </objectgroup>
+</map>

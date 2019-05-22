@@ -1,0 +1,23 @@
+{
+  "__type__": "cc.TiledMapAsset",
+  "_name": "7-1",
+  "_objFlags": 0,
+  "_native": "",
+  "tmxXmlStr": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<map version=\"1.2\" tiledversion=\"1.2.1\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"200\" height=\"16\" tilewidth=\"40\" tileheight=\"40\" infinite=\"0\" nextlayerid=\"12\" nextobjectid=\"1\">\r\n <tileset firstgid=\"1\" source=\"map.tsx\"/>\r\n <layer id=\"1\" name=\"background\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztw0ENAAAMA6EzWf9WZmMPSFg1VVVVVVVVVVVVVVVV3z4UPya9\r\n  </data>\r\n </layer>\r\n <layer id=\"2\" name=\"writeflag\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztzjEBAAAIA6AZxv4V7eDjISQgAQAAAAAAAADgg67rAQAAALA1jC0AJw==\r\n  </data>\r\n </layer>\r\n <layer id=\"3\" name=\"scene\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztmFlOwzAQhp07cJeyHIHtCFD6xA5i6VMJqyj0sb1DcjgOwY/USCOrduLY48R0PulXpcaZGU881miUEoS0uMmUus26jqI/ccRgnfYagi7z9Q6/Hz34Vn2Jo8L1m7is595r1/V3Ct9n0HmgGHzzFSsfF/BxCV1B1y39DfDeJrQFbUM7jnZi7dX1m/SpvrliaZr7CdY8QXmkfNTVY+h8/Bj+f4aPF+gVemvpbxfv7UH70AF06GinT+eQC847wOdu98k9555i1+MGo58j2D6GhtAJNErkrIfuGWxw3gGxz1LFf7rXOOvjDrbvoQfoERonkrOuzpXQPzjr4xO2p9AX9A3N5LwJicFVHyPSW+k9Vip9liBw1ceY9Fa0x0qpzxLWkwE5n6b68J3NzkhvRXss6bOElDDVh+9sdprZtYrcYs/2zIdQduvscMXPbZvTR85kNySm+vCdzeq9lW2OtVj+zi32qmcLsr4t9H2bTxdbdXZCxk/9NvHd1I4NjvzPlX/+uTHVh+9sVu+tbHOscvlbQBNNijyr1paqHZXNktguzMsb0SR26scnfqXC70GPhTN+PfZC+eff5EOPP7SPVbNZTp+CIAiC8McvgUx81Q==\r\n  </data>\r\n </layer>\r\n <layer id=\"4\" name=\"land\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztlzsOwyAQRGlTJ23qhDJHyf0vExdJEWsXho9BMu9J05llWWaEHAIAAAAAAAAAAAAA1BC/AoB/YiAfsB6K32MgH7Aeit/32SAfc2DuY1H8bmVjlXu6DK7Ta78f1023yXV69VCL5VVlzorfvWycIR/KjO4daih1Sr9T939sehbWbKlj9eOtTeXGO1dN1iyv5uas+D2VjTPkQ/Fizn+qn1/id6XvR27/0fmw+vHWpmp656o5T+n7ofg9lw31f/4I3igp5tQ2u9k9oOPvmHuun93sHlr1AcdcjL4=\r\n  </data>\r\n </layer>\r\n <layer id=\"5\" name=\"wall\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJzt170KgzAUBtDkcVsXuxaqi31vL0JRHHTwpxrOgW9PcvkSkhIAXFudU3rlf68CrqmLbnz1A1Y9oifPSKUvRTLWbT5xgE2kdZAw3Ce/lCgv5G5K2AMA9+b9gZE+nOM9y56mM9xrnv4fAAAAAMfoAUrbBrk=\r\n  </data>\r\n </layer>\r\n <layer id=\"6\" name=\"endflag\" width=\"200\" height=\"16\">\r\n  <data encoding=\"base64\" compression=\"zlib\">\r\n   eJztzrERAAAEADH2H5qzgU4hKb7+CAAAAGCjJnl9AQAAAAAAAADARw3v+QEB\r\n  </data>\r\n </layer>\r\n <objectgroup id=\"8\" name=\"prop\"/>\r\n <objectgroup id=\"9\" name=\"hide\"/>\r\n <objectgroup id=\"10\" name=\"monster\"/>\r\n <objectgroup id=\"11\" name=\"position\"/>\r\n</map>\r\n",
+  "textures": [
+    {
+      "__uuid__": "81eafc24-8d63-49b3-bd6b-3ba6786befd2"
+    }
+  ],
+  "textureNames": [
+    "map.png"
+  ],
+  "tsxFiles": [
+    {
+      "__uuid__": "c744d921-a195-4ec1-b087-16fc3d0e70df"
+    }
+  ],
+  "tsxFileNames": [
+    "map.tsx"
+  ]
+}

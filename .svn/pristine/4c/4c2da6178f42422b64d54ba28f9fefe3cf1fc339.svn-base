@@ -1,0 +1,37 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "gray_walk",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.5166666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "2",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "8a54aedf-e344-4a99-af4e-a579e416f142"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "783af5d0-66a3-4fd5-a690-4b4432647465"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "8a54aedf-e344-4a99-af4e-a579e416f142"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
