@@ -54,7 +54,7 @@ cc.Class({
                 EM.emit(EM.type.SHOW_TIP);
             },1000);
             setTimeout(()=>{
-                global.nextRound();
+                globalMgr.nextRound();
                 EM.emit(EM.type.GAME_PASS);
             },4000);
         }

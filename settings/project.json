@@ -1,4 +1,5 @@
 {
+  "assets-sort-type": "name",
   "collision-matrix": [
     [
       true
@@ -33,7 +34,7 @@
     "New Group 3",
     "New Group 4"
   ],
-  "last-module-event-record-time": 1556115200906,
+  "last-module-event-record-time": 1559121515430,
   "simulator-orientation": false,
   "simulator-resolution": {
     "height": 640,
@@ -41,6 +42,5 @@
   },
   "start-scene": "8135ee8c-6401-40a5-83e6-75f3119da302",
   "use-customize-simulator": false,
-  "use-project-simulator-setting": false,
-  "assets-sort-type": "name"
+  "use-project-simulator-setting": false
 }

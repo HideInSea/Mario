@@ -69,7 +69,7 @@ cc.Class({
     },
     isOutScreen(){
         let pos=this.node.convertToWorldSpace(cc.v2(0,0));
-        return (pos.x>global.winSize.width+320||pos.x<-80||pos.y<-80||pos.y>global.winSize.height+80)?true:false;
+        return (pos.x>globalMgr.winSize.width+320||pos.x<-80||pos.y<-80||pos.y>globalMgr.winSize.height+80)?true:false;
     },
     getSize(){
         let size=this.node.getContentSize();

@@ -177,7 +177,7 @@ cc.Class({
     },
     isOutScreen(){
         let pos=this.node.convertToWorldSpace(cc.v2(0,0));
-        if(pos.x>global.winSize.width+40*11||pos.x<-40*10||pos.y<-120||pos.y>global.winSize.height+80){
+        if(pos.x>globalMgr.winSize.width+40*11||pos.x<-40*10||pos.y<-120||pos.y>globalMgr.winSize.height+80){
             return true;
         }
         return false;
@@ -193,7 +193,7 @@ cc.Class({
         //移除屏幕之外的ladder
         let child=this.node.children;
         for(let i=0;i<child.length;i++){
-            if(child[i].y<-40*16||child[i].y>global.winSize.height){
+            if(child[i].y<-40*16||child[i].y>globalMgr.winSize.height){
                 child[i].removeFromParent();
                 i--;
             }

@@ -120,7 +120,7 @@ cc.Class({
     },
     //将屏幕坐标转换成地图坐标
     screenPosToMapPos(pos){
-        return this.node.parent.convertToWorldSpace(pos);
+        return this.node.convertToNodeSpace(pos);
     },
     //将地图坐标转换为屏幕坐标
     mapPosToScreenPos(pos){
